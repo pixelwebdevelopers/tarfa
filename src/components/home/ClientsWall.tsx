@@ -111,7 +111,7 @@ export function ClientsWall() {
                     alt={`${client.name} Logo`}
                     width={180}
                     height={40}
-                    className="max-h-10 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-200 opacity-90 group-hover:opacity-100"
+                    className="max-h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
                   />
                 </div>
               </div>

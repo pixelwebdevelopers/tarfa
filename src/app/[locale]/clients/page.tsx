@@ -171,14 +171,14 @@ export default async function ClientsPage({
                   </div>
 
                   {/* Logo Display Box */}
-                  <div className="h-20 w-full flex items-center justify-center p-3 bg-canvas-warm/70 dark:bg-charcoal-850 border border-charcoal-200/80 dark:border-charcoal-750">
+                  <div className="h-20 w-full flex items-center justify-center p-3 bg-white dark:bg-charcoal-850 border border-charcoal-200/80 dark:border-charcoal-750">
                     <div className="relative w-full h-12 flex items-center justify-center">
                       <Image
                         src={c.logo}
                         alt={`${c.name} Logo`}
                         width={200}
                         height={48}
-                        className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-200 opacity-90 group-hover:opacity-100"
+                        className="max-h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
                       />
                     </div>
                   </div>
