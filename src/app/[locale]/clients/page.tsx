@@ -1,9 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { PageHeader } from "@/components/PageHeader";
-import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
-import { ShieldCheck, Building2, CheckCircle2, ArrowRight, ArrowLeft } from "lucide-react";
+import { ShieldCheck, ArrowRight, ArrowLeft } from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -37,6 +37,7 @@ export default async function ClientsPage({
       id: "caf",
       name: "CAF ARABIA",
       arabicName: "كاف العربية",
+      logo: "/images/clients/caf-arabia.svg",
       sector: isAr ? "هندسة وتوريد قطارات السكك الحديدية والنقل" : "Railway Rolling Stock Engineering & Transport",
       scope: isAr ? "صيانة محركات الدفع الكهربائية ومضخات التبريد ومراوح التهوية" : "Traction motor inspection, auxiliary blower overhaul, cooling fans",
       location: "Riyadh, KSA",
@@ -45,6 +46,7 @@ export default async function ClientsPage({
       id: "ksb",
       name: "KSB PUMPS ARABIA",
       arabicName: "كي إس بي للمضخات العربية",
+      logo: "/images/clients/ksb-pumps.svg",
       sector: isAr ? "صناعة وتوريد المضخات ومحطات المياه الصناعية" : "Industrial Pump Manufacturing & Fluid Technology",
       scope: isAr ? "إعادة لف المحركات الكهربائية للمضخات الغاطسة والسطحية" : "Submersible & surface motor rewinding, mechanical seal overhaul",
       location: "Riyadh Industrial City",
@@ -53,14 +55,16 @@ export default async function ClientsPage({
       id: "al-ameen",
       name: "AL-AMEEN DEV & TRADE CO",
       arabicName: "شركة الأمين للتنمية والتجارة",
+      logo: "/images/clients/al-ameen.png",
       sector: isAr ? "التطوير الهندسي والتجارة والمقاولات الصناعية" : "Commercial Trading & Industrial Engineering Development",
-      scope: isAr ? "صيانة وتجديد المحركات الكهروميكانيكية ومعدات الضخ" : "Electromechanical drive overhaul and pump set refurbishment",
+      scope: isAr ? "صيانة وتجديد المحركات الكهروميكانيكية ومعدات الضخ والتبريد" : "Electromechanical drive overhaul and pump set refurbishment",
       location: "Kingdom-Wide Operations",
     },
     {
       id: "al-watnia",
       name: "AL-WATNIA",
       arabicName: "الشركة الوطنية للإنتاج الزراعي والداجني",
+      logo: "/images/clients/al-watania.png",
       sector: isAr ? "الصناعات الغذائية والإنتاج الزراعي والداجني" : "Poultry & Agricultural Food Processing",
       scope: isAr ? "صيانة ضواغط التبريد ومحركات خطوط المعالجة ومضخات المياه" : "Refrigeration chiller compressors, feed mill motors, deep well pumps",
       location: "Al-Qassim & Riyadh",
@@ -69,6 +73,7 @@ export default async function ClientsPage({
       id: "fagi",
       name: "DR MUHAMMAD FAGI HOSPITAL",
       arabicName: "مستشفى د. محمد فقيه",
+      logo: "/images/clients/fakeeh-care.svg",
       sector: isAr ? "الرعاية الصحية والمستشفيات والمنشآت الطبية" : "Healthcare Facilities & Medical Infrastructure",
       scope: isAr ? "صيانة ضواغط التكييف المركزي ومولدات الطوارئ ومضخات التعزيز" : "Central HVAC chiller compressors, backup generators, booster pumps",
       location: "Western & Central Regions",
@@ -77,6 +82,7 @@ export default async function ClientsPage({
       id: "sappco",
       name: "SAPPCO",
       arabicName: "الشركة السعودية لأنابيب البلاستيك (سابكو)",
+      logo: "/images/clients/sappco.png",
       sector: isAr ? "الصناعات البلاستيكية وأنابيب البنية التحتية" : "Saudi Plastic Products Company (Piping & Infrastructure)",
       scope: isAr ? "إعادة لف محركات خطوط البثق الرئيسية ومضخات التبريد الصناعي" : "Extrusion line DC/AC drive motors and chiller pump units",
       location: "Riyadh Industrial City",
@@ -85,6 +91,7 @@ export default async function ClientsPage({
       id: "al-jouf",
       name: "AlL-JOUF MINERAL WATER BOTTLING",
       arabicName: "شركة مياه الجوف المعدنية",
+      logo: "/images/clients/al-jouf-water.png",
       sector: isAr ? "تعبئة ومعالجة المياه الطبيعية والعصائر" : "Mineral Water Bottling & Beverage Processing Plants",
       scope: isAr ? "صيانة مضخات استخراج المياه العميقة ومحركات خطوط التعبئة" : "Deep extraction well pumps and automated bottling line drives",
       location: "Al-Jouf & Distribution Hubs",
@@ -93,6 +100,7 @@ export default async function ClientsPage({
       id: "ksu",
       name: "JAMIA MALIK SAUD",
       arabicName: "جامعة الملك سعود",
+      logo: "/images/clients/king-saud-university.png",
       sector: isAr ? "المرافق الجامعية ومحطات الخدمات الهندسية المركزية" : "King Saud University Engineering & Utilities Infrastructure",
       scope: isAr ? "صيانة ضواغط محطة التبريد المركزية ومضخات شبكات المياه" : "Central chiller plant compressors and campus distribution pumps",
       location: "Riyadh, KSA",
@@ -101,6 +109,7 @@ export default async function ClientsPage({
       id: "al-munajem",
       name: "Al MUNAJEM FOOD COMPANY",
       arabicName: "شركة المنجم للأغذية",
+      logo: "/images/clients/almunajem-foods.png",
       sector: isAr ? "سلاسل التبريد والتوزيع والتخزين الغذائي" : "Cold Chain Storage & Food Distribution",
       scope: isAr ? "صيانة ضواغط التجميد المركزية ومحركات مراوح مستودعات التبريد" : "Commercial blast freezing compressors and cold store fan motors",
       location: "Riyadh Logistics Zone",
@@ -141,16 +150,17 @@ export default async function ClientsPage({
         </div>
       </section>
 
-      {/* Client Cards Grid */}
+      {/* Client Cards Grid with Logos */}
       <section className="py-16 lg:py-20 bg-canvas-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {clients.map((c, idx) => (
               <div
                 key={c.id}
-                className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 flex flex-col justify-between space-y-4 hover:border-brand-red transition-colors shadow-hairline group"
+                className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 flex flex-col justify-between space-y-5 hover:border-brand-red transition-all duration-200 shadow-hairline group"
               >
-                <div className="space-y-2">
+                <div className="space-y-4">
+                  {/* Top card metadata */}
                   <div className="flex items-center justify-between border-b border-charcoal-100 dark:border-charcoal-800 pb-2.5">
                     <span className="font-mono text-[11px] font-bold text-brand-red">
                       {idx < 9 ? `CLIENT 0${idx + 1}` : `CLIENT ${idx + 1}`}
@@ -160,20 +170,36 @@ export default async function ClientsPage({
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
-                    {c.name}
-                  </h3>
-                  {isAr && (
-                    <span className="font-heading text-xs text-charcoal-500 block font-semibold">
-                      {c.arabicName}
-                    </span>
-                  )}
+                  {/* Logo Display Box */}
+                  <div className="h-20 w-full flex items-center justify-center p-3 bg-canvas-warm/70 dark:bg-charcoal-850 border border-charcoal-200/80 dark:border-charcoal-750">
+                    <div className="relative w-full h-12 flex items-center justify-center">
+                      <Image
+                        src={c.logo}
+                        alt={`${c.name} Logo`}
+                        width={200}
+                        height={48}
+                        className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-200 opacity-90 group-hover:opacity-100"
+                      />
+                    </div>
+                  </div>
 
-                  <p className="font-mono text-xs text-charcoal-600 dark:text-charcoal-300 font-medium">
-                    {c.sector}
-                  </p>
+                  {/* Client title and sector */}
+                  <div className="space-y-1">
+                    <h3 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
+                      {c.name}
+                    </h3>
+                    {isAr && (
+                      <span className="font-heading text-xs text-charcoal-500 block font-semibold">
+                        {c.arabicName}
+                      </span>
+                    )}
+                    <p className="font-mono text-xs text-charcoal-600 dark:text-charcoal-300 font-medium">
+                      {c.sector}
+                    </p>
+                  </div>
                 </div>
 
+                {/* Scope of service */}
                 <div className="pt-3 border-t border-charcoal-100 dark:border-charcoal-800 space-y-1">
                   <span className="font-mono text-[10px] uppercase tracking-wider text-charcoal-400 block font-semibold">
                     {isAr ? "نطاق الصيانة المنفذ:" : "SERVICES PERFORMED:"}
@@ -223,4 +249,3 @@ export default async function ClientsPage({
     </div>
   );
 }
-

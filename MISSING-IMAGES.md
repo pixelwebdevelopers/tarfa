@@ -70,3 +70,4 @@ To preserve Tarfa's 40-year reputation as an authentic, industrial-grade enginee
 2. **Resolution:** Minimum horizontal resolution of **2400 px** at 72 DPI (preferably 300 DPI for archival).
 3. **Delivery:** Upload to shared Google Drive or Dropbox folder structured by `workshop/`, `services/`, and `facility/`.
 4. **Processing:** The front-end engineering team will perform uniform color calibration, desaturation, sharpening, and WebP/AVIF compression according to the site's art direction rules.
+

@@ -161,3 +161,4 @@ All content lives strictly in typed JSON dictionaries:
 - Phones: `+966 50 2640 474` / `+966 50 6626770`  
 - Email: `nabbras@yahoo.com`  
 - Workshop: As Saman Al Saman, 2240, Al Sina'iyah, Riyadh 12871, KSA  
+
