@@ -3,18 +3,20 @@ import { setRequestLocale } from "next-intl/server";
 import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/Button";
 import {
-  ShieldCheck,
-  ClipboardCheck,
-  Search,
-  Wrench,
-  Flame,
-  Scale,
-  Truck,
   ArrowRight,
   ArrowLeft,
   AlertCircle,
   Shield,
 } from "lucide-react";
+import {
+  LogInspectionIcon,
+  TeardownIcon,
+  RewindingSpoolIcon,
+  BakingOvenIcon,
+  BalancingRigIcon,
+  ElectricalTestIcon,
+  DispatchCrateIcon,
+} from "@/components/icons/IndustryIcons";
 
 export async function generateMetadata({
   params,
@@ -46,49 +48,49 @@ export default async function ProcessPage({
   const steps = [
     {
       num: "01",
-      icon: ClipboardCheck,
+      icon: LogInspectionIcon,
       title: isAr ? "الاستلام والتوثيق المبدئي" : "Receipt & Initial Log Inspection",
       scope: isAr ? "توثيق بيانات لوحة الاسم Nameplate وفحص الأضرار الظاهرية" : "Nameplate parameter logging & visual baseline damage inspection",
       qa: isAr ? "توثيق بيانات لوحة الاسم وصور العطل الظاهري" : "Nameplate verification & incoming condition photo documentation",
     },
     {
       num: "02",
-      icon: Search,
+      icon: TeardownIcon,
       title: isAr ? "التفكيك الميكانيكي والفحص الساكن" : "Mechanical Teardown & Diagnostics",
       scope: isAr ? "تفكيك هيدروليكي، فحص استقامة العمود، واختبار مقارنة النبضة" : "Hydraulic teardown, shaft runout check, and surge comparison testing",
       qa: isAr ? "قياس مقاومة العزل بجهاز ميجر 5kV وفحص التدفق الحلقي" : "5kV Megger insulation resistance & loop flux core assessment",
     },
     {
       num: "03",
-      icon: Wrench,
+      icon: RewindingSpoolIcon,
       title: isAr ? "إعادة اللف والعزل الهندسي" : "Precision Rewinding & Slot Insulation",
       scope: isAr ? "عزل Nomex فئة H/F وأسلاك نحاسية نقية مطابقة للمصنّع الأصلي" : "Class H/F Nomex slot insulation & pure copper round/strip rewinding",
       qa: isAr ? "فحص قصر اللفات ومطابقة أبعاد وأقطار الأسلاك النحاسية" : "Turn-to-turn surge test and wire gauge micrometer verification",
     },
     {
       num: "04",
-      icon: Flame,
+      icon: BakingOvenIcon,
       title: isAr ? "الغمر بالورنيش والتحميص الحراري" : "Varnish Impregnation & Thermal Baking",
       scope: isAr ? "غمر كلي بأحواض الورنيش وتحميص في أفران مبرمجة لدرجات حرارة دقيقة" : "VPI/dip tank immersion & temperature-regulated curing oven bake",
       qa: isAr ? "مراقبة منحنى درجة الحرارة وزمن التحميص داخل الفرن" : "Baking oven temperature curve logging and curing hardness test",
     },
     {
       num: "05",
-      icon: Scale,
+      icon: BalancingRigIcon,
       title: isAr ? "الموازنة الديناميكية والتجميع" : "Precision Dynamic Balancing & Assembly",
       scope: isAr ? "موازنة إلكترونية ثنائية المستوى وفق ISO 1940 G2.5 وتركيب محامل أصلية" : "Two-plane dynamic balancing to ISO 1940 G2.5 with OEM bearings",
       qa: isAr ? "شهادة اتزان ديناميكي معتمدة بقياس الاهتزازات المتبقية" : "ISO 1940 residual unbalance certification (< 2.5 mm/s RMS)",
     },
     {
       num: "06",
-      icon: ShieldCheck,
+      icon: ElectricalTestIcon,
       title: isAr ? "التشغيل التجريبي والفحوصات النهائية" : "Full No-Load Run & Electrical Sign-off",
       scope: isAr ? "تشغيل بالجهد الاسمي الكامل، فحص توازن التيارات والاهتزاز والحرارة" : "Full rated voltage run test, phase balance, vibration FFT & thermal scan",
       qa: isAr ? "فحص توازن التيارات واختبار الجهد العالي (Hipot)" : "Phase current symmetry, bearing thermal scan, and final Hipot test",
     },
     {
       num: "07",
-      icon: Truck,
+      icon: DispatchCrateIcon,
       title: isAr ? "الطلاء الوقائي وإصدار التقرير والتسليم" : "Protective Coating, Report & Dispatch",
       scope: isAr ? "طلاء إيبوكسي صناعي مقاوم، وتغليف وإرفاق شهادة الفحص الفني" : "Industrial enamel coating, protective wrap, and final QA test certificate",
       qa: isAr ? "تقرير فحص نهائي معتمد وموقع من مهندس الجودة" : "Official signed workshop inspection certificate & handover sheet",
@@ -152,9 +154,6 @@ export default async function ProcessPage({
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
-                      <span className="font-mono text-[10px] text-brand-red uppercase font-bold tracking-wider block">
-                        STAGE {st.num}
-                      </span>
                       <h3 className="font-heading font-extrabold text-base sm:text-lg text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
                         {st.title}
                       </h3>

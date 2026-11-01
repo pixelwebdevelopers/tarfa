@@ -68,8 +68,6 @@ export default async function ChillerCompressorsPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="SERVICE 02 // CHILLER COMPRESSORS"
-        badge={isAr ? "ضواغط حلزونية وترددية وطاردة مركزية" : "SCREW / RECIPROCATING / CENTRIFUGAL"}
         title={isAr ? "صيانة وإعادة لف ضواغط التبريد الصناعية" : "Chiller Compressor Overhaul & Stator Rewinding"}
         description={isAr
           ? "حلول هندسية شاملة لضواغط التبريد والتكييف المركزي: عمرة ميكانيكية، إعادة لف الستاتور الداخلي بمواد مقاومة للوسائط، واختبارات الضغط بالنيتروجين."
@@ -88,7 +86,6 @@ export default async function ChillerCompressorsPage({
             {/* Left 7 Cols */}
             <div className="lg:col-span-7 space-y-6">
               <SectionHeading
-                eyebrow="CAPABILITY SCOPE 02"
                 title={isAr ? "حلول متكاملة لضواغط التبريد بمختلف علاماتها التجارية" : "Engineered Overhaul for Critical Chiller Plant Compressors"}
               />
 
@@ -136,7 +133,7 @@ export default async function ChillerCompressorsPage({
 
                 <div className="absolute bottom-4 start-4 end-4 z-10 bg-charcoal-950/90 border border-charcoal-700 p-3 font-mono text-xs text-white backdrop-blur-xs">
                   <span className="text-brand-red font-bold block text-[10px] uppercase mb-0.5">
-                    CHILLER OVERHAUL BAY // AL SINA'IYAH
+                    CHILLER OVERHAUL BAY, RIYADH
                   </span>
                   <span className="text-charcoal-300 text-xs">
                     {isAr
@@ -154,7 +151,6 @@ export default async function ChillerCompressorsPage({
       <section className="py-16 lg:py-20 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <SectionHeading
-            eyebrow="TECHNICAL MATRIX 02"
             title={isAr ? "جدول مواصفات صيانة ضواغط التبريد" : "Chiller Compressor Maintenance & Rewinding Specifications"}
             description={isAr
               ? "تفاصيل فئات الضواغط ونطاقات التبريد (بالطن التبريدي) وبروتوكولات الفحص الهيدروستاتيكي والكهربائي."
@@ -164,7 +160,7 @@ export default async function ChillerCompressorsPage({
 
           <SpecTable
             title={isAr ? "مصفوفة المواصفات الفنية لضواغط التبريد الصناعية" : "Chiller Compressor Technical Overhaul Matrix"}
-            caption="ASHRAE // AHRI // ISO 1940 COMPLIANT"
+            caption="ASHRAE · AHRI · ISO 1940 COMPLIANT"
             headers={{
               equipment: isAr ? "نوع ضاغط التبريد" : "Compressor Classification",
               scope: isAr ? "نطاق العمرة وإعادة اللف" : "Reconditioning & Stator Rewind Scope",

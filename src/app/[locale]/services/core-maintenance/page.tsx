@@ -68,8 +68,6 @@ export default async function CoreMaintenancePage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="SERVICE 05 // CORE MAINTENANCE"
-        badge={isAr ? "خدمة متخصصة نادرة" : "SPECIALIZED FACILITY DISCIPLINE"}
         title={isAr ? "صيانة ومعالجة قلوب المحركات الكهربائية" : "Stator Core Testing, Cleaning, Re-Varnishing & Spot Welding"}
         description={isAr
           ? "خدمات متخصصة في معالجة القلوب المغناطيسية لمحركات المضخات الغاطسة والمحركات الكبرى بالرياض لحمايتها من الانهيار الحراري."
@@ -87,7 +85,6 @@ export default async function CoreMaintenancePage({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <SectionHeading
-                eyebrow="CAPABILITY SCOPE 05"
                 title={isAr ? "معالجة القلوب المغناطيسية وإنقاذ الستاتور من التلف الكامل" : "Restoring Magnetic Integrity Without Complete Core Replacement"}
               />
 
@@ -133,7 +130,7 @@ export default async function CoreMaintenancePage({
 
                 <div className="absolute bottom-4 start-4 end-4 z-10 bg-charcoal-950/90 border border-charcoal-700 p-3 font-mono text-xs text-white backdrop-blur-xs">
                   <span className="text-brand-red font-bold block text-[10px] uppercase mb-0.5">
-                    CORE DIAGNOSTIC BAY // RIYADH
+                    CORE DIAGNOSTIC BAY, RIYADH
                   </span>
                   <span className="text-charcoal-300 text-xs">
                     {isAr
@@ -151,7 +148,6 @@ export default async function CoreMaintenancePage({
       <section className="py-16 lg:py-20 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <SectionHeading
-            eyebrow="TECHNICAL MATRIX 05"
             title={isAr ? "جدول مواصفات معالجة قلوب الستاتور" : "Stator Core Repair & Testing Specifications"}
             description={isAr
               ? "مواصفات الفحوصات التشخيصية ومعالجة العزل ولحام النقطة للشرائح السائبة بموجب معايير IEEE و IEC."
@@ -161,7 +157,7 @@ export default async function CoreMaintenancePage({
 
           <SpecTable
             title={isAr ? "مصفوفة المواصفات الفنية لمعالجة قلوب الستاتور" : "Stator Core Maintenance Engineering Matrix"}
-            caption="IEEE 43 // IEEE 56 // IEC 60034-23 COMPLIANT"
+            caption="IEEE 43 · IEEE 56 · IEC 60034-23 COMPLIANT"
             headers={{
               equipment: isAr ? "نوع العملية الهندسية" : "Core Maintenance Process",
               scope: isAr ? "نطاق العمل والمعالجة" : "Remediation & Testing Scope",

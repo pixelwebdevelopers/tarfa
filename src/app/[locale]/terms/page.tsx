@@ -27,7 +27,6 @@ export default async function TermsPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="LEGAL // TERMS"
         title={isAr ? "شروط الخدمة والتعاقد الفني" : "Terms of Industrial Service & Warranty"}
         description={isAr
           ? "المعايير والشروط العامة الحاكمة لعمليات استلام المعدات، الفحص التشخيصي، إعادة اللف، وضمان التشغيل لدى تارفا."

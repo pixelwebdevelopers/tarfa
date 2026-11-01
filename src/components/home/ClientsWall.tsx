@@ -96,13 +96,6 @@ export function ClientsWall() {
               key={client.id}
               className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 hover:border-brand-red transition-all duration-200 flex flex-col justify-between space-y-4 group"
             >
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] font-bold text-brand-red">
-                  {idx < 9 ? `CLIENT // 0${idx + 1}` : `CLIENT // ${idx + 1}`}
-                </span>
-                <span className="w-2 h-2 rounded-none bg-charcoal-300 dark:bg-charcoal-700 group-hover:bg-brand-red transition-colors" />
-              </div>
-
               {/* Logo display container */}
               <div className="h-16 w-full flex items-center justify-center p-3 bg-white dark:bg-charcoal-900 border border-charcoal-200/80 dark:border-charcoal-750">
                 <div className="relative w-full h-10 flex items-center justify-center">
@@ -135,7 +128,7 @@ export function ClientsWall() {
             <span>{t("andMore")}</span>
           </div>
           <span className="text-brand-red font-semibold uppercase flex-shrink-0">
-            EST. 1983 // RIYADH, KSA
+            AL SINA'IYAH, RIYADH
           </span>
         </div>
       </div>

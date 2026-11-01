@@ -5,7 +5,15 @@ import { Link } from "@/i18n/routing";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
-import { ArrowRight, ArrowLeft, ArrowUpRight, Cpu, Gauge, Wrench, Zap, Layers, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowLeft, ArrowUpRight } from "lucide-react";
+import {
+  MotorIcon,
+  CompressorIcon,
+  PumpIcon,
+  TransformerIcon,
+  StatorCoreIcon,
+  RotorBalancingIcon,
+} from "@/components/icons/IndustryIcons";
 
 export async function generateMetadata({
   params,
@@ -35,8 +43,7 @@ export default async function ServicesPage({
   const services = [
     {
       id: "motors",
-      code: "01",
-      icon: Cpu,
+      icon: MotorIcon,
       title: isAr ? "محركات الجهد المنخفض والعالي" : "Low & High Voltage Electric Motors",
       headline: isAr ? "من المحركات الصغيرة حتى القدرات الصناعية الكبرى" : "From Fractional Drives to Heavy-Duty Megawatt Motors",
       desc: isAr
@@ -48,8 +55,7 @@ export default async function ServicesPage({
     },
     {
       id: "chiller-compressors",
-      code: "02",
-      icon: Gauge,
+      icon: CompressorIcon,
       title: isAr ? "ضواغط التبريد الصناعية (الشيلرات)" : "Industrial Chiller Compressors",
       headline: isAr ? "حلول صيانة شاملة لمختلف ماركات وأنواع الضواغط" : "Complete Overhaul & Stator Rewinding for Chiller Systems",
       desc: isAr
@@ -61,8 +67,7 @@ export default async function ServicesPage({
     },
     {
       id: "water-pumps",
-      code: "03",
-      icon: Wrench,
+      icon: PumpIcon,
       title: isAr ? "مضخات المياه والعمليات الصناعية" : "Water & Heavy Industrial Pumps",
       headline: isAr ? "إعادة لف وصيانة مضخات الطرد المركزي والإزاحة الإيجابية" : "Rewinding & Maintenance for Submersible & Surface Pumps",
       desc: isAr
@@ -74,8 +79,7 @@ export default async function ServicesPage({
     },
     {
       id: "generators-transformers",
-      code: "04",
-      icon: Zap,
+      icon: TransformerIcon,
       title: isAr ? "المولدات والمحولات الكهربائية" : "Generators, Alternators & Transformers",
       headline: isAr ? "صيانة كهروميكانيكية متخصصة لمحولات الرفع والخفض والمولدات" : "Electrical Maintenance, Oil Replacement & Coil Rewinding",
       desc: isAr
@@ -87,8 +91,7 @@ export default async function ServicesPage({
     },
     {
       id: "core-maintenance",
-      code: "05",
-      icon: Layers,
+      icon: StatorCoreIcon,
       title: isAr ? "صيانة ومعالجة قلوب المحركات (Core Maintenance)" : "Stator Core Testing, Varnishing & Spot Welding",
       headline: isAr ? "معالجة شرائح الستاتور دون الحاجة لاستبدال القلب بالكامل" : "In-House Lamination Restoration & Flux Loss Diagnostics",
       desc: isAr
@@ -100,8 +103,7 @@ export default async function ServicesPage({
     },
     {
       id: "testing-balancing",
-      code: "06",
-      icon: ShieldCheck,
+      icon: RotorBalancingIcon,
       title: isAr ? "الفحوصات الهندسية وموازنة الروتور" : "Static Diagnostic Testing & Dynamic Rotor Balancing",
       headline: isAr ? "موازنة ديناميكية دقيقة وفحوصات ساكنة شاملة" : "Dynamic Balancing to ISO 1940 & High-Potential Insulation Tests",
       desc: isAr
@@ -116,8 +118,6 @@ export default async function ServicesPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="DIRECTORY // WORKSHOP SERVICES"
-        badge={isAr ? "6 تخصصات صناعية" : "6 CORE DISCIPLINES"}
         title={isAr ? "دليل الخدمات الكهروميكانيكية المتخصصة" : "Industrial Electromechanical Service Catalog"}
         description={isAr
           ? "تغطي ورشتنا بالرياض كافة متطلبات إعادة اللف، العمرات الميكانيكية، صيانة القلوب، والموازنة الديناميكية للمعدات الدوارة في مختلف مصانع المملكة."
@@ -148,26 +148,19 @@ export default async function ServicesPage({
                       className="object-cover filter contrast-[1.05] grayscale-[15%] group-hover:grayscale-0 transition-all duration-300"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute top-3 start-3 bg-charcoal-950/90 border border-charcoal-700 font-mono text-xs font-bold text-brand-red px-2 py-0.5">
-                      SERVICE {svc.code}
-                    </div>
                   </div>
 
                   {/* Body Content */}
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                    <div className="space-y-2.5">
-                      <div className="flex items-center gap-2.5">
-                        <div className="w-8 h-8 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                          <Icon className="w-4 h-4" />
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                          <Icon className="w-6 h-6" />
                         </div>
-                        <span className="font-mono text-[11px] font-bold text-brand-red uppercase tracking-wider">
-                          DISCIPLINE {svc.code}
-                        </span>
+                        <h2 className="font-heading font-extrabold text-xl text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
+                          {svc.title}
+                        </h2>
                       </div>
-
-                      <h2 className="font-heading font-extrabold text-xl text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
-                        {svc.title}
-                      </h2>
 
                       <span className="font-mono text-xs text-charcoal-500 dark:text-charcoal-400 block font-medium">
                         {svc.headline}

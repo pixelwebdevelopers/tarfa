@@ -78,29 +78,29 @@
   "credibility": {
     "items": [
       {
-        "mono": "01 // FOUNDATION",
+        "mono": "ESTABLISHED",
         "value": "Since 1983",
         "label": "Over four decades of continuous industrial service in Saudi Arabia"
       },
       {
-        "mono": "02 // LOCATION",
+        "mono": "LOCATION",
         "value": "Riyadh, KSA",
         "label": "Centrally based in Riyadh's industrial core (Al Sina'iyah)"
       },
       {
-        "mono": "03 // CAPACITY",
+        "mono": "CAPACITY",
         "value": "Low & High Voltage",
         "label": "Round wire & strip wire rewinding for fractional to heavy megawatt drives"
       },
       {
-        "mono": "04 // QUALITY",
+        "mono": "STANDARDS",
         "value": "100% Verified",
         "label": "Surge, insulation resistance, core loss, and rotor dynamic balancing"
       }
     ]
   },
   "servicesIndex": {
-    "eyebrow": "01 // INDUSTRIAL CAPABILITIES",
+    "eyebrow": "",
     "headline": "Engineered Rewinding & Electromechanical Maintenance",
     "description": "Every machine is inspected, repaired, baked, and tested to OEM standards to minimize plant downtime.",
     "items": [
@@ -155,7 +155,7 @@
     ]
   },
   "coreMaintenance": {
-    "eyebrow": "02 // SPECIALIZED WORKSHOP CAPABILITY",
+    "eyebrow": "",
     "headline": "Stator Core Rehabilitation & Magnetic Integrity",
     "badge": "Core Diagnostics Bay",
     "lead": "Damaged stator laminations cause severe hot spots and catastrophic motor failure. Tarfa's dedicated core workshop repairs and re-insulates laminations without requiring complete core replacement.",
@@ -178,7 +178,7 @@
     ]
   },
   "process": {
-    "eyebrow": "03 // QUALITY ASSURANCE WORKFLOW",
+    "eyebrow": "",
     "headline": "7-Stage Industrial Refurbishment Lifecycle",
     "note": "Standard workshop protocol for rewinding and overhauls. Custom testing regimens available upon request.",
     "clientNote": "Client confirmation required for project-specific inspection criteria.",
@@ -221,7 +221,7 @@
     ]
   },
   "industries": {
-    "eyebrow": "04 // SECTOR EXPERTISE",
+    "eyebrow": "",
     "headline": "Serving Critical Infrastructure Across Saudi Arabia",
     "lead": "Heavy manufacturing and public infrastructure cannot tolerate unexpected downtime. Tarfa maintains critical motors, pumps, and compressors for Saudi Arabia's leading industrial sectors.",
     "sectors": [
@@ -256,7 +256,7 @@
     ]
   },
   "clients": {
-    "eyebrow": "05 // TRACK RECORD",
+    "eyebrow": "",
     "headline": "Trusted by Leading Saudi Enterprises",
     "lead": "Over 40 years of service partnerships across the Kingdom's industrial landscape.",
     "list": [
@@ -273,7 +273,7 @@
     "andMore": "And dozens of industrial operators across the Kingdom of Saudi Arabia."
   },
   "ctaBand": {
-    "eyebrow": "IMMEDIATE INDUSTRIAL SUPPORT",
+    "eyebrow": "",
     "headline": "Facing Equipment Failure or Planning Scheduled Overhaul?",
     "desc": "Speak directly with our technical team in Riyadh for immediate diagnostic dispatch or scheduled service proposals.",
     "phoneLabel": "Direct Workshop Dispatch",
@@ -281,7 +281,7 @@
     "buttonLabel": "Submit Technical Inquiry"
   },
   "contact": {
-    "eyebrow": "06 // DIRECT CONTACT & QUOTE",
+    "eyebrow": "",
     "headline": "Request a Technical Assessment or Quote",
     "lead": "Provide equipment specifications and photos of the nameplate for an accurate turnaround and cost estimate.",
     "representative": "Hamid Ali",

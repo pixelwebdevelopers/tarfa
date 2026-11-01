@@ -9,13 +9,15 @@ import {
   ArrowRight,
   ArrowLeft,
   ArrowUpRight,
-  Cpu,
-  Gauge,
-  Droplets,
-  Zap,
-  Layers,
-  Scale,
 } from "lucide-react";
+import {
+  MotorIcon,
+  CompressorIcon,
+  PumpIcon,
+  TransformerIcon,
+  StatorCoreIcon,
+  RotorBalancingIcon,
+} from "@/components/icons/IndustryIcons";
 import { cn } from "@/lib/utils";
 
 export function ServicesIndexTable() {
@@ -38,48 +40,42 @@ export function ServicesIndexTable() {
   const services = [
     {
       id: "motors",
-      code: "01",
-      icon: Cpu,
+      icon: MotorIcon,
       title: t("items.0.title"),
       specs: t("items.0.specs"),
       link: "/services/motors",
     },
     {
       id: "chiller-compressors",
-      code: "02",
-      icon: Gauge,
+      icon: CompressorIcon,
       title: t("items.1.title"),
       specs: t("items.1.specs"),
       link: "/services/chiller-compressors",
     },
     {
       id: "water-pumps",
-      code: "03",
-      icon: Droplets,
+      icon: PumpIcon,
       title: t("items.2.title"),
       specs: t("items.2.specs"),
       link: "/services/water-pumps",
     },
     {
       id: "generators-transformers",
-      code: "04",
-      icon: Zap,
+      icon: TransformerIcon,
       title: t("items.3.title"),
       specs: t("items.3.specs"),
       link: "/services/generators-transformers",
     },
     {
       id: "core-maintenance",
-      code: "05",
-      icon: Layers,
+      icon: StatorCoreIcon,
       title: t("items.4.title"),
       specs: t("items.4.specs"),
       link: "/services/core-maintenance",
     },
     {
       id: "testing-balancing",
-      code: "06",
-      icon: Scale,
+      icon: RotorBalancingIcon,
       title: t("items.5.title"),
       specs: t("items.5.specs"),
       link: "/services/testing-balancing",
@@ -124,13 +120,10 @@ export function ServicesIndexTable() {
                 {/* Red left/right indicator bar on hover */}
                 <div className="absolute top-0 bottom-0 start-0 w-1 bg-brand-red opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                {/* Col A: Index Code, Icon & Title */}
+                {/* Col A: Icon & Title */}
                 <div className="lg:w-5/12 flex items-center gap-4 sm:gap-5">
-                  <span className="font-mono text-sm sm:text-base font-bold text-brand-red">
-                    {item.code}
-                  </span>
-                  <div className="w-10 h-10 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                    <Icon className="w-5 h-5" />
+                  <div className="w-11 h-11 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                    <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal-950 dark:text-white group-hover:text-white transition-colors">
                     {item.title}

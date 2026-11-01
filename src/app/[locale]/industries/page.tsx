@@ -7,23 +7,26 @@ import { Button } from "@/components/Button";
 import {
   ArrowRight,
   ArrowLeft,
-  Building2,
-  Factory,
-  Construction,
-  HeartPulse,
-  Wheat,
-  Utensils,
   Clock,
   ShieldCheck,
   Truck,
-  Droplets,
-  Cpu,
-  Zap,
-  Flame,
   Wind,
-  Gauge,
-  Layers,
 } from "lucide-react";
+import {
+  MotorIcon,
+  CompressorIcon,
+  PumpIcon,
+  TransformerIcon,
+  StatorCoreIcon,
+  RotorBalancingIcon,
+  GovernmentWorksIcon,
+  SteelIndustryIcon,
+  CementIndustryIcon,
+  ConstructionIndustryIcon,
+  HealthcareIndustryIcon,
+  FlourMillIcon,
+  ColdChainFoodIcon,
+} from "@/components/icons/IndustryIcons";
 
 export async function generateMetadata({
   params,
@@ -55,130 +58,124 @@ export default async function IndustriesPage({
   const sectors = [
     {
       id: "government",
-      icon: Building2,
-      code: "SECTOR 01",
+      icon: GovernmentWorksIcon,
       name: isAr ? "المشاريع الحكومية والمرافق العامة" : "Government Projects & Public Utilities",
       chips: isAr
         ? ["محطات الضخ الكبرى", "محولات التوزيع", "مشاريع البنية التحتية"]
         : ["Deep Extraction", "Power Distribution", "Municipal Networks"],
       equipment: [
         {
-          icon: Droplets,
+          icon: PumpIcon,
           title: isAr ? "مضخات الآبار الارتوازية الغاطسة عالية القدرة" : "Deep Well Submersible Pump Sets",
         },
         {
-          icon: Cpu,
+          icon: PumpIcon,
           title: isAr ? "محركات محطات الضخ الرئيسية متعددة المراحل" : "Main Municipal Booster & Multistage Pumps",
         },
         {
-          icon: Zap,
+          icon: TransformerIcon,
           title: isAr ? "محولات التوزيع ومولدات الديزل الاحتياطية" : "Distribution Transformers & Standby Gensets",
         },
       ],
     },
     {
       id: "steel",
-      icon: Factory,
-      code: "SECTOR 02",
+      icon: SteelIndustryIcon,
       name: isAr ? "صناعات الحديد والصلب" : "Steel & Heavy Metal Manufacturing",
       chips: isAr
         ? ["بيئات حرارية شاقة", "عزم بدء فائق", "عزل الفئة H"]
         : ["Severe Duty", "Continuous Rolling", "Class H Insulation"],
       equipment: [
         {
-          icon: Cpu,
+          icon: MotorIcon,
           title: isAr ? "محركات الدرفلة الرئيسية ومحركات التيار المستمر" : "Rolling Mill Drives & Heavy DC Armatures",
         },
         {
-          icon: Zap,
+          icon: MotorIcon,
           title: isAr ? "محركات روافع الصهر ذات حلقات الانزلاق" : "Furnace Crane Slip-Ring Hoist Motors",
         },
         {
-          icon: Wind,
+          icon: PumpIcon,
           title: isAr ? "مراوح أبراج التبريد ومضخات السوائل الكثيفة" : "Cooling Tower Draft Blowers & Slurry Pumps",
         },
       ],
     },
     {
       id: "cement",
-      icon: Layers,
-      code: "SECTOR 03",
+      icon: CementIndustryIcon,
       name: isAr ? "صناعات الإسمنت والجبس" : "Cement & Heavy Mineral Industries",
       chips: isAr
         ? ["مقاومة الغبار الكلسي", "مطاحن الكرات", "أفران دوارة"]
         : ["Abrasive Particulate", "Ball Mills", "Rotary Kiln Drives"],
       equipment: [
         {
-          icon: Cpu,
+          icon: MotorIcon,
           title: isAr ? "محركات أفران الإسمنت الرئيسية ومحركات الكسارات" : "Rotary Kiln Main Drives & Jaw Crushers",
         },
         {
-          icon: Gauge,
+          icon: RotorBalancingIcon,
           title: isAr ? "مراوح سحب الغبار الكبرى (موازنة ديناميكية ISO)" : "High-Inertia Baghouse Fans (ISO 1940)",
         },
         {
-          icon: Droplets,
+          icon: PumpIcon,
           title: isAr ? "مضخات طين الإسمنت ومنافيخ النقل الهوائي" : "Cement Slurry Pumps & Pneumatic Blowers",
         },
       ],
     },
     {
       id: "construction",
-      icon: Construction,
-      code: "SECTOR 04",
+      icon: ConstructionIndustryIcon,
       name: isAr ? "شركات المقاولات والإنشاءات الكبرى" : "Civil Construction & Infrastructure",
       chips: isAr
         ? ["نزح المياه الجوفية", "خلاطات خرسانية", "مولدات ميدانية"]
         : ["Site Dewatering", "Batching Plants", "Mobile Generators"],
       equipment: [
         {
-          icon: Droplets,
+          icon: PumpIcon,
           title: isAr ? "مضخات نزح المياه الجوفية الغاطسة المقاومة للطمي" : "Submersible Dewatering & Slurry Pumps",
         },
         {
-          icon: Cpu,
+          icon: MotorIcon,
           title: isAr ? "محركات محطات الخرسانة الجاهزة ومضخات الحقن" : "Ready-Mix Batching Drives & Grout Pumps",
         },
         {
-          icon: Zap,
+          icon: TransformerIcon,
           title: isAr ? "مولدات الديزل الميدانية لمواقع المشاريع" : "Skid-Mounted Site Generators & Alternators",
         },
       ],
     },
     {
       id: "hospitals",
-      icon: HeartPulse,
-      code: "SECTOR 05",
+      icon: HealthcareIndustryIcon,
       name: isAr ? "المستشفيات والمنشآت الصحية" : "Hospitals & Critical Healthcare Facilities",
       chips: isAr
         ? ["شيلرات التكييف المركزي", "طاقة طوارئ دون انقطاع", "مضخات تعقيم"]
         : ["Mission-Critical HVAC", "Zero-Tolerance Uptime", "Sterile Pumping"],
       equipment: [
         {
-          icon: Gauge,
+          icon: CompressorIcon,
           title: isAr ? "ضواغط الشيلرات المركزية (حلزونية ومكابس)" : "Central HVAC Chiller Compressors (Screw/Recip)",
         },
         {
-          icon: Zap,
+          icon: TransformerIcon,
           title: isAr ? "مولدات الطوارئ الاحتياطية لغرف العمليات" : "Emergency ICU Backup Generators & Sync Panels",
         },
         {
-          icon: Droplets,
+          icon: PumpIcon,
           title: isAr ? "مضخات تعزيز الضغط وشبكات مياه الإطفاء" : "Potable Water Booster Sets & Fire Pumps",
         },
       ],
     },
     {
       id: "flour-mills",
-      icon: Wheat,
-      code: "SECTOR 06",
+      icon: FlourMillIcon,
       name: isAr ? "مطاحن الدقيق وصوامع الغلال" : "Flour Mills & Grain Silo Facilities",
       chips: isAr
         ? ["بيئات قابلة للاشتعال", "نواقل لولبية", "منافيخ هوائية"]
         : ["Combustible Dust Proof", "Pneumatic Conveying", "Vertical Elevators"],
       equipment: [
         {
-          icon: Cpu,
+          icon: MotorIcon,
           title: isAr ? "محركات النواقل ومصاعد الحبوب الرأسية" : "Bucket Elevator Drives & Screw Conveyors",
         },
         {
@@ -186,30 +183,29 @@ export default async function IndustriesPage({
           title: isAr ? "منافيخ النقل الهوائي للدقيق (Roots Blowers)" : "Pneumatic Positive-Displacement Blowers",
         },
         {
-          icon: ShieldCheck,
+          icon: MotorIcon,
           title: isAr ? "محركات محكمة مقاومة لدخول الغبار العضوي" : "Totally Enclosed Dust-Proof Electric Motors",
         },
       ],
     },
     {
       id: "food",
-      icon: Utensils,
-      code: "SECTOR 07",
+      icon: ColdChainFoodIcon,
       name: isAr ? "الصناعات الغذائية ومستودعات التبريد" : "Food Processing & Cold Chain Logistics",
       chips: isAr
         ? ["غرف تجميد مركزية", "مضخات ستانلس ستيل", "خطوط تعبئة"]
         : ["Sub-Zero Cold Storage", "Sanitary Pumping", "Packaging Lines"],
       equipment: [
         {
-          icon: Gauge,
+          icon: CompressorIcon,
           title: isAr ? "ضواغط التبريد لغرف حفظ اللحوم والألبان" : "Cold-Room Ammonia & Freon Compressors",
         },
         {
-          icon: Droplets,
+          icon: PumpIcon,
           title: isAr ? "مضخات الستانلس ستيل الصحية لنقل السوائل" : "Sanitary Stainless Centrifugal & PD Pumps",
         },
         {
-          icon: Cpu,
+          icon: MotorIcon,
           title: isAr ? "محركات خطوط التعبئة وسيور الفرز الآلية" : "Automated Conveyor Drives & Washdown Motors",
         },
       ],
@@ -295,14 +291,9 @@ export default async function IndustriesPage({
                         <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors flex-shrink-0">
                           <Icon className="w-6 h-6" />
                         </div>
-                        <div>
-                          <span className="font-mono text-[10px] font-bold text-charcoal-400 block tracking-wider">
-                            {sector.code}
-                          </span>
-                          <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white leading-snug">
-                            {sector.name}
-                          </h3>
-                        </div>
+                        <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white leading-snug">
+                          {sector.name}
+                        </h3>
                       </div>
                     </div>
 

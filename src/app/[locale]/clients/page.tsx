@@ -119,8 +119,6 @@ export default async function ClientsPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="PARTNERS // TRACK RECORD"
-        badge={isAr ? "شراكات مستمرة منذ 1983" : "SERVING KSA SINCE 1983"}
         title={isAr ? "عملاؤنا وشركاء مسيرة التميز" : "Valued Corporate Clients & Industrial Partners"}
         description={isAr
           ? "على مدى أكثر من 40 عاماً، وثقت كبرى الشركات الصناعية والمؤسسات العامة في المملكة بقدرات تارفا في الحفاظ على استمرارية معداتها."
@@ -160,16 +158,6 @@ export default async function ClientsPage({
                 className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 flex flex-col justify-between space-y-5 hover:border-brand-red transition-all duration-200 shadow-hairline group"
               >
                 <div className="space-y-4">
-                  {/* Top card metadata */}
-                  <div className="flex items-center justify-between border-b border-charcoal-100 dark:border-charcoal-800 pb-2.5">
-                    <span className="font-mono text-[11px] font-bold text-brand-red">
-                      {idx < 9 ? `CLIENT 0${idx + 1}` : `CLIENT ${idx + 1}`}
-                    </span>
-                    <span className="font-mono text-[10px] text-charcoal-400 uppercase">
-                      {c.location}
-                    </span>
-                  </div>
-
                   {/* Logo Display Box */}
                   <div className="h-20 w-full flex items-center justify-center p-3 bg-white dark:bg-charcoal-850 border border-charcoal-200/80 dark:border-charcoal-750">
                     <div className="relative w-full h-12 flex items-center justify-center">
@@ -223,7 +211,7 @@ export default async function ClientsPage({
               </span>
             </div>
             <span className="font-bold text-brand-red uppercase flex-shrink-0">
-              EST. 1983 // 40+ YEARS
+              SERVING KSA SINCE 1983
             </span>
           </div>
         </div>

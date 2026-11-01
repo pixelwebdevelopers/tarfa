@@ -68,8 +68,6 @@ export default async function TestingBalancingPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="SERVICE 06 // TESTING & BALANCING"
-        badge={isAr ? "معيار ISO 1940 وفحوصات الجهد العالي" : "ISO 1940 G2.5 // SURGE & HIPOT"}
         title={isAr ? "الفحوصات الهندسية وموازنة الروتور الديناميكية" : "Diagnostic Testing & Precision Rotor Balancing"}
         description={isAr
           ? "فحوصات ساكنة شاملة، اختبارات مقارنة النبضة، موازنة ديناميكية للأعضاء الدوارة وفق أعلى المعايير الهندسية بالرياض."
@@ -87,7 +85,6 @@ export default async function TestingBalancingPage({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <SectionHeading
-                eyebrow="CAPABILITY SCOPE 06"
                 title={isAr ? "دقة الاختبار تضمن سلامة التشغيل واستقرار الأداء" : "Precision Balancing Eliminates Machine Vibration at Root"}
               />
 
@@ -133,7 +130,7 @@ export default async function TestingBalancingPage({
 
                 <div className="absolute bottom-4 start-4 end-4 z-10 bg-charcoal-950/90 border border-charcoal-700 p-3 font-mono text-xs text-white backdrop-blur-xs">
                   <span className="text-brand-red font-bold block text-[10px] uppercase mb-0.5">
-                    TESTING BAY 06 // RIYADH
+                    TESTING BAY, RIYADH
                   </span>
                   <span className="text-charcoal-300 text-xs">
                     {isAr
@@ -151,7 +148,6 @@ export default async function TestingBalancingPage({
       <section className="py-16 lg:py-20 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <SectionHeading
-            eyebrow="TECHNICAL MATRIX 06"
             title={isAr ? "جدول مواصفات الفحوصات الساكنة والموازنة" : "Testing Protocols & Dynamic Balancing Specifications"}
             description={isAr
               ? "مواصفات ومعايير فحص العزل، موازنة الأعضاء الدوارة، وصيانة حلقات الانزلاق وفق الممارسات المعتمدة."
@@ -161,7 +157,7 @@ export default async function TestingBalancingPage({
 
           <SpecTable
             title={isAr ? "مصفوفة المواصفات الفنية للاختبارات والموازنة" : "Diagnostic Testing & Rotor Balancing Specification Matrix"}
-            caption="ISO 1940 // IEEE 43 // EASA AR100 COMPLIANT"
+            caption="ISO 1940 · IEEE 43 · EASA AR100 COMPLIANT"
             headers={{
               equipment: isAr ? "نوع الفحص أو المعايرة" : "Diagnostic Discipline",
               scope: isAr ? "نطاق الفحص والمعايرة" : "Test Scope & Calibration Standard",

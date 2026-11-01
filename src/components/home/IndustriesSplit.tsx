@@ -5,17 +5,16 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import {
-  Landmark,
-  Flame,
-  Boxes,
-  HardHat,
-  Stethoscope,
-  Wind,
-  UtensilsCrossed,
-  ArrowRight,
-  ArrowLeft,
-} from "lucide-react";
+  GovernmentWorksIcon,
+  SteelIndustryIcon,
+  CementIndustryIcon,
+  ConstructionIndustryIcon,
+  HealthcareIndustryIcon,
+  FlourMillIcon,
+  ColdChainFoodIcon,
+} from "@/components/icons/IndustryIcons";
 
 export function IndustriesSplit() {
   const t = useTranslations("industries");
@@ -25,37 +24,37 @@ export function IndustriesSplit() {
 
   const sectors = [
     {
-      icon: Landmark,
+      icon: GovernmentWorksIcon,
       name: t("sectors.0.name"),
       tag: isAr ? "محطات الضخ وتوليد الكهرباء" : "Municipal Pumping & Power Stations",
     },
     {
-      icon: Flame,
+      icon: SteelIndustryIcon,
       name: t("sectors.1.name"),
       tag: isAr ? "محركات الدرفلة وأوناش الرفع" : "Mill Drives, Crane Motors & Furnace Pumps",
     },
     {
-      icon: Boxes,
+      icon: CementIndustryIcon,
       name: t("sectors.2.name"),
       tag: isAr ? "محركات الأفران ومضخات الحمأة" : "Kiln Drives, Exhaust Fans & Slurry Pumps",
     },
     {
-      icon: HardHat,
+      icon: ConstructionIndustryIcon,
       name: t("sectors.3.name"),
       tag: isAr ? "مضخات النزح ومولدات المواقع" : "Dewatering Pumps & Batching Plant Motors",
     },
     {
-      icon: Stethoscope,
+      icon: HealthcareIndustryIcon,
       name: t("sectors.4.name"),
       tag: isAr ? "ضواغط الشيلر ومولدات الطوارئ" : "Central HVAC Chillers & Backup Generators",
     },
     {
-      icon: Wind,
+      icon: FlourMillIcon,
       name: t("sectors.5.name"),
       tag: isAr ? "محركات منافيخ الهواء ومصاعد الحبوب" : "Blower Motors & Explosion-Proof Drives",
     },
     {
-      icon: UtensilsCrossed,
+      icon: ColdChainFoodIcon,
       name: t("sectors.6.name"),
       tag: isAr ? "ضواغط التجميد ومحركات خطوط التعبئة" : "Blast Freezers & Packaging Line Drives",
     },
@@ -96,7 +95,7 @@ export function IndustriesSplit() {
 
               <div className="absolute bottom-4 start-4 end-4 z-10 bg-charcoal-950/90 border border-charcoal-700 p-3 backdrop-blur-xs font-mono text-xs text-white">
                 <span className="text-brand-red font-bold block text-[10px] uppercase mb-0.5">
-                  HEAVY SECTORS // KINGDOM-WIDE
+                  KINGDOM-WIDE INDUSTRIAL SECTORS
                 </span>
                 <span>
                   {isAr

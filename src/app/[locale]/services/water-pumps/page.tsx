@@ -75,8 +75,6 @@ export default async function WaterPumpsPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="SERVICE 03 // WATER PUMPS"
-        badge={isAr ? "مضخات غاطسة وسطحية متعددة المراحل" : "SUBMERSIBLE & CENTRIFUGAL"}
         title={isAr ? "إعادة لف وصيانة المضخات المائية والصناعية" : "Water & Industrial Pump Overhaul & Rewinding"}
         description={isAr
           ? "حلول هندسية متكاملة لمضخات المياه النظيفة، مضخات نزح المياه الجوفية، ومضخات العمليات الصناعية الثقيلة بالرياض."
@@ -94,7 +92,6 @@ export default async function WaterPumpsPage({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <SectionHeading
-                eyebrow="CAPABILITY SCOPE 03"
                 title={isAr ? "كفاءة مائية وهيدروليكية موثوقة لأعلى معايير التشغيل" : "Precision Hydraulic Rebuilding for Municipal & Heavy Plants"}
               />
 
@@ -140,7 +137,7 @@ export default async function WaterPumpsPage({
 
                 <div className="absolute bottom-4 start-4 end-4 z-10 bg-charcoal-950/90 border border-charcoal-700 p-3 font-mono text-xs text-white backdrop-blur-xs">
                   <span className="text-brand-red font-bold block text-[10px] uppercase mb-0.5">
-                    PUMP RECONDITIONING BAY // RIYADH
+                    PUMP RECONDITIONING BAY, RIYADH
                   </span>
                   <span className="text-charcoal-300 text-xs">
                     {isAr
@@ -158,7 +155,6 @@ export default async function WaterPumpsPage({
       <section className="py-16 lg:py-20 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <SectionHeading
-            eyebrow="TECHNICAL MATRIX 03"
             title={isAr ? "جدول مواصفات صيانة مضخات المياه الصناعية" : "Industrial Water Pump Specifications & Overhaul Protocol"}
             description={isAr
               ? "تفاصيل فئات المضخات الغاطسة ومضخات الطرد المركزي والإزاحة الإيجابية ومعايير الفحص الهيدروستاتيكي والموازنة."
@@ -168,7 +164,7 @@ export default async function WaterPumpsPage({
 
           <SpecTable
             title={isAr ? "مصفوفة المواصفات الفنية لمضخات المياه والعمليات" : "Industrial Pumps Engineering Specification Matrix"}
-            caption="HI (HYDRAULIC INSTITUTE) // ISO 9906 // ISO 1940 COMPLIANT"
+            caption="HI (HYDRAULIC INSTITUTE) · ISO 9906 · ISO 1940 COMPLIANT"
             headers={{
               equipment: isAr ? "نوع وفئة المضخة" : "Pump Topology & Family",
               scope: isAr ? "نطاق العمرة وإعادة اللف" : "Reconditioning & Stator Rewind Scope",

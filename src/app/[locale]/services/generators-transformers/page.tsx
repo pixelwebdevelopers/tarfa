@@ -68,8 +68,6 @@ export default async function GeneratorsTransformersPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="SERVICE 04 // GENERATORS & TRANSFORMERS"
-        badge={isAr ? "محولات رفع وخفض ومولدات صناعية" : "STEP-UP / STEP-DOWN / PRIME ALTERNATORS"}
         title={isAr ? "المولدات والمولدات الفرعية والمحولات الكهربائية" : "Generators, Alternators & Transformer Overhaul"}
         description={isAr
           ? "صيانة كهروميكانيكية متخصصة لمولدات الطاقة والمحولات: إعادة لف الملفات، تبديل وفحص الزيوت العازلة، ومعايرة منظمات الجهد."
@@ -87,7 +85,6 @@ export default async function GeneratorsTransformersPage({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <SectionHeading
-                eyebrow="CAPABILITY SCOPE 04"
                 title={isAr ? "جاهزية واستقرار مصادر الطاقة ومحطات التوزيع" : "Ensuring Uninterrupted Electrical Power Distribution"}
               />
 
@@ -151,7 +148,6 @@ export default async function GeneratorsTransformersPage({
       <section className="py-16 lg:py-20 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <SectionHeading
-            eyebrow="TECHNICAL MATRIX 04"
             title={isAr ? "جدول مواصفات صيانة المولدات والمحولات" : "Generators, Alternators & Transformers Technical Matrix"}
             description={isAr
               ? "مصفوفة هندسية توضح نطاقات القدرة للمولدات والمحولات وفحوصات الزيت العازل ومعايير اختبار النبضة ونسب التحويل."
@@ -161,7 +157,7 @@ export default async function GeneratorsTransformersPage({
 
           <SpecTable
             title={isAr ? "مصفوفة المواصفات الفنية للمولدات والمحولات الكهربائية" : "Power Generation & Transformer Engineering Matrix"}
-            caption="IEEE C57 // IEC 60076 // IEC 60296 COMPLIANT"
+            caption="IEEE C57 · IEC 60076 · IEC 60296 COMPLIANT"
             headers={{
               equipment: isAr ? "المعدة وفئة التشغيل" : "Equipment Topology",
               scope: isAr ? "نطاق الصيانة وإعادة اللف" : "Rewind & Refurbishment Scope",

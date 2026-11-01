@@ -82,8 +82,6 @@ export default async function MotorsServicePage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="SERVICE 01 // MOTORS"
-        badge={isAr ? "من القدرات الصغيرة حتى الميجاوات" : "FRACTIONAL TO MULTI-MW"}
         title={isAr ? "إعادة لف وصيانة المحركات الكهربائية" : "Electric Motor Rewinding & Mechanical Overhaul"}
         description={isAr
           ? "إعادة لف متخصصة بالأسلاك الدائرية والشريطية لمحركات الجهد العالي والمنخفض، التيار المتردد والمستمر، محركات حلقات الانزلاق والسيرفو بالرياض."
@@ -102,7 +100,6 @@ export default async function MotorsServicePage({
             {/* Left 7 Cols */}
             <div className="lg:col-span-7 space-y-6">
               <SectionHeading
-                eyebrow="CAPABILITY SCOPE 01"
                 title={isAr ? "حيث يجد كل نوع من المحركات عناية هندسية فائقة" : "Where Every Motor Type Finds Expert Industrial Care"}
               />
 
@@ -150,7 +147,7 @@ export default async function MotorsServicePage({
 
                 <div className="absolute bottom-4 start-4 end-4 z-10 bg-charcoal-950/90 border border-charcoal-700 p-3 font-mono text-xs text-white backdrop-blur-xs">
                   <span className="text-brand-red font-bold block text-[10px] uppercase mb-0.5">
-                    FACILITY BAY 02 // REWINDING
+                    FACILITY REWINDING BAY
                   </span>
                   <span className="text-charcoal-300 text-xs">
                     {isAr
@@ -168,7 +165,6 @@ export default async function MotorsServicePage({
       <section className="py-16 lg:py-20 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <SectionHeading
-            eyebrow="TECHNICAL MATRIX 01"
             title={isAr ? "جدول مواصفات وفئات المحركات الكهربائية" : "Electric Motor Specifications & Diagnostic Protocol"}
             description={isAr
               ? "مصفوفة تفصيلية لنطاقات القدرة، أساليب إعادة اللف، واختبارات الجودة لجميع أنواع المحركات المعتمدة بالورشة."
@@ -178,7 +174,7 @@ export default async function MotorsServicePage({
 
           <SpecTable
             title={isAr ? "مصفوفة المواصفات الهندسية للمحركات الكهربائية" : "Electric Motors Engineering & Testing Matrix"}
-            caption="IEC 60034 // IEEE 43 // ISO 1940 COMPLIANT"
+            caption="IEC 60034 · IEEE 43 · ISO 1940 COMPLIANT"
             headers={{
               equipment: isAr ? "نوع المحرك والفئة" : "Motor Topology & Class",
               scope: isAr ? "نطاق العمرة وإعادة اللف" : "Rewinding & Repair Scope",
@@ -194,13 +190,12 @@ export default async function MotorsServicePage({
       <section className="py-16 bg-white dark:bg-charcoal-900 border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <SectionHeading
-            eyebrow="QUALITY CONTROLS"
             title={isAr ? "مراحل الفحص وضمان جودة لف المحرك" : "Quality Assurance & Testing Stages"}
           />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 font-mono text-xs text-start">
             <div className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 space-y-2">
-              <span className="text-brand-red font-bold text-sm block">01 // PRE-TEST</span>
+              <span className="text-brand-red font-bold text-xs uppercase block">PRE-TEST INSPECTION</span>
               <h4 className="font-heading font-bold text-sm text-charcoal-900 dark:text-white">
                 {isAr ? "الفحص الأولي للقلب" : "Loop Flux & Stator Core Test"}
               </h4>
@@ -210,7 +205,7 @@ export default async function MotorsServicePage({
             </div>
 
             <div className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 space-y-2">
-              <span className="text-brand-red font-bold text-sm block">02 // IN-PROCESS</span>
+              <span className="text-brand-red font-bold text-xs uppercase block">IN-PROCESS TESTING</span>
               <h4 className="font-heading font-bold text-sm text-charcoal-900 dark:text-white">
                 {isAr ? "فحص مقارنة النبضة (Surge)" : "Surge Comparison Testing"}
               </h4>
@@ -220,7 +215,7 @@ export default async function MotorsServicePage({
             </div>
 
             <div className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 space-y-2">
-              <span className="text-brand-red font-bold text-sm block">03 // ROTOR</span>
+              <span className="text-brand-red font-bold text-xs uppercase block">ROTOR BALANCING</span>
               <h4 className="font-heading font-bold text-sm text-charcoal-900 dark:text-white">
                 {isAr ? "موازنة الروتور الحركية" : "Dynamic Rotor Balancing"}
               </h4>
@@ -230,7 +225,7 @@ export default async function MotorsServicePage({
             </div>
 
             <div className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 space-y-2">
-              <span className="text-brand-red font-bold text-sm block">04 // DISPATCH</span>
+              <span className="text-brand-red font-bold text-xs uppercase block">FINAL RUN & DISPATCH</span>
               <h4 className="font-heading font-bold text-sm text-charcoal-900 dark:text-white">
                 {isAr ? "التشغيل التجريبي الكامل" : "No-Load Run Test & Report"}
               </h4>
@@ -247,7 +242,7 @@ export default async function MotorsServicePage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">
-              QUOTE ESTIMATE // FAST TURNAROUND
+              FAST TURNAROUND ESTIMATE
             </span>
             <h3 className="font-heading font-bold text-xl text-white">
               {isAr ? "هل ترغب في تقييم عطل محرك أو طلب عرض سعر إعادة لف؟" : "Facing Motor Burnout or Planning Scheduled Rewind?"}

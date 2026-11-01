@@ -103,8 +103,6 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="LIAISON // DIRECT RFQ"
-        badge={isAr ? "استجابة فنية خلال 24 ساعة" : "24H TECHNICAL RESPONSE"}
         title={isAr ? "التواصل المباشر وطلب عروض الأسعار" : "Contact & Technical Quotation Gateway"}
         description={isAr
           ? "تواصل مباشرة مع فريقنا الهندسي بالرياض للحصول على تقييم فني لعطل المعدة أو طلب عرض سعر إعادة لف وعمرة شاملة."
@@ -121,7 +119,6 @@ export default function ContactPage() {
             {/* Left 5 Cols: Contact Information Cards */}
             <div className="lg:col-span-5 space-y-6">
               <SectionHeading
-                eyebrow="WORKSHOP DIRECTORY"
                 title={isAr ? "بيانات التواصل ومقر الورشة" : "Direct Technical Directory"}
                 description={isAr
                   ? "فريقنا الهندسي جاهز لاستقبال المعدات أو ترتيب زيارة ميدانية لفحص المعدات في موقع مصنعك."
@@ -270,7 +267,7 @@ export default function ContactPage() {
             <div className="lg:col-span-7 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 sm:p-8 lg:p-10 shadow-hairline space-y-6">
               <div className="space-y-2 border-b border-charcoal-100 dark:border-charcoal-800 pb-4">
                 <span className="font-mono text-xs uppercase tracking-wider text-brand-red font-bold">
-                  RFQ PORTAL // 24-HOUR ESTIMATE
+                  RFQ PORTAL · 24-HOUR ESTIMATE
                 </span>
                 <h3 className="font-heading font-extrabold text-2xl text-charcoal-950 dark:text-white">
                   {t("form.submit")}

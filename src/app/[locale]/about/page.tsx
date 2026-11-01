@@ -11,10 +11,12 @@ import {
   AlertCircle,
   ArrowRight,
   ArrowLeft,
-  Scale,
-  Flame,
-  Zap,
 } from "lucide-react";
+import {
+  RotorBalancingIcon,
+  BakingOvenIcon,
+  ElectricalTestIcon,
+} from "@/components/icons/IndustryIcons";
 
 export async function generateMetadata({
   params,
@@ -62,7 +64,6 @@ export default async function AboutPage({
             {/* Left 6 Cols: History Narrative */}
             <div className="lg:col-span-6 space-y-6">
               <SectionHeading
-                eyebrow="01 // FOUNDATION & HERITAGE"
                 title={isAr ? "نبض خدمات إعادة اللف منذ عام 1983" : "The Pulse of Industrial Rewinding Since 1983"}
               />
 
@@ -86,9 +87,6 @@ export default async function AboutPage({
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-mono text-[10px] uppercase text-brand-red font-bold block mb-0.5">
-                      PILLAR 01
-                    </span>
                     <span className="font-heading font-bold text-sm text-charcoal-900 dark:text-white block">
                       {isAr ? "بيت الجودة" : "House of Quality"}
                     </span>
@@ -103,9 +101,6 @@ export default async function AboutPage({
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="font-mono text-[10px] uppercase text-brand-red font-bold block mb-0.5">
-                      PILLAR 02
-                    </span>
                     <span className="font-heading font-bold text-sm text-charcoal-900 dark:text-white block">
                       {isAr ? "الخبرة الممتدة" : "40+ Years Heritage"}
                     </span>
@@ -131,7 +126,7 @@ export default async function AboutPage({
 
                 <div className="absolute bottom-4 start-4 end-4 z-10 bg-charcoal-950/90 border border-charcoal-700 p-3 font-mono text-xs text-white backdrop-blur-xs">
                   <span className="text-brand-red font-bold block text-[10px] uppercase mb-0.5">
-                    WORKSHOP INFRASTRUCTURE // RIYADH SINA'IYAH
+                    RIYADH SINA'IYAH WORKSHOP
                   </span>
                   <span className="text-charcoal-300 text-xs">
                     {isAr
@@ -149,7 +144,6 @@ export default async function AboutPage({
       <section className="py-16 lg:py-20 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <SectionHeading
-            eyebrow="02 // WORKSHOP TOOLING & INFRASTRUCTURE"
             title={isAr ? "تجهيزات الورشة ومحطات الفحص الهندسي" : "Workshop Equipment & Diagnostic Bays"}
             description={isAr
               ? "صممت ورشتنا في المدينة الصناعية بالرياض للتعامل مع محركات الجهد العالي والضواغط الصناعية الثقيلة."
@@ -159,13 +153,8 @@ export default async function AboutPage({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
-              <div className="flex items-center justify-between">
-                <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
-                  <Scale className="w-6 h-6" />
-                </div>
-                <span className="font-mono text-xs text-brand-red font-bold">
-                  STATION 01
-                </span>
+              <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+                <RotorBalancingIcon className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
@@ -183,13 +172,8 @@ export default async function AboutPage({
             </div>
 
             <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
-              <div className="flex items-center justify-between">
-                <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
-                  <Flame className="w-6 h-6" />
-                </div>
-                <span className="font-mono text-xs text-brand-red font-bold">
-                  STATION 02
-                </span>
+              <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+                <BakingOvenIcon className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
@@ -207,13 +191,8 @@ export default async function AboutPage({
             </div>
 
             <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
-              <div className="flex items-center justify-between">
-                <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <span className="font-mono text-xs text-brand-red font-bold">
-                  STATION 03
-                </span>
+              <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+                <ElectricalTestIcon className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
@@ -240,7 +219,7 @@ export default async function AboutPage({
             <div className="flex items-center gap-2">
               <AlertCircle className="w-4 h-4 text-brand-red" />
               <span className="font-mono text-xs uppercase font-bold text-brand-red tracking-wider">
-                CONTENT INTEGRITY // CLIENT DOCUMENTATION PENDING
+                CLIENT DOCUMENTATION VERIFICATION
               </span>
             </div>
             <p className="font-mono text-xs text-charcoal-500 dark:text-charcoal-400 leading-relaxed">

@@ -15,13 +15,15 @@ import {
   ArrowLeft,
   Wrench,
   ShieldCheck,
-  Cpu,
-  Layers,
-  Gauge,
-  Zap,
-  Droplets,
-  Scale,
 } from "lucide-react";
+import {
+  MotorIcon,
+  CompressorIcon,
+  PumpIcon,
+  TransformerIcon,
+  StatorCoreIcon,
+  RotorBalancingIcon,
+} from "@/components/icons/IndustryIcons";
 import { COMPANY_DETAILS } from "@/config/contact";
 import { LanguageToggle } from "./LanguageToggle";
 import { Button } from "./Button";
@@ -57,38 +59,32 @@ export function Header() {
     {
       href: "/services/motors",
       title: t("servicesMenu.motors.title"),
-      icon: Cpu,
-      code: "01",
+      icon: MotorIcon,
     },
     {
       href: "/services/chiller-compressors",
       title: t("servicesMenu.chillerCompressors.title"),
-      icon: Gauge,
-      code: "02",
+      icon: CompressorIcon,
     },
     {
       href: "/services/water-pumps",
       title: t("servicesMenu.waterPumps.title"),
-      icon: Droplets,
-      code: "03",
+      icon: PumpIcon,
     },
     {
       href: "/services/generators-transformers",
       title: t("servicesMenu.generatorsTransformers.title"),
-      icon: Zap,
-      code: "04",
+      icon: TransformerIcon,
     },
     {
       href: "/services/core-maintenance",
       title: t("servicesMenu.coreMaintenance.title"),
-      icon: Layers,
-      code: "05",
+      icon: StatorCoreIcon,
     },
     {
       href: "/services/testing-balancing",
       title: t("servicesMenu.testingBalancing.title"),
-      icon: Scale,
-      code: "06",
+      icon: RotorBalancingIcon,
     },
   ];
 
@@ -228,10 +224,7 @@ export function Header() {
                                 <div className="w-10 h-10 flex-shrink-0 bg-white dark:bg-charcoal-900 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center group-hover/item:bg-brand-red group-hover/item:text-white transition-colors">
                                   <Icon className="w-5 h-5" />
                                 </div>
-                                <div className="space-y-0.5 min-w-0">
-                                  <span className="font-mono text-[10px] text-brand-red group-hover/item:text-brand-red font-bold block uppercase tracking-wider">
-                                    SERVICE {item.code}
-                                  </span>
+                                <div className="min-w-0">
                                   <span className="font-heading text-xs sm:text-sm font-extrabold text-charcoal-950 dark:text-white group-hover/item:text-white transition-colors line-clamp-1 block">
                                     {item.title}
                                   </span>
@@ -332,9 +325,6 @@ export function Header() {
                       <Icon className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">
-                      <span className="font-mono text-[9px] text-brand-red font-bold block">
-                        SERVICE {item.code}
-                      </span>
                       <span className="font-heading text-xs font-bold text-charcoal-900 dark:text-white block line-clamp-1">
                         {item.title}
                       </span>

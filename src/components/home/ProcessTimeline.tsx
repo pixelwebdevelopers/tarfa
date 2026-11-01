@@ -3,16 +3,16 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
+import { AlertCircle } from "lucide-react";
 import {
-  ClipboardCheck,
-  Search,
-  Wrench,
-  Flame,
-  Scale,
-  ShieldCheck,
-  Truck,
-  AlertCircle,
-} from "lucide-react";
+  LogInspectionIcon,
+  TeardownIcon,
+  RewindingSpoolIcon,
+  BakingOvenIcon,
+  BalancingRigIcon,
+  ElectricalTestIcon,
+  DispatchCrateIcon,
+} from "@/components/icons/IndustryIcons";
 
 export function ProcessTimeline() {
   const t = useTranslations("process");
@@ -22,43 +22,43 @@ export function ProcessTimeline() {
   const steps = [
     {
       num: "01",
-      icon: ClipboardCheck,
+      icon: LogInspectionIcon,
       title: t("steps.0.title"),
       badge: isAr ? "فحص أولي وتوثيق" : "INCOMING LOG",
     },
     {
       num: "02",
-      icon: Search,
+      icon: TeardownIcon,
       title: t("steps.1.title"),
       badge: isAr ? "تفكيك وتشخيص" : "DIAGNOSTICS",
     },
     {
       num: "03",
-      icon: Wrench,
+      icon: RewindingSpoolIcon,
       title: t("steps.2.title"),
       badge: isAr ? "إعادة لف وعزل" : "PRECISION REWIND",
     },
     {
       num: "04",
-      icon: Flame,
+      icon: BakingOvenIcon,
       title: t("steps.3.title"),
       badge: isAr ? "غمر وتحميص حراري" : "VPI & BAKING",
     },
     {
       num: "05",
-      icon: Scale,
+      icon: BalancingRigIcon,
       title: t("steps.4.title"),
       badge: isAr ? "موازنة ديناميكية" : "ISO 1940 BALANCE",
     },
     {
       num: "06",
-      icon: ShieldCheck,
+      icon: ElectricalTestIcon,
       title: t("steps.5.title"),
       badge: isAr ? "فحص التشغيل والحمل" : "FULL RUN TEST",
     },
     {
       num: "07",
-      icon: Truck,
+      icon: DispatchCrateIcon,
       title: t("steps.6.title"),
       badge: isAr ? "تقرير فني وتسليم" : "QC & DISPATCH",
     },

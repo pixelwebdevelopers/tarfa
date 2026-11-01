@@ -96,9 +96,6 @@ export function CoreMaintenanceMosaic() {
             </div>
 
             <div className="p-6 sm:p-7 space-y-2 text-start bg-charcoal-900">
-              <span className="font-mono text-xs text-brand-red font-semibold">
-                PROCESS 01 // ELECTROMAGNETIC DIAGNOSTICS
-              </span>
               <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">
                 {panels[0].title}
               </h3>
@@ -123,9 +120,6 @@ export function CoreMaintenanceMosaic() {
                 />
               </div>
               <div className="space-y-1.5 flex-1">
-                <span className="font-mono text-[10px] text-brand-red font-bold uppercase tracking-wider block">
-                  PROCESS 02 // {panels[1].tag}
-                </span>
                 <h4 className="font-heading font-bold text-base sm:text-lg text-white">
                   {panels[1].title}
                 </h4>
@@ -148,9 +142,6 @@ export function CoreMaintenanceMosaic() {
                 />
               </div>
               <div className="space-y-1.5 flex-1">
-                <span className="font-mono text-[10px] text-brand-red font-bold uppercase tracking-wider block">
-                  PROCESS 03 // {panels[2].tag}
-                </span>
                 <h4 className="font-heading font-bold text-base sm:text-lg text-white">
                   {panels[2].title}
                 </h4>

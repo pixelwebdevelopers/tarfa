@@ -27,7 +27,6 @@ export default async function PrivacyPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="LEGAL // PRIVACY"
         title={isAr ? "سياسة الخصوصية وحماية البيانات" : "Privacy & Data Protection Policy"}
         description={isAr
           ? "تلتزم شركة تارفا لصيانة المعدات بحماية خصوصية بيانات عملائها وشركائها الصناعيين وفق الأنظمة المعتمدة في المملكة العربية السعودية."

@@ -68,7 +68,7 @@ export function Footer() {
                   {isAr ? "تارفا لصيانة المعدات" : "TARFA"}
                 </span>
                 <span className="font-mono text-[10px] text-brand-red font-semibold tracking-wider uppercase">
-                  {isAr ? "بيت الجودة // تأسست 1983" : "HOUSE OF QUALITY // EST. 1983"}
+                  {isAr ? "بيت الجودة · تأسست 1983" : "HOUSE OF QUALITY · EST. 1983"}
                 </span>
               </div>
             </Link>
