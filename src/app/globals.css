@@ -27,7 +27,9 @@
   }
 
   body {
-    background-color: var(--color-canvas-warm);
+    background-color: #F8F7F4;
+    background-image: url('/images/bg.webp');
+    background-repeat: repeat;
     color: #0F172A;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
@@ -132,6 +134,27 @@
     border-right: 2px solid var(--color-brand-red);
     pointer-events: none;
     z-index: 10;
+  }
+
+  /* Creamy Dotted Background Pattern (128x128 repeat tile) */
+  .bg-cream-dots,
+  .bg-cream-pattern {
+    background-image: url('/images/bg.webp');
+    background-repeat: repeat;
+  }
+
+  /* Repeat creamy dotted background on all light website background sections */
+  section.bg-white,
+  section.bg-canvas-warm {
+    background-image: url('/images/bg.webp');
+    background-repeat: repeat;
+  }
+
+  /* Dark mode overrides */
+  .dark section.bg-white,
+  .dark section.bg-canvas-warm,
+  .dark body {
+    background-image: none;
   }
 }
 

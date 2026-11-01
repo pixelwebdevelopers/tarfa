@@ -62,6 +62,10 @@ const config: Config = {
         "hairline-dark": "0 0 0 1px rgba(255, 255, 255, 0.08)",
         technical: "0 1px 3px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.06)",
       },
+      backgroundImage: {
+        "cream-dots": "url('/images/bg.webp')",
+        "cream-pattern": "url('/images/bg.webp')",
+      },
     },
   },
   plugins: [],
