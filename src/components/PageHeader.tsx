@@ -31,19 +31,6 @@ export function PageHeader({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 relative z-10 text-start">
         <Breadcrumbs items={breadcrumbs} className="mb-3" />
 
-        <div className="flex flex-wrap items-center gap-3">
-          {sectionNumber && (
-            <span className="font-mono text-xs uppercase tracking-widest text-brand-red font-bold">
-              {sectionNumber}
-            </span>
-          )}
-          {badge && (
-            <span className="font-mono text-[10px] uppercase tracking-wider bg-charcoal-800 text-charcoal-300 border border-charcoal-700 px-2 py-0.5 industrial-cut-badge">
-              {badge}
-            </span>
-          )}
-        </div>
-
         <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight max-w-4xl">
           {title}
         </h1>
