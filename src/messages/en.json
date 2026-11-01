@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "siteTitle": "Tarfa Equipment Maintenance | Riyadh, Saudi Arabia",
+    "siteDescription": "Tarfa Equipment Maintenance (Est. 1983, Riyadh) provides specialized industrial rewinding, overhaul, and repair of motors, chiller compressors, pumps, generators, alternators, and transformers.",
+    "ogTitle": "Tarfa Equipment Maintenance | House of Quality Since 1983",
+    "ogDescription": "Industrial-grade electrical and mechanical rewinding and repair services in Riyadh, Saudi Arabia."
+  },
+  "common": {
+    "est": "EST. 1983",
+    "location": "Riyadh, KSA",
+    "houseOfQuality": "House of Quality",
+    "tagline": "Where Excellence Meets Expertise",
+    "requestQuote": "Request a Quote",
+    "viewServices": "View Services",
+    "exploreCapabilities": "Explore Capabilities",
+    "downloadProfile": "Download Profile",
+    "contactExpert": "Contact an Engineer",
+    "callDirect": "Call Direct",
+    "whatsappDirect": "WhatsApp Inquiry",
+    "allRightsReserved": "All rights reserved",
+    "specLabel": "SPECIFICATION // TECHNICAL STANDARD",
+    "learnMore": "Learn More",
+    "backToHome": "Return to Home",
+    "backToServices": "Back to Services",
+    "verifiedClient": "Verified Partner",
+    "readTime": "Technical Overview",
+    "serviceCatalog": "Service Catalog"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "industries": "Industries",
+    "process": "Our Process",
+    "clients": "Clients",
+    "contact": "Contact & Quote",
+    "styleguide": "Design System",
+    "servicesMenu": {
+      "motors": {
+        "title": "Electric Motors Rewinding & Overhaul",
+        "desc": "AC, DC, synchronous & special motors up to high-voltage classes."
+      },
+      "chillerCompressors": {
+        "title": "Chiller Compressors Maintenance",
+        "desc": "Reciprocating, screw & centrifugal compressor rewinding and overhauling."
+      },
+      "waterPumps": {
+        "title": "Water & Industrial Pumps",
+        "desc": "Centrifugal, submersible, multistage, dewatering, slurry & booster pumps."
+      },
+      "generatorsTransformers": {
+        "title": "Generators & Transformers",
+        "desc": "Alternators, step-up/down transformers, oil replacement & coil rewinding."
+      },
+      "coreMaintenance": {
+        "title": "Stator Core Maintenance",
+        "desc": "Specialized core testing, cleaning, re-varnishing & spot welding."
+      },
+      "testingBalancing": {
+        "title": "Testing & Dynamic Rotor Balancing",
+        "desc": "Static electrical tests, insulation diagnostics & precision rotor balancing."
+      }
+    }
+  },
+  "hero": {
+    "eyebrow": "ELECTROMECHANICAL WORKSHOP // RIYADH SINAIYAH",
+    "headline": "Precision Rewinding & Heavy Electromechanical Maintenance Since 1983.",
+    "subheadline": "Tarfa provides industrial-grade rewinding, overhaul, and static/dynamic testing for electric motors, chiller compressors, industrial pumps, and transformers across the Kingdom.",
+    "primaryCta": "Request a Technical Quote",
+    "secondaryCta": "View Service Capabilities",
+    "establishedBadge": "40+ Years of Industrial Service",
+    "specs": [
+      { "label": "VOLTAGE CAPACITY", "val": "Up to 13.8 kV" },
+      { "label": "TESTING STANDARD", "val": "Static & Dynamic Load" },
+      { "label": "WORKSHOP FACILITY", "val": "Al Sina'iyah, Riyadh" }
+    ]
+  },
+  "credibility": {
+    "items": [
+      {
+        "mono": "01 // FOUNDATION",
+        "value": "Since 1983",
+        "label": "Over four decades of continuous industrial service in Saudi Arabia"
+      },
+      {
+        "mono": "02 // LOCATION",
+        "value": "Riyadh, KSA",
+        "label": "Centrally based in Riyadh's industrial core (Al Sina'iyah)"
+      },
+      {
+        "mono": "03 // CAPACITY",
+        "value": "Low & High Voltage",
+        "label": "Round wire & strip wire rewinding for fractional to heavy megawatt drives"
+      },
+      {
+        "mono": "04 // QUALITY",
+        "value": "100% Verified",
+        "label": "Surge, insulation resistance, core loss, and rotor dynamic balancing"
+      }
+    ]
+  },
+  "servicesIndex": {
+    "eyebrow": "01 // INDUSTRIAL CAPABILITIES",
+    "headline": "Engineered Rewinding & Electromechanical Maintenance",
+    "description": "Every machine is inspected, repaired, baked, and tested to OEM standards to minimize plant downtime.",
+    "items": [
+      {
+        "id": "motors",
+        "code": "SERVICE 01",
+        "title": "Low & High Voltage Electric Motors",
+        "scope": "Round & strip wire rewinding for AC induction, DC shunt/series, synchronous, slip-ring, and servo motors.",
+        "specs": "Fractional HP to Multi-MW / AC & DC / All Voltage Classes",
+        "link": "/services/motors"
+      },
+      {
+        "id": "chiller-compressors",
+        "code": "SERVICE 02",
+        "title": "Industrial Chiller Compressors",
+        "scope": "Comprehensive overhauling, stator rewinding, mechanical inspection, and parts replacement for major chiller brands.",
+        "specs": "Reciprocating (Piston) / Semi-Hermetic / Screw / Centrifugal",
+        "link": "/services/chiller-compressors"
+      },
+      {
+        "id": "water-pumps",
+        "code": "SERVICE 03",
+        "title": "Industrial Water & Process Pumps",
+        "scope": "Mechanical overhaul, stator rewinding, impeller alignment, and pressure testing for municipal and industrial fluids.",
+        "specs": "Submersible / Centrifugal / Multistage / Dewatering / Slurry / Booster",
+        "link": "/services/water-pumps"
+      },
+      {
+        "id": "generators-transformers",
+        "code": "SERVICE 04",
+        "title": "Generators, Alternators & Transformers",
+        "scope": "Coil rewinding, dielectric oil testing and replacement, core inspection, and step-up / step-down transformer maintenance.",
+        "specs": "Distribution Transformers / Heavy Alternators / Diesel Generators",
+        "link": "/services/generators-transformers"
+      },
+      {
+        "id": "core-maintenance",
+        "code": "SERVICE 05",
+        "title": "Stator Core Repair & Re-Varnishing",
+        "scope": "In-house stator lamination restoration: magnetic core loss testing, interlaminar cleaning, re-varnishing, and spot welding.",
+        "specs": "Loop Flux Testing / Stator Lamination Reconditioning / Spot Welding",
+        "link": "/services/core-maintenance"
+      },
+      {
+        "id": "testing-balancing",
+        "code": "SERVICE 06",
+        "title": "Static Diagnostic Testing & Rotor Balancing",
+        "scope": "Comprehensive static testing, high-potential dielectric checks, slip ring maintenance, and dynamic balancing of main rotors.",
+        "specs": "Dynamic Balancing to ISO 1940 / Surge Testing / Megger Testing",
+        "link": "/services/testing-balancing"
+      }
+    ]
+  },
+  "coreMaintenance": {
+    "eyebrow": "02 // SPECIALIZED WORKSHOP CAPABILITY",
+    "headline": "Stator Core Rehabilitation & Magnetic Integrity",
+    "badge": "Core Diagnostics Bay",
+    "lead": "Damaged stator laminations cause severe hot spots and catastrophic motor failure. Tarfa's dedicated core workshop repairs and re-insulates laminations without requiring complete core replacement.",
+    "mosaic": [
+      {
+        "title": "Core Testing & Flux Diagnostics",
+        "description": "Loop flux testing and thermal scan to pinpoint interlaminar insulation breakdown and iron loss hot spots.",
+        "tag": "DIAGNOSTIC TEST"
+      },
+      {
+        "title": "Core Cleaning & Re-Varnishing",
+        "description": "Removal of carbonized varnish, chemical cleansing of laminations, and application of high-dielectric baking varnish.",
+        "tag": "RE-INSULATION"
+      },
+      {
+        "title": "Core Spot Welding",
+        "description": "Precision localized spot welding to secure loosened stator teeth and eliminate mechanical vibration during operation.",
+        "tag": "STRUCTURAL REPAIR"
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "03 // QUALITY ASSURANCE WORKFLOW",
+    "headline": "7-Stage Industrial Refurbishment Lifecycle",
+    "note": "Standard workshop protocol for rewinding and overhauls. Custom testing regimens available upon request.",
+    "clientNote": "Client confirmation required for project-specific inspection criteria.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Receive & Inspect",
+        "desc": "Incoming physical inspection, nameplate recording, and initial mechanical fault diagnosis."
+      },
+      {
+        "step": "02",
+        "title": "Dismantle & Test",
+        "desc": "Systematic mechanical teardown, static insulation tests, and core flux assessment."
+      },
+      {
+        "step": "03",
+        "title": "Rewind & Repair",
+        "desc": "Precision round or strip wire winding, slot insulation insertion, and wedge sealing."
+      },
+      {
+        "step": "04",
+        "title": "Varnish & Bake",
+        "desc": "Vacuum pressure impregnation / dip varnishing followed by temperature-controlled oven curing."
+      },
+      {
+        "step": "05",
+        "title": "Balance & Reassemble",
+        "desc": "Dynamic balancing of main rotors on precision balancing machine and mechanical reassembly."
+      },
+      {
+        "step": "06",
+        "title": "Final Testing",
+        "desc": "Full no-load running test, vibration analysis, megger test, and phase balance verification."
+      },
+      {
+        "step": "07",
+        "title": "Handover & Dispatch",
+        "desc": "Protective painting, terminal box sealing, and comprehensive test documentation report."
+      }
+    ]
+  },
+  "industries": {
+    "eyebrow": "04 // SECTOR EXPERTISE",
+    "headline": "Serving Critical Infrastructure Across Saudi Arabia",
+    "lead": "Heavy manufacturing and public infrastructure cannot tolerate unexpected downtime. Tarfa maintains critical motors, pumps, and compressors for Saudi Arabia's leading industrial sectors.",
+    "sectors": [
+      {
+        "name": "Government & Public Utilities",
+        "desc": "Municipal water pumping stations, power generation substations, and public infrastructure plants."
+      },
+      {
+        "name": "Steel Manufacturing",
+        "desc": "Heavy mill drives, crane slip-ring motors, cooling tower fans, and high-temperature pump sets."
+      },
+      {
+        "name": "Cement Industries",
+        "desc": "Kiln drive motors, baghouse exhaust fans, slurry pumps, and severe-duty crusher drives."
+      },
+      {
+        "name": "Construction & Infrastructure",
+        "desc": "Dewatering pumps, earthmoving generators, batching plant motors, and compressor units."
+      },
+      {
+        "name": "Hospitals & Healthcare Facilities",
+        "desc": "Central HVAC chiller compressors, emergency backup generators, and vital booster pumps."
+      },
+      {
+        "name": "Flour Mills & Grain Silos",
+        "desc": "Pneumatic blower motors, grain elevator drives, and explosion-proof dust-environment motors."
+      },
+      {
+        "name": "Food & Beverage Processing",
+        "desc": "Sanitary pump systems, cold-store refrigeration compressors, and automated bottling line drives."
+      }
+    ]
+  },
+  "clients": {
+    "eyebrow": "05 // TRACK RECORD",
+    "headline": "Trusted by Leading Saudi Enterprises",
+    "lead": "Over 40 years of service partnerships across the Kingdom's industrial landscape.",
+    "list": [
+      { "name": "CAF ARABIA", "sector": "Railway & Transport Engineering" },
+      { "name": "KSB PUMPS ARABIA", "sector": "Pump Manufacturing & Industrial Fluid Systems" },
+      { "name": "AL-AMEEN DEV & TRADE CO", "sector": "Commercial Trading & Engineering Development" },
+      { "name": "AL-WATNIA", "sector": "Poultry & Agricultural Food Processing" },
+      { "name": "DR MUHAMMAD FAGI HOSPITAL", "sector": "Healthcare Facilities & Medical Infrastructure" },
+      { "name": "SAPPCO", "sector": "Saudi Plastic Products Company" },
+      { "name": "AL-JOUF MINERAL WATER BOTTLING", "sector": "Beverage Bottling & Processing Plants" },
+      { "name": "JAMIA MALIK SAUD", "sector": "King Saud University Engineering & Utilities" },
+      { "name": "AL MUNAJEM FOOD COMPANY", "sector": "Cold Chain Storage & Food Distribution" }
+    ],
+    "andMore": "And dozens of industrial operators across the Kingdom of Saudi Arabia."
+  },
+  "ctaBand": {
+    "eyebrow": "IMMEDIATE INDUSTRIAL SUPPORT",
+    "headline": "Facing Equipment Failure or Planning Scheduled Overhaul?",
+    "desc": "Speak directly with our technical team in Riyadh for immediate diagnostic dispatch or scheduled service proposals.",
+    "phoneLabel": "Direct Workshop Dispatch",
+    "whatsappLabel": "WhatsApp Instant Channel",
+    "buttonLabel": "Submit Technical Inquiry"
+  },
+  "contact": {
+    "eyebrow": "06 // DIRECT CONTACT & QUOTE",
+    "headline": "Request a Technical Assessment or Quote",
+    "lead": "Provide equipment specifications and photos of the nameplate for an accurate turnaround and cost estimate.",
+    "representative": "Hamid Ali",
+    "repRole": "Workshop Manager & Technical Director",
+    "form": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "e.g. Eng. Khalid Al-Otaibi",
+      "company": "Company / Organization",
+      "companyPlaceholder": "e.g. Advanced Petrochemical Co.",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+966 5X XXX XXXX",
+      "email": "Email Address",
+      "emailPlaceholder": "engineer@company.com",
+      "equipmentType": "Equipment Category",
+      "equipmentSelectDefault": "Select equipment category",
+      "equipmentOptions": {
+        "motor": "Electric Motor (AC / DC / High Voltage)",
+        "compressor": "Chiller Compressor (Screw / Centrifugal / Reciprocating)",
+        "pump": "Industrial Water Pump (Submersible / Centrifugal / Slurry)",
+        "generator": "Generator or Alternator",
+        "transformer": "Transformer (Step-up / Step-down)",
+        "core": "Stator Core Repair & Testing",
+        "balancing": "Rotor Dynamic Balancing",
+        "other": "Other Heavy Electromechanical Equipment"
+      },
+      "powerRating": "Power Rating / Voltage (Optional)",
+      "powerRatingPlaceholder": "e.g. 250 kW, 3.3 kV, 1450 RPM",
+      "message": "Scope of Work / Symptoms of Failure",
+      "messagePlaceholder": "Describe current condition, burn marks, vibration symptoms, or required overhaul schedule...",
+      "fileUpload": "Attach Nameplate or Equipment Photo (Optional)",
+      "fileUploadHint": "Clear photo of motor/compressor nameplate accelerates technical quoting.",
+      "submit": "Submit Quotation Request",
+      "submitting": "Submitting Request...",
+      "successTitle": "Inquiry Successfully Transmitted",
+      "successDesc": "Your technical quotation request has been logged. Our workshop team will review the parameters and contact you within 24 hours.",
+      "errorTitle": "Submission Error",
+      "errorDesc": "Unable to submit inquiry. Please call +966 50 2640 474 or message via WhatsApp directly."
+    }
+  },
+  "footer": {
+    "aboutText": "Tarfa Equipment Maintenance (House of Quality, Est. 1983) is Riyadh's specialized electromechanical workshop for motor rewinding, chiller compressor overhaul, pump maintenance, and dynamic rotor balancing.",
+    "quickLinks": "Navigation",
+    "servicesTitle": "Workshop Services",
+    "contactTitle": "Riyadh Workshop",
+    "standardsTitle": "Testing & Standards",
+    "standardsList": [
+      "Dynamic Balancing (ISO 1940)",
+      "Surge & High-Potential Testing",
+      "Stator Core Flux Loss Diagnostics",
+      "Class F & Class H Rewinding Materials",
+      "Dielectric Oil Breakdown Testing"
+    ]
+  },
+  "styleguide": {
+    "title": "Design System & Engineering Style Guide",
+    "subtitle": "Tarfa Equipment Maintenance visual language, color tokens, typography, and component specs.",
+    "colorPalette": "Brand Color Tokens",
+    "typography": "Typography Scale",
+    "components": "Base Components",
+    "cutMotif": "The 25° Industrial Chamfer Cut",
+    "specTableDemo": "Spec Table Component",
+    "formDemo": "Form Field Tokens"
+  }
+}
+
