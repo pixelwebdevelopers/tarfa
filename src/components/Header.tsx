@@ -171,7 +171,7 @@ export function Header() {
                 {isAr ? "تارفا لصيانة المعدات" : "TARFA"}
               </span>
               <span className="font-mono text-[10px] text-brand-red font-semibold tracking-wider uppercase mt-0.5">
-                {isAr ? "بيت الجودة // تأسست 1983" : "EQUIPMENT MAINTENANCE // EST. 1983"}
+                {isAr ? "بيت الجودة" : "EQUIPMENT MAINTENANCE"}
               </span>
             </div>
           </Link>
