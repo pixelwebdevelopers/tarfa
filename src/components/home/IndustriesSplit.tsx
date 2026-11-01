@@ -5,7 +5,17 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
-import { Check, ArrowRight, ArrowLeft } from "lucide-react";
+import {
+  Landmark,
+  Flame,
+  Boxes,
+  HardHat,
+  Stethoscope,
+  Wind,
+  UtensilsCrossed,
+  ArrowRight,
+  ArrowLeft,
+} from "lucide-react";
 
 export function IndustriesSplit() {
   const t = useTranslations("industries");
@@ -15,32 +25,39 @@ export function IndustriesSplit() {
 
   const sectors = [
     {
+      icon: Landmark,
       name: t("sectors.0.name"),
-      desc: t("sectors.0.desc"),
+      tag: isAr ? "محطات الضخ وتوليد الكهرباء" : "Municipal Pumping & Power Stations",
     },
     {
+      icon: Flame,
       name: t("sectors.1.name"),
-      desc: t("sectors.1.desc"),
+      tag: isAr ? "محركات الدرفلة وأوناش الرفع" : "Mill Drives, Crane Motors & Furnace Pumps",
     },
     {
+      icon: Boxes,
       name: t("sectors.2.name"),
-      desc: t("sectors.2.desc"),
+      tag: isAr ? "محركات الأفران ومضخات الحمأة" : "Kiln Drives, Exhaust Fans & Slurry Pumps",
     },
     {
+      icon: HardHat,
       name: t("sectors.3.name"),
-      desc: t("sectors.3.desc"),
+      tag: isAr ? "مضخات النزح ومولدات المواقع" : "Dewatering Pumps & Batching Plant Motors",
     },
     {
+      icon: Stethoscope,
       name: t("sectors.4.name"),
-      desc: t("sectors.4.desc"),
+      tag: isAr ? "ضواغط الشيلر ومولدات الطوارئ" : "Central HVAC Chillers & Backup Generators",
     },
     {
+      icon: Wind,
       name: t("sectors.5.name"),
-      desc: t("sectors.5.desc"),
+      tag: isAr ? "محركات منافيخ الهواء ومصاعد الحبوب" : "Blower Motors & Explosion-Proof Drives",
     },
     {
+      icon: UtensilsCrossed,
       name: t("sectors.6.name"),
-      desc: t("sectors.6.desc"),
+      tag: isAr ? "ضواغط التجميد ومحركات خطوط التعبئة" : "Blast Freezers & Packaging Line Drives",
     },
   ];
 
@@ -48,14 +65,23 @@ export function IndustriesSplit() {
     <section className="w-full py-16 lg:py-24 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800 text-start">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Heading */}
-        <SectionHeading
-          eyebrow={t("eyebrow")}
-          title={t("headline")}
-          description={t("lead")}
-        />
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8">
+          <SectionHeading
+            eyebrow={t("eyebrow")}
+            title={t("headline")}
+            description={t("lead")}
+          />
+          <Link
+            href="/industries"
+            className="inline-flex items-center gap-2 font-heading font-semibold text-sm text-brand-red hover:underline pb-1 flex-shrink-0"
+          >
+            <span>{isAr ? "استعراض كافة القطاعات" : "Explore All Sectors"}</span>
+            <ArrowIcon className="w-4 h-4" />
+          </Link>
+        </div>
 
         {/* Split Layout: 5 Cols Image vs 7 Cols List */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column (5 Cols): Real Heavy Industry Facility Photo */}
           <div className="lg:col-span-5 relative space-y-4">
             <div className="relative h-[380px] sm:h-[480px] w-full border border-charcoal-200 dark:border-charcoal-700 bg-charcoal-900 overflow-hidden industrial-cut">
@@ -86,30 +112,32 @@ export function IndustriesSplit() {
             </div>
           </div>
 
-          {/* Right Column (7 Cols): Clean Editorial Checklist */}
-          <div className="lg:col-span-7 divide-y divide-charcoal-200 dark:divide-charcoal-800 border-t border-b border-charcoal-200 dark:border-charcoal-800">
-            {sectors.map((item, idx) => (
-              <div
-                key={idx}
-                className="py-4.5 sm:py-5 flex items-start gap-4 group hover:bg-white dark:hover:bg-charcoal-850 px-2 sm:px-3 transition-colors rounded-none"
-              >
-                <div className="w-5 h-5 rounded-none bg-brand-red/10 border border-brand-red/30 text-brand-red flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                  <Check className="w-3.5 h-3.5" />
+          {/* Right Column (7 Cols): Visual Icon List */}
+          <div className="lg:col-span-7 divide-y divide-charcoal-200 dark:divide-charcoal-800 border-t border-b border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900">
+            {sectors.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-4 sm:p-5 flex items-center gap-4 group hover:bg-canvas-warm dark:hover:bg-charcoal-850 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
+                    <h3 className="font-heading font-extrabold text-base sm:text-lg text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors line-clamp-1">
+                      {item.name}
+                    </h3>
+                    <span className="font-mono text-xs text-charcoal-500 dark:text-charcoal-400 font-medium sm:text-end flex-shrink-0">
+                      {item.tag}
+                    </span>
+                  </div>
                 </div>
-                <div className="space-y-1 flex-1">
-                  <h3 className="font-heading font-bold text-base sm:text-lg text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
-                    {item.name}
-                  </h3>
-                  <p className="font-body text-xs sm:text-sm text-charcoal-500 dark:text-charcoal-400 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
   );
 }
-

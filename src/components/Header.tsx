@@ -19,6 +19,8 @@ import {
   Layers,
   Gauge,
   Zap,
+  Droplets,
+  Scale,
 } from "lucide-react";
 import { COMPANY_DETAILS } from "@/config/contact";
 import { LanguageToggle } from "./LanguageToggle";
@@ -55,43 +57,37 @@ export function Header() {
     {
       href: "/services/motors",
       title: t("servicesMenu.motors.title"),
-      desc: t("servicesMenu.motors.desc"),
       icon: Cpu,
       code: "01",
     },
     {
       href: "/services/chiller-compressors",
       title: t("servicesMenu.chillerCompressors.title"),
-      desc: t("servicesMenu.chillerCompressors.desc"),
       icon: Gauge,
       code: "02",
     },
     {
       href: "/services/water-pumps",
       title: t("servicesMenu.waterPumps.title"),
-      desc: t("servicesMenu.waterPumps.desc"),
-      icon: Wrench,
+      icon: Droplets,
       code: "03",
     },
     {
       href: "/services/generators-transformers",
       title: t("servicesMenu.generatorsTransformers.title"),
-      desc: t("servicesMenu.generatorsTransformers.desc"),
       icon: Zap,
       code: "04",
     },
     {
       href: "/services/core-maintenance",
       title: t("servicesMenu.coreMaintenance.title"),
-      desc: t("servicesMenu.coreMaintenance.desc"),
       icon: Layers,
       code: "05",
     },
     {
       href: "/services/testing-balancing",
       title: t("servicesMenu.testingBalancing.title"),
-      desc: t("servicesMenu.testingBalancing.desc"),
-      icon: ShieldCheck,
+      icon: Scale,
       code: "06",
     },
   ];
@@ -227,19 +223,19 @@ export function Header() {
                               <Link
                                 key={item.href}
                                 href={item.href as any}
-                                className="p-2.5 rounded-sm hover:bg-canvas-warm dark:hover:bg-charcoal-800 transition-colors border border-transparent hover:border-charcoal-100 dark:hover:border-charcoal-700 group/item text-start block"
+                                className="p-3 bg-canvas-warm/60 dark:bg-charcoal-850 hover:bg-charcoal-950 hover:text-white dark:hover:bg-charcoal-800 transition-all border border-charcoal-200/80 dark:border-charcoal-700/80 hover:border-brand-red group/item text-start flex items-center gap-3.5"
                               >
-                                <div className="flex items-center gap-2 mb-1">
-                                  <span className="font-mono text-[10px] text-brand-red font-semibold">
-                                    {item.code}
+                                <div className="w-10 h-10 flex-shrink-0 bg-white dark:bg-charcoal-900 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center group-hover/item:bg-brand-red group-hover/item:text-white transition-colors">
+                                  <Icon className="w-5 h-5" />
+                                </div>
+                                <div className="space-y-0.5 min-w-0">
+                                  <span className="font-mono text-[10px] text-brand-red group-hover/item:text-brand-red font-bold block uppercase tracking-wider">
+                                    SERVICE {item.code}
                                   </span>
-                                  <span className="font-heading text-xs font-bold text-charcoal-900 dark:text-white group-hover/item:text-brand-red transition-colors line-clamp-1">
+                                  <span className="font-heading text-xs sm:text-sm font-extrabold text-charcoal-950 dark:text-white group-hover/item:text-white transition-colors line-clamp-1 block">
                                     {item.title}
                                   </span>
                                 </div>
-                                <p className="text-[11px] text-charcoal-500 dark:text-charcoal-400 line-clamp-2 leading-relaxed">
-                                  {item.desc}
-                                </p>
                               </Link>
                             );
                           })}
@@ -324,18 +320,28 @@ export function Header() {
               {isAr ? "الخدمات الرئيسية" : "SERVICES DIRECTORY"}
             </span>
             <div className="grid grid-cols-1 gap-2">
-              {serviceItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href as any}
-                  className="font-heading text-xs text-charcoal-700 dark:text-charcoal-300 hover:text-brand-red py-1 ps-2 border-s-2 border-charcoal-200 dark:border-charcoal-700 flex items-center gap-2"
-                >
-                  <span className="font-mono text-[10px] text-brand-red">
-                    {item.code}
-                  </span>
-                  <span>{item.title}</span>
-                </Link>
-              ))}
+              {serviceItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href as any}
+                    className="p-2.5 bg-canvas-warm/70 dark:bg-charcoal-900 border border-charcoal-200 dark:border-charcoal-800 flex items-center gap-3 hover:border-brand-red transition-colors"
+                  >
+                    <div className="w-8 h-8 flex-shrink-0 bg-white dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="font-mono text-[9px] text-brand-red font-bold block">
+                        SERVICE {item.code}
+                      </span>
+                      <span className="font-heading text-xs font-bold text-charcoal-900 dark:text-white block line-clamp-1">
+                        {item.title}
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
 

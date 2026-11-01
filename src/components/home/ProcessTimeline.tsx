@@ -3,7 +3,16 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
-import { CheckCircle2, AlertCircle } from "lucide-react";
+import {
+  ClipboardCheck,
+  Search,
+  Wrench,
+  Flame,
+  Scale,
+  ShieldCheck,
+  Truck,
+  AlertCircle,
+} from "lucide-react";
 
 export function ProcessTimeline() {
   const t = useTranslations("process");
@@ -12,39 +21,46 @@ export function ProcessTimeline() {
 
   const steps = [
     {
-      num: t("steps.0.step"),
+      num: "01",
+      icon: ClipboardCheck,
       title: t("steps.0.title"),
-      desc: t("steps.0.desc"),
+      badge: isAr ? "فحص أولي وتوثيق" : "INCOMING LOG",
     },
     {
-      num: t("steps.1.step"),
+      num: "02",
+      icon: Search,
       title: t("steps.1.title"),
-      desc: t("steps.1.desc"),
+      badge: isAr ? "تفكيك وتشخيص" : "DIAGNOSTICS",
     },
     {
-      num: t("steps.2.step"),
+      num: "03",
+      icon: Wrench,
       title: t("steps.2.title"),
-      desc: t("steps.2.desc"),
+      badge: isAr ? "إعادة لف وعزل" : "PRECISION REWIND",
     },
     {
-      num: t("steps.3.step"),
+      num: "04",
+      icon: Flame,
       title: t("steps.3.title"),
-      desc: t("steps.3.desc"),
+      badge: isAr ? "غمر وتحميص حراري" : "VPI & BAKING",
     },
     {
-      num: t("steps.4.step"),
+      num: "05",
+      icon: Scale,
       title: t("steps.4.title"),
-      desc: t("steps.4.desc"),
+      badge: isAr ? "موازنة ديناميكية" : "ISO 1940 BALANCE",
     },
     {
-      num: t("steps.5.step"),
+      num: "06",
+      icon: ShieldCheck,
       title: t("steps.5.title"),
-      desc: t("steps.5.desc"),
+      badge: isAr ? "فحص التشغيل والحمل" : "FULL RUN TEST",
     },
     {
-      num: t("steps.6.step"),
+      num: "07",
+      icon: Truck,
       title: t("steps.6.title"),
-      desc: t("steps.6.desc"),
+      badge: isAr ? "تقرير فني وتسليم" : "QC & DISPATCH",
     },
   ];
 
@@ -66,48 +82,49 @@ export function ProcessTimeline() {
           </div>
         </div>
 
-        {/* Desktop Horizontal Timeline / Mobile Vertical Rail */}
+        {/* Desktop Horizontal Timeline / Mobile Rail */}
         <div className="relative">
           {/* Timeline Connector Line on Desktop */}
-          <div className="hidden xl:block absolute top-10 start-8 end-8 h-[2px] bg-charcoal-200 dark:bg-charcoal-800 z-0" />
+          <div className="hidden xl:block absolute top-10 start-8 end-8 h-[2px] bg-charcoal-200 dark:border-charcoal-800 z-0" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-7 gap-6 relative z-10">
-            {steps.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 flex flex-col justify-between space-y-3 group hover:border-brand-red transition-colors"
-              >
-                {/* Step Indicator Header */}
-                <div className="flex items-center justify-between">
-                  <span className="w-9 h-9 flex items-center justify-center font-mono font-bold text-sm bg-charcoal-950 text-white group-hover:bg-brand-red transition-colors rounded-none industrial-cut-badge">
-                    {item.num}
-                  </span>
-                  <span className="font-mono text-[10px] text-charcoal-400 uppercase">
-                    STAGE {item.num}
-                  </span>
-                </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-7 gap-5 relative z-10">
+            {steps.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 flex flex-col justify-between space-y-4 group hover:border-brand-red transition-all duration-200 shadow-hairline"
+                >
+                  {/* Step Indicator Header */}
+                  <div className="flex items-center justify-between border-b border-charcoal-200/80 dark:border-charcoal-750 pb-2.5">
+                    <span className="w-8 h-8 flex items-center justify-center font-mono font-bold text-xs bg-charcoal-950 text-white group-hover:bg-brand-red transition-colors rounded-none">
+                      {item.num}
+                    </span>
+                    <span className="font-mono text-[10px] text-charcoal-400 uppercase font-semibold">
+                      STAGE {item.num}
+                    </span>
+                  </div>
 
-                {/* Step Title & Description */}
-                <div className="space-y-1.5 flex-1 pt-1">
-                  <h3 className="font-heading font-bold text-sm sm:text-base text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="font-body text-xs text-charcoal-500 dark:text-charcoal-400 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
+                  {/* Centered Visual Icon Box */}
+                  <div className="w-12 h-12 rounded-none bg-white dark:bg-charcoal-900 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center group-hover:bg-brand-red group-hover:text-white transition-all my-1">
+                    <Icon className="w-6 h-6" />
+                  </div>
 
-                {/* Micro spec / status marker */}
-                <div className="pt-2 border-t border-charcoal-200/60 dark:border-charcoal-800 flex items-center gap-1.5 text-[10px] font-mono text-charcoal-400">
-                  <span className="w-1.5 h-1.5 bg-brand-red/70 rounded-full" />
-                  <span>QC Signoff</span>
+                  {/* Step Title & Visual Badge */}
+                  <div className="space-y-1.5 flex-1">
+                    <h3 className="font-heading font-extrabold text-sm sm:text-base text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors leading-snug">
+                      {item.title}
+                    </h3>
+                    <span className="font-mono text-[10px] text-brand-red font-semibold uppercase tracking-wider block">
+                      {item.badge}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
   );
 }
-

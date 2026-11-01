@@ -5,7 +5,16 @@ import { PageHeader } from "@/components/PageHeader";
 import { Button } from "@/components/Button";
 import { SectionHeading } from "@/components/SectionHeading";
 import { COMPANY_DETAILS } from "@/config/contact";
-import { Shield, Clock, Award, CheckCircle2, AlertCircle, ArrowRight, ArrowLeft } from "lucide-react";
+import {
+  ShieldCheck,
+  Award,
+  AlertCircle,
+  ArrowRight,
+  ArrowLeft,
+  Scale,
+  Flame,
+  Zap,
+} from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -36,8 +45,6 @@ export default async function AboutPage({
     <div className="flex flex-col w-full text-start">
       {/* Page Header */}
       <PageHeader
-        sectionNumber="OVERVIEW // EST. 1983"
-        badge={isAr ? "بيت الجودة" : "HOUSE OF QUALITY"}
         title={isAr ? "أربعة عقود من التميز الكهروميكانيكي في الرياض" : "Four Decades of Electromechanical Excellence in Riyadh"}
         description={isAr
           ? "منذ عام 1983، تشكل تارفا نبض خدمات إعادة اللف والصيانة في الصناعة السعودية، حيث يلتقي التميز بالخبرة للحفاظ على استمرارية خطوط الإنتاج."
@@ -72,30 +79,40 @@ export default async function AboutPage({
                 </p>
               </div>
 
-              {/* Core Pillars */}
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850">
-                  <span className="font-mono text-xs uppercase text-brand-red font-bold block mb-1">
-                    PILLAR 01
-                  </span>
-                  <span className="font-heading font-bold text-sm text-charcoal-900 dark:text-white block">
-                    {isAr ? "بيت الجودة" : "House of Quality"}
-                  </span>
-                  <span className="text-xs text-charcoal-500 dark:text-charcoal-400 mt-0.5 block">
-                    {isAr ? "مواد عزل درجة H و F وأسلاك نحاسية معتمدة" : "Class H & F copper wire and OEM varnish standards"}
-                  </span>
+              {/* Core Pillars with Visual Icons */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 flex items-start gap-3">
+                  <div className="w-10 h-10 bg-white dark:bg-charcoal-900 border border-charcoal-200 dark:border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
+                    <ShieldCheck className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] uppercase text-brand-red font-bold block mb-0.5">
+                      PILLAR 01
+                    </span>
+                    <span className="font-heading font-bold text-sm text-charcoal-900 dark:text-white block">
+                      {isAr ? "بيت الجودة" : "House of Quality"}
+                    </span>
+                    <span className="text-xs text-charcoal-500 dark:text-charcoal-400 mt-0.5 block">
+                      {isAr ? "عزل الفئة H و F ونحاس كهرلي نقي 100%" : "Class H & F copper wire and OEM varnish standards"}
+                    </span>
+                  </div>
                 </div>
 
-                <div className="p-4 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850">
-                  <span className="font-mono text-xs uppercase text-brand-red font-bold block mb-1">
-                    PILLAR 02
-                  </span>
-                  <span className="font-heading font-bold text-sm text-charcoal-900 dark:text-white block">
-                    {isAr ? "الخبرة الممتدة" : "40+ Years Heritage"}
-                  </span>
-                  <span className="text-xs text-charcoal-500 dark:text-charcoal-400 mt-0.5 block">
-                    {isAr ? "خدمة متواصلة للقطاعات السعودية الثقيلة" : "Continuous service to Saudi heavy industry since 1983"}
-                  </span>
+                <div className="p-4 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 flex items-start gap-3">
+                  <div className="w-10 h-10 bg-white dark:bg-charcoal-900 border border-charcoal-200 dark:border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
+                    <Award className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="font-mono text-[10px] uppercase text-brand-red font-bold block mb-0.5">
+                      PILLAR 02
+                    </span>
+                    <span className="font-heading font-bold text-sm text-charcoal-900 dark:text-white block">
+                      {isAr ? "الخبرة الممتدة" : "40+ Years Heritage"}
+                    </span>
+                    <span className="text-xs text-charcoal-500 dark:text-charcoal-400 mt-0.5 block">
+                      {isAr ? "خدمة متواصلة للقطاعات السعودية الثقيلة" : "Continuous service to Saudi heavy industry since 1983"}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -141,13 +158,23 @@ export default async function AboutPage({
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-3">
-              <span className="font-mono text-xs text-brand-red font-semibold block">
-                STATION 01 // BALANCING
-              </span>
-              <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
-                {isAr ? "موازنة الأعضاء الدوارة (ISO 1940)" : "Dynamic Rotor Balancing Rig"}
-              </h3>
+            <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+                  <Scale className="w-6 h-6" />
+                </div>
+                <span className="font-mono text-xs text-brand-red font-bold">
+                  STATION 01
+                </span>
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
+                  {isAr ? "موازنة الأعضاء الدوارة (ISO 1940)" : "Dynamic Rotor Balancing Rig"}
+                </h3>
+                <span className="inline-block mt-1 px-2 py-0.5 bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 font-mono text-[10px] text-charcoal-600 dark:text-charcoal-300">
+                  ISO 1940 Grade 2.5 / Rotors & Impellers
+                </span>
+              </div>
               <p className="font-body text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
                 {isAr
                   ? "أجهزة موازنة إلكترونية لمعايرة وتصحيح اختلال توازن العضو الدوار ومراوح السحب وضمان خلوها من الاهتزازات التشغيلية."
@@ -155,13 +182,23 @@ export default async function AboutPage({
               </p>
             </div>
 
-            <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-3">
-              <span className="font-mono text-xs text-brand-red font-semibold block">
-                STATION 02 // IMPREGNATION
-              </span>
-              <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
-                {isAr ? "أفران التحميص وغمر الورنيش" : "Varnish Impregnation & Curing Ovens"}
-              </h3>
+            <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+                  <Flame className="w-6 h-6" />
+                </div>
+                <span className="font-mono text-xs text-brand-red font-bold">
+                  STATION 02
+                </span>
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
+                  {isAr ? "أفران التحميص وغمر الورنيش" : "Varnish Impregnation & Curing Ovens"}
+                </h3>
+                <span className="inline-block mt-1 px-2 py-0.5 bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 font-mono text-[10px] text-charcoal-600 dark:text-charcoal-300">
+                  Class H & F / Temperature Regulated
+                </span>
+              </div>
               <p className="font-body text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
                 {isAr
                   ? "أحواض غمر بمواد ورنيش عازلة عالية المقاومة وأفران تجفيف مضبوطة حرارياً لضمان تصلب العازل ومقاومة الرطوبة."
@@ -169,13 +206,23 @@ export default async function AboutPage({
               </p>
             </div>
 
-            <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-3">
-              <span className="font-mono text-xs text-brand-red font-semibold block">
-                STATION 03 // ELECTRICAL TESTING
-              </span>
-              <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
-                {isAr ? "مختبر الفحص الكهربائي الساكن" : "Static High-Potential Test Suite"}
-              </h3>
+            <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
+              <div className="flex items-center justify-between">
+                <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+                  <Zap className="w-6 h-6" />
+                </div>
+                <span className="font-mono text-xs text-brand-red font-bold">
+                  STATION 03
+                </span>
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
+                  {isAr ? "مختبر الفحص الكهربائي الساكن" : "Static High-Potential Test Suite"}
+                </h3>
+                <span className="inline-block mt-1 px-2 py-0.5 bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 font-mono text-[10px] text-charcoal-600 dark:text-charcoal-300">
+                  Surge Comparison / 5kV Megger / Micro-Ohm
+                </span>
+              </div>
               <p className="font-body text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
                 {isAr
                   ? "فحوصات مقارنة النبضة (Surge Test)، واختبار مقاومة العزل حتى 5 كيلوفولت، وقياس مقاومة الأطوار بدقة الميكروأوم."

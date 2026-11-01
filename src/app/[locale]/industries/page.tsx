@@ -4,7 +4,26 @@ import { setRequestLocale } from "next-intl/server";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
-import { ArrowRight, ArrowLeft, Building2, Factory, Construction, HeartPulse, Wheat, Utensils, Check } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowLeft,
+  Building2,
+  Factory,
+  Construction,
+  HeartPulse,
+  Wheat,
+  Utensils,
+  Clock,
+  ShieldCheck,
+  Truck,
+  Droplets,
+  Cpu,
+  Zap,
+  Flame,
+  Wind,
+  Gauge,
+  Layers,
+} from "lucide-react";
 
 export async function generateMetadata({
   params,
@@ -39,13 +58,22 @@ export default async function IndustriesPage({
       icon: Building2,
       code: "SECTOR 01",
       name: isAr ? "المشاريع الحكومية والمرافق العامة" : "Government Projects & Public Utilities",
-      summary: isAr
-        ? "محطات ضخ مياه الشرب، محطات توليد الطاقة الكهربائية، وشبكات البنية التحتية العامة في منطقة الرياض ومختلف مناطق المملكة."
-        : "Municipal water extraction stations, power distribution substations, and critical civic infrastructure throughout the Kingdom.",
+      chips: isAr
+        ? ["محطات الضخ الكبرى", "محولات التوزيع", "مشاريع البنية التحتية"]
+        : ["Deep Extraction", "Power Distribution", "Municipal Networks"],
       equipment: [
-        isAr ? "مضخات الآبار الارتوازية الغاطسة عالية القدرة" : "High-capacity deep well submersible pump sets",
-        isAr ? "محركات محطات الضخ الرئيسية متعددة المراحل" : "Main municipal booster and multistage water pumps",
-        isAr ? "محولات التوزيع ومولدات الديزل الاحتياطية للمنشآت العامة" : "Distribution transformers and emergency diesel gensets",
+        {
+          icon: Droplets,
+          title: isAr ? "مضخات الآبار الارتوازية الغاطسة عالية القدرة" : "Deep Well Submersible Pump Sets",
+        },
+        {
+          icon: Cpu,
+          title: isAr ? "محركات محطات الضخ الرئيسية متعددة المراحل" : "Main Municipal Booster & Multistage Pumps",
+        },
+        {
+          icon: Zap,
+          title: isAr ? "محولات التوزيع ومولدات الديزل الاحتياطية" : "Distribution Transformers & Standby Gensets",
+        },
       ],
     },
     {
@@ -53,41 +81,68 @@ export default async function IndustriesPage({
       icon: Factory,
       code: "SECTOR 02",
       name: isAr ? "صناعات الحديد والصلب" : "Steel & Heavy Metal Manufacturing",
-      summary: isAr
-        ? "بيئات تشغيلية قاسية تتطلب محركات تتحمل درجات الحرارة العالية والغبار المعدني والاهتزازات المستمرة."
-        : "Severe operating environments requiring high-temperature insulation, heavy starting torque, and continuous duty uptime.",
+      chips: isAr
+        ? ["بيئات حرارية شاقة", "عزم بدء فائق", "عزل الفئة H"]
+        : ["Severe Duty", "Continuous Rolling", "Class H Insulation"],
       equipment: [
-        isAr ? "محركات الدرفلة الرئيسية ومحركات التيار المستمر الثقيلة" : "Heavy rolling mill drive motors and DC armatures",
-        isAr ? "محركات روافع الصهر الكهربائية ذات حلقات الانزلاق" : "Furnace crane slip-ring hoist and traverse motors",
-        isAr ? "مراوح أبراج التبريد ومضخات التبريد الصناعي" : "Cooling tower forced-draft blowers and slurry pumps",
+        {
+          icon: Cpu,
+          title: isAr ? "محركات الدرفلة الرئيسية ومحركات التيار المستمر" : "Rolling Mill Drives & Heavy DC Armatures",
+        },
+        {
+          icon: Zap,
+          title: isAr ? "محركات روافع الصهر ذات حلقات الانزلاق" : "Furnace Crane Slip-Ring Hoist Motors",
+        },
+        {
+          icon: Wind,
+          title: isAr ? "مراوح أبراج التبريد ومضخات السوائل الكثيفة" : "Cooling Tower Draft Blowers & Slurry Pumps",
+        },
       ],
     },
     {
       id: "cement",
-      icon: Factory,
+      icon: Layers,
       code: "SECTOR 03",
       name: isAr ? "صناعات الإسمنت والجبس" : "Cement & Heavy Mineral Industries",
-      summary: isAr
-        ? "أفران الإسمنت وكسارات الحجر تتطلب محركات ذات عزم دوران فائق ومقاومة عالية لتسرب الغبار الكلسي."
-        : "Rotary kilns, raw ball mills, and clinker crushers operating in high particulate and abrasive dust atmospheres.",
+      chips: isAr
+        ? ["مقاومة الغبار الكلسي", "مطاحن الكرات", "أفران دوارة"]
+        : ["Abrasive Particulate", "Ball Mills", "Rotary Kiln Drives"],
       equipment: [
-        isAr ? "محركات أفران الإسمنت الرئيسية ومحركات الكسارات" : "Rotary kiln main drive motors and primary jaw crushers",
-        isAr ? "مراوح سحب الهواء والغبار الكبرى (Baghouse Exhaust Fans)" : "High-inertia baghouse and ID exhaust fans (dynamic balancing)",
-        isAr ? "مضخات طين الإسمنت والحمأة ذات العزم العالي" : "Cement slurry transfer pumps and pneumatic blower stators",
+        {
+          icon: Cpu,
+          title: isAr ? "محركات أفران الإسمنت الرئيسية ومحركات الكسارات" : "Rotary Kiln Main Drives & Jaw Crushers",
+        },
+        {
+          icon: Gauge,
+          title: isAr ? "مراوح سحب الغبار الكبرى (موازنة ديناميكية ISO)" : "High-Inertia Baghouse Fans (ISO 1940)",
+        },
+        {
+          icon: Droplets,
+          title: isAr ? "مضخات طين الإسمنت ومنافيخ النقل الهوائي" : "Cement Slurry Pumps & Pneumatic Blowers",
+        },
       ],
     },
     {
       id: "construction",
       icon: Construction,
       code: "SECTOR 04",
-      name: isAr ? "شركات المقاولات والإنشاءات الكبرى" : "Civil Construction & Infrastructure Companies",
-      summary: isAr
-        ? "مشاريع البناء والحفريات والأنفاق تعتمد على جاهزية مضخات نزح المياه الجوفية ومولدات الطاقة الميدانية."
-        : "Large-scale excavation, tunneling, and batching plants relying on immediate dewatering readiness and portable generation sets.",
+      name: isAr ? "شركات المقاولات والإنشاءات الكبرى" : "Civil Construction & Infrastructure",
+      chips: isAr
+        ? ["نزح المياه الجوفية", "خلاطات خرسانية", "مولدات ميدانية"]
+        : ["Site Dewatering", "Batching Plants", "Mobile Generators"],
       equipment: [
-        isAr ? "مضخات نزح المياه الجوفية الغاطسة ذات قدرة سحب الرواسب" : "Heavy-duty dewatering submersible pumps with solids handling",
-        isAr ? "محركات خلاطات الخرسانة المركزية ومضخات الحقن" : "Ready-mix batching plant drives and grout injection pumps",
-        isAr ? "مولدات الديزل الميدانية لمواقع المشاريع النائية" : "Skid-mounted site diesel alternators and distribution coils",
+        {
+          icon: Droplets,
+          title: isAr ? "مضخات نزح المياه الجوفية الغاطسة المقاومة للطمي" : "Submersible Dewatering & Slurry Pumps",
+        },
+        {
+          icon: Cpu,
+          title: isAr ? "محركات محطات الخرسانة الجاهزة ومضخات الحقن" : "Ready-Mix Batching Drives & Grout Pumps",
+        },
+        {
+          icon: Zap,
+          title: isAr ? "مولدات الديزل الميدانية لمواقع المشاريع" : "Skid-Mounted Site Generators & Alternators",
+        },
       ],
     },
     {
@@ -95,13 +150,22 @@ export default async function IndustriesPage({
       icon: HeartPulse,
       code: "SECTOR 05",
       name: isAr ? "المستشفيات والمنشآت الصحية" : "Hospitals & Critical Healthcare Facilities",
-      summary: isAr
-        ? "منشآت حيوية لا تحتمل أي انقطاع في منظومة التكييف المركزي أو تعطل مضخات المياه ومولدات الطوارئ."
-        : "Mission-critical facilities requiring zero tolerance for HVAC chiller failures, sterile water drops, or standby power interruptions.",
+      chips: isAr
+        ? ["شيلرات التكييف المركزي", "طاقة طوارئ دون انقطاع", "مضخات تعقيم"]
+        : ["Mission-Critical HVAC", "Zero-Tolerance Uptime", "Sterile Pumping"],
       equipment: [
-        isAr ? "ضواغط التبريد المركزية للشيلرات (حلزونية ومكابس)" : "Central HVAC chiller compressors (screw and reciprocating)",
-        isAr ? "مولدات الطوارئ الاحتياطية لتغذية غرف العمليات والعناية" : "Emergency backup power generators and synchronization alternators",
-        isAr ? "مضخات تعزيز الضغط وشبكات مياه الإطفاء والتعقيم" : "Potable booster sets and certified fire suppression pumps",
+        {
+          icon: Gauge,
+          title: isAr ? "ضواغط الشيلرات المركزية (حلزونية ومكابس)" : "Central HVAC Chiller Compressors (Screw/Recip)",
+        },
+        {
+          icon: Zap,
+          title: isAr ? "مولدات الطوارئ الاحتياطية لغرف العمليات" : "Emergency ICU Backup Generators & Sync Panels",
+        },
+        {
+          icon: Droplets,
+          title: isAr ? "مضخات تعزيز الضغط وشبكات مياه الإطفاء" : "Potable Water Booster Sets & Fire Pumps",
+        },
       ],
     },
     {
@@ -109,13 +173,22 @@ export default async function IndustriesPage({
       icon: Wheat,
       code: "SECTOR 06",
       name: isAr ? "مطاحن الدقيق وصوامع الغلال" : "Flour Mills & Grain Silo Facilities",
-      summary: isAr
-        ? "بيئات غبار دقيق قابلة للاشتعال تتطلب محركات معزولة بإحكام ومراوح نقل هوائي متزنة ديناميكياً."
-        : "Combustible flour dust environments requiring hermetically sealed motors, pneumatic conveyor drives, and vibration-free blowers.",
+      chips: isAr
+        ? ["بيئات قابلة للاشتعال", "نواقل لولبية", "منافيخ هوائية"]
+        : ["Combustible Dust Proof", "Pneumatic Conveying", "Vertical Elevators"],
       equipment: [
-        isAr ? "محركات النواقل اللولبية ومصاعد الحبوب الرأسية" : "Vertical bucket elevator drives and enclosed screw conveyors",
-        isAr ? "مضخات ومنافيخ النقل الهوائي للدقيق (Roots Blowers)" : "Pneumatic transfer positive-displacement Roots blowers",
-        isAr ? "المحركات المحكمة المقاومة لدخول الغبار الكربوني" : "Totally enclosed dust-ignition-proof electric motors",
+        {
+          icon: Cpu,
+          title: isAr ? "محركات النواقل ومصاعد الحبوب الرأسية" : "Bucket Elevator Drives & Screw Conveyors",
+        },
+        {
+          icon: Wind,
+          title: isAr ? "منافيخ النقل الهوائي للدقيق (Roots Blowers)" : "Pneumatic Positive-Displacement Blowers",
+        },
+        {
+          icon: ShieldCheck,
+          title: isAr ? "محركات محكمة مقاومة لدخول الغبار العضوي" : "Totally Enclosed Dust-Proof Electric Motors",
+        },
       ],
     },
     {
@@ -123,13 +196,22 @@ export default async function IndustriesPage({
       icon: Utensils,
       code: "SECTOR 07",
       name: isAr ? "الصناعات الغذائية ومستودعات التبريد" : "Food Processing & Cold Chain Logistics",
-      summary: isAr
-        ? "مصانع الأغذية والألبان وسلاسل التجميد تعتمد كلياً على كفاءة ضواغط التبريد ومضخات الفولاذ الصحي."
-        : "Food packaging, dairy processing, and cold chain distribution centers requiring continuous sub-zero refrigeration reliability.",
+      chips: isAr
+        ? ["غرف تجميد مركزية", "مضخات ستانلس ستيل", "خطوط تعبئة"]
+        : ["Sub-Zero Cold Storage", "Sanitary Pumping", "Packaging Lines"],
       equipment: [
-        isAr ? "ضواغط التبريد والتجميد لمستودعات اللحوم والألبان" : "Ammonia and Freon cold-room refrigeration compressors",
-        isAr ? "مضخات الستانلس ستيل الصحية لنقل السوائل الغذائية" : "Sanitary stainless steel centrifugal and positive displacement pumps",
-        isAr ? "محركات خطوط التعبئة الآلية ومحركات السيور الناقلة" : "Automated bottling conveyor drives and washdown motors",
+        {
+          icon: Gauge,
+          title: isAr ? "ضواغط التبريد لغرف حفظ اللحوم والألبان" : "Cold-Room Ammonia & Freon Compressors",
+        },
+        {
+          icon: Droplets,
+          title: isAr ? "مضخات الستانلس ستيل الصحية لنقل السوائل" : "Sanitary Stainless Centrifugal & PD Pumps",
+        },
+        {
+          icon: Cpu,
+          title: isAr ? "محركات خطوط التعبئة وسيور الفرز الآلية" : "Automated Conveyor Drives & Washdown Motors",
+        },
       ],
     },
   ];
@@ -137,8 +219,6 @@ export default async function IndustriesPage({
   return (
     <div className="flex flex-col w-full text-start">
       <PageHeader
-        sectionNumber="EXPERTISE // 04"
-        badge={isAr ? "القطاعات الحيوية بالمملكة" : "7 INDUSTRIAL SECTORS"}
         title={isAr ? "خبرتنا الممتدة عبر القطاعات الصناعية" : "Industrial Expertise Across Critical Saudi Sectors"}
         description={isAr
           ? "تعتمد كبرى مصانع ومرافق المملكة على تارفا للحفاظ على جاهزية معداتها الكهروميكانيكية وتقليل أوقات التوقف الطارئة."
@@ -149,42 +229,56 @@ export default async function IndustriesPage({
         ]}
       />
 
-      {/* Intro Context Banner */}
-      <section className="py-12 bg-white dark:bg-charcoal-900 border-b border-charcoal-200 dark:border-charcoal-800">
+      {/* Visual Diagnostic & Reliability Capabilities Strip */}
+      <section className="py-8 bg-charcoal-950 text-white border-b border-charcoal-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8 space-y-3">
-              <span className="font-mono text-xs uppercase tracking-wider text-brand-red font-semibold">
-                INDUSTRIAL RELIABILITY MANDATE
-              </span>
-              <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-charcoal-900 dark:text-white">
-                {isAr
-                  ? "حماية خطوط الإنتاج الحيوية من الخسائر التشغيلية"
-                  : "Protecting Continuous Manufacturing Plants from Catastrophic Downtime"}
-              </h2>
-              <p className="font-body text-sm text-charcoal-600 dark:text-charcoal-400 leading-relaxed max-w-2xl">
-                {isAr
-                  ? "تدرك تارفا أن توقف محرك رئيسي في مصنع إسمنت أو شيلر مركزي في مستشفى يكلف مئات الآلاف كل ساعة. لذلك نقدم دعماً هندسياً سريعاً وبروتوكولات فحص دقيقة تعيد المعدة لمواصفات المصنع الأصلي."
-                  : "At Tarfa, we understand that an unexpected motor trip in a steel mill or a chiller failure in a major hospital incurs severe downtime penalties. Our workshop responds with precision diagnostics, round-the-clock overhaul capability, and OEM compliance."}
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-4 bg-charcoal-900 border border-charcoal-800 flex items-center gap-4">
+              <div className="w-12 h-12 bg-charcoal-950 border border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
+                <Clock className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-brand-red font-bold block">
+                  {isAr ? "جاهزية الطوارئ" : "24/7 RAPID DISPATCH"}
+                </span>
+                <span className="font-heading font-bold text-sm text-white block">
+                  {isAr ? "استجابة فورية للأعطال بالرياض" : "Round-the-Clock Breakdown Support"}
+                </span>
+              </div>
             </div>
 
-            <div className="lg:col-span-4 p-5 bg-charcoal-950 text-white border border-charcoal-800 text-start space-y-2 font-mono text-xs">
-              <span className="text-brand-red font-bold text-xs uppercase block">
-                EMERGENCY LIAISON
-              </span>
-              <p className="text-charcoal-300">
-                {isAr ? "الخط الساخن للمصانع لحالات الأعطال الطارئة بالرياض:" : "Direct industrial breakdown dispatch line in Riyadh:"}
-              </p>
-              <a href="tel:+966502640474" className="phone-number text-lg font-bold text-white block hover:text-brand-red transition-colors">
-                +966 50 2640 474
-              </a>
+            <div className="p-4 bg-charcoal-900 border border-charcoal-800 flex items-center gap-4">
+              <div className="w-12 h-12 bg-charcoal-950 border border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-brand-red font-bold block">
+                  {isAr ? "المعايير المعتمدة" : "OEM TOLERANCE COMPLIANCE"}
+                </span>
+                <span className="font-heading font-bold text-sm text-white block">
+                  {isAr ? "مطابقة مواصفات المصانع العالمية" : "Certified Surge & ISO 1940 Protocols"}
+                </span>
+              </div>
+            </div>
+
+            <div className="p-4 bg-charcoal-900 border border-charcoal-800 flex items-center gap-4">
+              <div className="w-12 h-12 bg-charcoal-950 border border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
+                <Truck className="w-6 h-6" />
+              </div>
+              <div>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-brand-red font-bold block">
+                  {isAr ? "الخدمات اللوجستية" : "HEAVY CRANE & LOGISTICS"}
+                </span>
+                <span className="font-heading font-bold text-sm text-white block">
+                  {isAr ? "استلام وتسليم المعدات الثقيلة بالموقع" : "Direct Transport to Riyadh Sina'iyah"}
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Detailed Sector Grid */}
+      {/* Visual Sector Cards Grid */}
       <section className="py-16 lg:py-20 bg-canvas-warm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -193,39 +287,59 @@ export default async function IndustriesPage({
               return (
                 <div
                   key={sector.id}
-                  className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 sm:p-7 flex flex-col justify-between space-y-5 hover:border-brand-red transition-colors shadow-hairline"
+                  className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 sm:p-7 flex flex-col justify-between space-y-5 hover:border-brand-red transition-colors shadow-hairline group"
                 >
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between border-b border-charcoal-100 dark:border-charcoal-800 pb-3">
-                      <div className="flex items-center gap-2.5 text-brand-red">
-                        <Icon className="w-5 h-5 flex-shrink-0" />
-                        <span className="font-heading font-bold text-lg text-charcoal-950 dark:text-white">
-                          {sector.name}
-                        </span>
+                  <div className="space-y-4">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors flex-shrink-0">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <span className="font-mono text-[10px] font-bold text-charcoal-400 block tracking-wider">
+                            {sector.code}
+                          </span>
+                          <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white leading-snug">
+                            {sector.name}
+                          </h3>
+                        </div>
                       </div>
-                      <span className="font-mono text-xs font-semibold text-charcoal-400">
-                        {sector.code}
-                      </span>
                     </div>
 
-                    <p className="font-body text-xs sm:text-sm text-charcoal-600 dark:text-charcoal-300 leading-relaxed">
-                      {sector.summary}
-                    </p>
+                    {/* Operational capability tags */}
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {sector.chips.map((chip, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-0.5 bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 font-mono text-[10px] text-charcoal-700 dark:text-charcoal-300"
+                        >
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Typical Machinery Maintained */}
-                  <div className="pt-3 border-t border-charcoal-100 dark:border-charcoal-800 space-y-2">
+                  {/* Typical Machinery Serviced with Micro-Icons */}
+                  <div className="pt-4 border-t border-charcoal-100 dark:border-charcoal-800 space-y-2.5">
                     <span className="font-mono text-[10px] uppercase tracking-wider text-charcoal-400 block font-semibold">
-                      {isAr ? "المعدات الكهروميكانيكية التي نقوم بصيانتها:" : "KEY ROTATING MACHINERY SERVICED:"}
+                      {isAr ? "المعدات الكهروميكانيكية المتخصصة:" : "SPECIALIZED MACHINERY OVERHAULED:"}
                     </span>
-                    <ul className="space-y-1.5 text-xs font-body text-charcoal-700 dark:text-charcoal-300">
-                      {sector.equipment.map((eq, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="text-brand-red font-bold text-xs mt-0.5">•</span>
-                          <span>{eq}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <div className="space-y-2">
+                      {sector.equipment.map((eq, i) => {
+                        const EqIcon = eq.icon;
+                        return (
+                          <div
+                            key={i}
+                            className="flex items-center gap-2.5 p-2 bg-canvas-warm/60 dark:bg-charcoal-850/60 border border-charcoal-100 dark:border-charcoal-800 text-xs font-body text-charcoal-800 dark:text-charcoal-200"
+                          >
+                            <div className="w-6 h-6 bg-white dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
+                              <EqIcon className="w-3.5 h-3.5" />
+                            </div>
+                            <span className="font-medium text-xs">{eq.title}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               );

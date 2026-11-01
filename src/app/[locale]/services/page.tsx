@@ -155,21 +155,23 @@ export default async function ServicesPage({
 
                   {/* Body Content */}
                   <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-brand-red">
-                        <Icon className="w-4 h-4" />
-                        <span className="font-mono text-[11px] font-semibold uppercase tracking-wider">
+                    <div className="space-y-2.5">
+                      <div className="flex items-center gap-2.5">
+                        <div className="w-8 h-8 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                        <span className="font-mono text-[11px] font-bold text-brand-red uppercase tracking-wider">
                           DISCIPLINE {svc.code}
                         </span>
                       </div>
 
-                      <h2 className="font-heading font-bold text-xl text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
+                      <h2 className="font-heading font-extrabold text-xl text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">
                         {svc.title}
                       </h2>
 
-                      <p className="font-body text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
-                        {svc.desc}
-                      </p>
+                      <span className="font-mono text-xs text-charcoal-500 dark:text-charcoal-400 block font-medium">
+                        {svc.headline}
+                      </span>
                     </div>
 
                     {/* Operational Envelope */}

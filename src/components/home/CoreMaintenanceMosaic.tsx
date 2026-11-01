@@ -83,6 +83,7 @@ export function CoreMaintenanceMosaic() {
                 src={panels[0].image}
                 alt={panels[0].alt}
                 fill
+                priority
                 className="object-cover filter contrast-[1.05] grayscale-[15%] group-hover:grayscale-0 transition-all duration-300"
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
@@ -101,7 +102,7 @@ export function CoreMaintenanceMosaic() {
               <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">
                 {panels[0].title}
               </h3>
-              <p className="font-body text-xs sm:text-sm text-charcoal-300 leading-relaxed max-w-xl">
+              <p className="font-body text-xs text-sm text-charcoal-300 leading-relaxed max-w-xl">
                 {panels[0].desc}
               </p>
             </div>
@@ -116,6 +117,7 @@ export function CoreMaintenanceMosaic() {
                   src={panels[1].image}
                   alt={panels[1].alt}
                   fill
+                  priority
                   className="object-cover filter contrast-[1.05] grayscale-[15%] group-hover:grayscale-0 transition-all duration-300"
                   sizes="(max-width: 640px) 100vw, 150px"
                 />
@@ -140,6 +142,7 @@ export function CoreMaintenanceMosaic() {
                   src={panels[2].image}
                   alt={panels[2].alt}
                   fill
+                  priority
                   className="object-cover filter contrast-[1.05] grayscale-[15%] group-hover:grayscale-0 transition-all duration-300"
                   sizes="(max-width: 640px) 100vw, 150px"
                 />
