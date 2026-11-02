@@ -232,13 +232,6 @@ export function Footer() {
               {isAr ? "شروط الخدمة" : "Terms"}
             </Link>
             <span>•</span>
-            <Link
-              href="/styleguide"
-              className="text-brand-red hover:text-white transition-colors font-semibold"
-            >
-              {isAr ? "دليل الهوية الهندسية" : "Style Guide"}
-            </Link>
-            <span>•</span>
             <LanguageToggle variant="dark" />
           </div>
         </div>
