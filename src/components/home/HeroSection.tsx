@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/Button";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { ArrowRight, ArrowLeft, Shield, Gauge, Cpu, MapPin } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function HeroSection() {
   const t = useTranslations("hero");
@@ -15,15 +16,82 @@ export function HeroSection() {
   const isAr = locale === "ar";
   const ArrowIcon = isAr ? ArrowLeft : ArrowRight;
 
-  return (
-    <section className="relative w-full bg-charcoal-950 text-white overflow-hidden border-b border-charcoal-800">
-      {/* Subtle technical background grid */}
-      <div className="absolute inset-0 bg-tech-grid-dark opacity-40 pointer-events-none" />
+  // 4 Realistic Workshop Documentary Slides
+  const slides = [
+    {
+      src: "/images/workshop/hero-industrial-motor.jpg",
+      alt: isAr
+        ? "إعادة لف قلب ستاتور المحركات الكهربائية الصناعية بالأسلاك النحاسية في ورشة تارفا بالرياض"
+        : "Heavy industrial motor stator copper rewinding in Tarfa Riyadh workshop",
+    },
+    {
+      src: "/images/workshop/hero-chiller-compressor.jpg",
+      alt: isAr
+        ? "عمرة وفحص ضواغط التبريد اللولبية (سكرو) الصناعية بمقاييس دقيقة"
+        : "Industrial HVAC chiller screw compressor precision overhaul in Riyadh bay",
+    },
+    {
+      src: "/images/workshop/hero-water-pump.jpg",
+      alt: isAr
+        ? "صيانة ومحاذاة مضخات الطرد المركزي متعددة المراحل للمنشآت الصناعية"
+        : "Heavy industrial multistage centrifugal water pump refurbishment and alignment",
+    },
+    {
+      src: "/images/workshop/hero-dynamic-balancing.jpg",
+      alt: isAr
+        ? "الموازنة الديناميكية الدقيقة لروتور المحركات وفق مواصفات ISO 1940"
+        : "Dynamic rotor balancing to ISO 1940 standards with digital diagnostics",
+    },
+  ];
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Automatic slideshow with no controls: transitions every 4.5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  return (
+    <section className="relative w-full bg-charcoal-950 text-white overflow-hidden border-b border-charcoal-800 min-h-[580px] lg:min-h-[660px] flex items-center">
+      {/* Subtle technical background grid */}
+      <div className="absolute inset-0 bg-tech-grid-dark opacity-35 pointer-events-none" />
+
+      {/* Desktop Full-Bleed Right-Side Slideshow: ZERO top/bottom padding */}
+      <div className="hidden lg:block absolute inset-y-0 end-0 w-[50%] xl:w-[52%] h-full overflow-hidden pointer-events-none">
+        {slides.map((slide, idx) => {
+          const isActive = idx === currentSlide;
+          return (
+            <div
+              key={slide.src}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-1000 ease-in-out",
+                isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+              )}
+            >
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={idx === 0}
+                className="object-cover filter contrast-[1.05]"
+                sizes="52vw"
+              />
+            </div>
+          );
+        })}
+
+        {/* Seamless Editorial Blend on the start/left edge into the #1c1e3e background */}
+        <div className="absolute inset-y-0 start-0 w-36 sm:w-52 lg:w-64 bg-gradient-to-r rtl:bg-gradient-to-l from-[#1c1e3e] via-[#1c1e3e]/85 to-transparent pointer-events-none z-20" />
+      </div>
+
+      {/* Main Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: 7 Cols (Editorial Typography & Action) */}
-          <ScrollReveal animation="fade-up" duration={700} className="lg:col-span-7 space-y-6 text-start">
+          <div className="lg:col-span-7 xl:col-span-6 space-y-6 text-start">
             {/* Eyebrow & Est. Badge */}
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 px-2.5 py-1 bg-brand-red text-white font-mono text-[11px] font-bold tracking-wider uppercase industrial-cut-badge">
@@ -45,6 +113,32 @@ export function HeroSection() {
               {t("subheadline")}
             </p>
 
+            {/* Mobile / Tablet Full-Bleed Slideshow: ZERO top/bottom margins */}
+            <div className="lg:hidden w-full h-[320px] sm:h-[400px] relative overflow-hidden rounded-md my-4 border border-[#2d3164]">
+              {slides.map((slide, idx) => {
+                const isActive = idx === currentSlide;
+                return (
+                  <div
+                    key={slide.src}
+                    className={cn(
+                      "absolute inset-0 transition-opacity duration-1000 ease-in-out",
+                      isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+                    )}
+                  >
+                    <Image
+                      src={slide.src}
+                      alt={slide.alt}
+                      fill
+                      priority={idx === 0}
+                      className="object-cover filter contrast-[1.05]"
+                      sizes="100vw"
+                    />
+                  </div>
+                );
+              })}
+              <div className="absolute inset-y-0 start-0 w-24 bg-gradient-to-r rtl:bg-gradient-to-l from-[#1c1e3e] via-[#1c1e3e]/80 to-transparent pointer-events-none z-20" />
+            </div>
+
             {/* CTAs: 1 Primary Red Chamfer Button + 1 Quiet Secondary Text Link */}
             <div className="pt-2 flex flex-wrap items-center gap-5 sm:gap-6">
               <Button
@@ -52,7 +146,7 @@ export function HeroSection() {
                 variant="primary"
                 size="lg"
                 withChamfer
-                className="text-sm font-bold shadow-technical"
+                className="text-sm font-bold shadow-technical rounded-full"
               >
                 <span>{t("primaryCta")}</span>
                 <ArrowIcon className="w-4 h-4 ms-2" />
@@ -90,31 +184,9 @@ export function HeroSection() {
                 <span className="text-white font-bold text-xs sm:text-sm">{isAr ? "صناعية الرياض" : "Al Sina'iyah"}</span>
               </div>
             </div>
-          </ScrollReveal>
-
-          {/* Right Column: 5 Cols (Photorealistic Workshop Image Seamlessly Blended with Background) */}
-          <ScrollReveal animation="slide-left" delay={150} duration={800} className="lg:col-span-5 relative">
-            <div className="relative h-[360px] sm:h-[420px] lg:h-[460px] w-full overflow-hidden rounded-md bg-[#1c1e3e]">
-              <Image
-                src="/images/workshop/hero-industrial-motor.jpg"
-                alt="Tarfa specialized technician inspecting heavy industrial motor stator core in Riyadh workshop"
-                fill
-                priority
-                className="object-cover filter contrast-[1.05]"
-                sizes="(max-width: 1024px) 100vw, 45vw"
-              />
-
-              {/* Seamless blend on the start/left edge into the #1c1e3e background */}
-              <div className="absolute inset-y-0 start-0 w-28 sm:w-44 bg-gradient-to-r rtl:bg-gradient-to-l from-[#1c1e3e] via-[#1c1e3e]/80 to-transparent pointer-events-none z-10" />
-
-              {/* Top and bottom subtle edge blend */}
-              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#1c1e3e]/70 to-transparent pointer-events-none z-10" />
-              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#1c1e3e]/70 to-transparent pointer-events-none z-10" />
-            </div>
-          </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-

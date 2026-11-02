@@ -16,7 +16,6 @@ interface ScrollRevealProps {
   animation?: AnimationVariant;
   delay?: number;
   duration?: number;
-  threshold?: number;
   className?: string;
   as?: React.ElementType;
 }
@@ -25,12 +24,11 @@ export function ScrollReveal({
   children,
   animation = "fade-up",
   delay = 0,
-  duration = 700,
-  threshold = 0.05,
+  duration = 950, // Slower, more graceful transition
   className,
   as: Component = "div",
 }: ScrollRevealProps) {
-  // Start with true so content is ALWAYS visible on SSR and initial load
+  // Start with true on initial server render to ensure SEO accessibility
   const [isRevealed, setIsRevealed] = useState(true);
   const [isInitialized, setIsInitialized] = useState(false);
   const elementRef = useRef<HTMLElement | null>(null);
@@ -48,16 +46,16 @@ export function ScrollReveal({
     if (!node) return;
 
     const rect = node.getBoundingClientRect();
-    const isAboveFold = rect.top < window.innerHeight && rect.bottom > 0;
+    // Check if element is already within the visible viewport on initial page load
+    const isAboveFold = rect.top < window.innerHeight - 80 && rect.bottom > 0;
 
     if (isAboveFold) {
-      // Element is already in view (e.g. Hero section or top fold)
       setIsRevealed(true);
       setIsInitialized(true);
       return;
     }
 
-    // Element is below the fold: set up reveal on scroll
+    // Element is below the fold: prime it to animate only when scrolled into view
     setIsRevealed(false);
     setIsInitialized(true);
 
@@ -65,12 +63,12 @@ export function ScrollReveal({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsRevealed(true);
-          observer.disconnect();
+          observer.disconnect(); // Trigger once as user scrolls into the section
         }
       },
       {
-        threshold: 0.05,
-        rootMargin: "80px 0px 80px 0px", // Trigger 80px before entering viewport
+        threshold: 0.15, // Requires 15% of the element to be inside the viewport
+        rootMargin: "0px 0px -80px 0px", // Only triggers AFTER the element is 80px inside the visible screen!
       }
     );
 
