@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function CredibilityStrip() {
   const t = useTranslations("credibility");
@@ -34,20 +35,23 @@ export function CredibilityStrip() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x rtl:sm:divide-x-reverse divide-charcoal-200 dark:divide-charcoal-800 text-start">
           {items.map((item, idx) => (
-            <div
+            <ScrollReveal
               key={idx}
+              animation="fade-up"
+              delay={idx * 80}
+              duration={650}
               className="py-6 sm:py-8 px-4 sm:px-6 lg:px-7 flex flex-col justify-between space-y-2 first:ps-0 last:pe-0"
             >
               <span className="font-mono text-xs uppercase tracking-wider text-brand-red font-semibold">
                 {item.mono}
               </span>
-              <div className="font-heading font-extrabold text-2xl lg:text-3xl text-charcoal-950 dark:text-white tracking-tight">
+              <div className="font-heading font-extrabold text-2xl lg:text-3xl xl:text-4xl text-charcoal-950 dark:text-white tracking-tight">
                 {item.value}
               </div>
-              <p className="font-body text-xs text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
+              <p className="font-body text-sm text-charcoal-700 dark:text-charcoal-300 leading-relaxed font-medium">
                 {item.label}
               </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

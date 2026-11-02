@@ -52,7 +52,7 @@ export function SectionHeading({
         <p
           className={cn(
             "text-base md:text-lg leading-relaxed font-body",
-            isDark ? "text-charcoal-300" : "text-charcoal-500"
+            isDark ? "text-slate-200" : "text-charcoal-700 dark:text-charcoal-200"
           )}
         >
           {description}

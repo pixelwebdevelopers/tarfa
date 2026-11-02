@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import {
   GovernmentWorksIcon,
@@ -64,7 +65,7 @@ export function IndustriesSplit() {
     <section className="w-full py-16 lg:py-24 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800 text-start">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8">
+        <ScrollReveal animation="fade-up" duration={700} className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8">
           <SectionHeading
             eyebrow={t("eyebrow")}
             title={t("headline")}
@@ -77,12 +78,12 @@ export function IndustriesSplit() {
             <span>{isAr ? "استعراض كافة القطاعات" : "Explore All Sectors"}</span>
             <ArrowIcon className="w-4 h-4" />
           </Link>
-        </div>
+        </ScrollReveal>
 
         {/* Split Layout: 5 Cols Image vs 7 Cols List */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column (5 Cols): Real Heavy Industry Facility Photo */}
-          <div className="lg:col-span-5 relative space-y-4">
+          <ScrollReveal animation="slide-left" duration={800} className="lg:col-span-5 relative space-y-4">
             <div className="relative h-[380px] sm:h-[480px] w-full border border-charcoal-200 dark:border-charcoal-700 bg-charcoal-900 overflow-hidden industrial-cut">
               <Image
                 src="/images/workshop/heavy-industry-plant.png"
@@ -109,10 +110,10 @@ export function IndustriesSplit() {
               <span>{isAr ? "دعم الطوارئ للمصانع" : "Emergency Plant Breakdown Standby"}</span>
               <span className="text-brand-red font-bold">+966 50 2640 474</span>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column (7 Cols): Visual Icon List */}
-          <div className="lg:col-span-7 divide-y divide-charcoal-200 dark:divide-charcoal-800 border-t border-b border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900">
+          <ScrollReveal animation="slide-right" delay={150} duration={800} className="lg:col-span-7 divide-y divide-charcoal-200 dark:divide-charcoal-800 border-t border-b border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900">
             {sectors.map((item, idx) => {
               const Icon = item.icon;
               return (
@@ -134,7 +135,7 @@ export function IndustriesSplit() {
                 </div>
               );
             })}
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

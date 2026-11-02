@@ -6,6 +6,7 @@ import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ArrowRight, ArrowLeft, ShieldAlert, Check } from "lucide-react";
 
 export function CoreMaintenanceMosaic() {
@@ -45,7 +46,7 @@ export function CoreMaintenanceMosaic() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         {/* Section Heading & Context */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end text-start border-b border-charcoal-800 pb-8">
+        <ScrollReveal animation="fade-up" duration={700} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end text-start border-b border-charcoal-800 pb-8">
           <div className="lg:col-span-8 space-y-3">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-brand-red" />
@@ -56,7 +57,7 @@ export function CoreMaintenanceMosaic() {
             <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-tight text-white">
               {t("headline")}
             </h2>
-            <p className="font-body text-sm sm:text-base text-charcoal-300 max-w-2xl leading-relaxed">
+            <p className="font-body text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
               {t("lead")}
             </p>
           </div>
@@ -66,18 +67,18 @@ export function CoreMaintenanceMosaic() {
               href="/services/core-maintenance"
               variant="outline"
               size="md"
-              className="border-charcoal-700 text-white hover:text-white hover:border-brand-red text-xs font-mono"
+              className="border-slate-400 text-white hover:text-white hover:border-brand-red text-xs font-mono"
             >
               <span>{isAr ? "معايير صيانة القلوب" : "Core Maintenance Standards"}</span>
               <ArrowIcon className="w-3.5 h-3.5 ms-2" />
             </Button>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Asymmetric 3-Panel Mosaic with Real PDF Photos */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Panel 1: Primary Large Feature (Core Testing) - 7 Cols */}
-          <div className="lg:col-span-7 border border-charcoal-800 bg-charcoal-900/90 relative overflow-hidden flex flex-col justify-between group">
+          <ScrollReveal animation="slide-left" duration={800} className="lg:col-span-7 border border-[#2d3164] bg-[#161838] relative overflow-hidden flex flex-col justify-between group">
             <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-charcoal-950">
               <Image
                 src={panels[0].image}
@@ -95,20 +96,20 @@ export function CoreMaintenanceMosaic() {
               </div>
             </div>
 
-            <div className="p-6 sm:p-7 space-y-2 text-start bg-charcoal-900">
+            <div className="p-6 sm:p-7 space-y-2 text-start bg-[#161838]">
               <h3 className="font-heading font-bold text-xl sm:text-2xl text-white">
                 {panels[0].title}
               </h3>
-              <p className="font-body text-xs text-sm text-charcoal-300 leading-relaxed max-w-xl">
+              <p className="font-body text-sm sm:text-base text-slate-200 leading-relaxed max-w-xl">
                 {panels[0].desc}
               </p>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: 2 Stacked Panels (5 Cols) */}
-          <div className="lg:col-span-5 grid grid-cols-1 gap-6">
+          <ScrollReveal animation="slide-right" delay={150} duration={800} className="lg:col-span-5 grid grid-cols-1 gap-6">
             {/* Panel 2: Core Cleaning & Re-Varnishing */}
-            <div className="border border-charcoal-800 bg-charcoal-900/90 p-5 sm:p-6 flex flex-col sm:flex-row gap-5 items-center group text-start">
+            <div className="border border-[#2d3164] bg-[#161838] p-5 sm:p-6 flex flex-col sm:flex-row gap-5 items-center group text-start">
               <div className="relative w-full sm:w-36 h-36 flex-shrink-0 bg-charcoal-950 overflow-hidden border border-charcoal-700">
                 <Image
                   src={panels[1].image}
@@ -119,18 +120,18 @@ export function CoreMaintenanceMosaic() {
                   sizes="(max-width: 640px) 100vw, 150px"
                 />
               </div>
-              <div className="space-y-1.5 flex-1">
+              <div className="space-y-2 flex-1">
                 <h4 className="font-heading font-bold text-base sm:text-lg text-white">
                   {panels[1].title}
                 </h4>
-                <p className="font-body text-xs text-charcoal-300 leading-relaxed">
+                <p className="font-body text-xs sm:text-sm text-slate-200 leading-relaxed">
                   {panels[1].desc}
                 </p>
               </div>
             </div>
 
             {/* Panel 3: Core Spot Welding */}
-            <div className="border border-charcoal-800 bg-charcoal-900/90 p-5 sm:p-6 flex flex-col sm:flex-row gap-5 items-center group text-start">
+            <div className="border border-[#2d3164] bg-[#161838] p-5 sm:p-6 flex flex-col sm:flex-row gap-5 items-center group text-start">
               <div className="relative w-full sm:w-36 h-36 flex-shrink-0 bg-charcoal-950 overflow-hidden border border-charcoal-700">
                 <Image
                   src={panels[2].image}
@@ -141,20 +142,20 @@ export function CoreMaintenanceMosaic() {
                   sizes="(max-width: 640px) 100vw, 150px"
                 />
               </div>
-              <div className="space-y-1.5 flex-1">
+              <div className="space-y-2 flex-1">
                 <h4 className="font-heading font-bold text-base sm:text-lg text-white">
                   {panels[2].title}
                 </h4>
-                <p className="font-body text-xs text-charcoal-300 leading-relaxed">
+                <p className="font-body text-xs sm:text-sm text-slate-200 leading-relaxed">
                   {panels[2].desc}
                 </p>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Verification Strip */}
-        <div className="border-t border-charcoal-800/80 pt-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-charcoal-400">
+        <div className="border-t border-[#2d3164] pt-6 flex flex-wrap items-center justify-between gap-4 font-mono text-xs sm:text-sm text-slate-300">
           <div className="flex items-center gap-2 text-white">
             <span className="w-2 h-2 rounded-full bg-industrial-green animate-pulse" />
             <span>{isAr ? "مختبر تشخيص الستاتور والقلوب في الرياض" : "In-House Riyadh Stator Core Diagnostic Station"}</span>

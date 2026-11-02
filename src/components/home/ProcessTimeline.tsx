@@ -3,6 +3,7 @@
 import React from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { AlertCircle } from "lucide-react";
 import {
   LogInspectionIcon,
@@ -68,7 +69,7 @@ export function ProcessTimeline() {
     <section className="w-full py-16 lg:py-24 bg-white dark:bg-charcoal-900 border-b border-charcoal-200 dark:border-charcoal-800 text-start">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8">
+        <ScrollReveal animation="fade-up" duration={700} className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8">
           <SectionHeading
             eyebrow={t("eyebrow")}
             title={t("headline")}
@@ -80,7 +81,7 @@ export function ProcessTimeline() {
             <AlertCircle className="w-4 h-4 text-brand-red flex-shrink-0" />
             <span>{isAr ? "مسار معتمد يخضع لتأكيد متطلبات العميل" : "Standard Workflow (Subject to Client Confirmation)"}</span>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Desktop Horizontal Timeline / Mobile Rail */}
         <div className="relative">
@@ -91,17 +92,20 @@ export function ProcessTimeline() {
             {steps.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div
+                <ScrollReveal
                   key={idx}
+                  animation="fade-up"
+                  delay={idx * 65}
+                  duration={650}
                   className="p-5 border border-charcoal-200 dark:border-charcoal-800 bg-canvas-warm dark:bg-charcoal-850 flex flex-col justify-between space-y-4 group hover:border-brand-red transition-all duration-200 shadow-hairline"
                 >
                   {/* Step Indicator Header */}
                   <div className="flex items-center justify-between border-b border-charcoal-200/80 dark:border-charcoal-750 pb-2.5">
-                    <span className="w-8 h-8 flex items-center justify-center font-mono font-bold text-xs bg-charcoal-950 text-white group-hover:bg-brand-red transition-colors rounded-none">
+                    <span className="w-8 h-8 flex items-center justify-center font-mono font-bold text-xs bg-[#1c1e3e] text-white group-hover:bg-brand-red transition-colors rounded-none">
                       {item.num}
                     </span>
-                    <span className="font-mono text-[10px] text-charcoal-400 uppercase font-semibold">
-                      STAGE {item.num}
+                    <span className="font-mono text-xs text-brand-red uppercase font-semibold">
+                      {item.badge}
                     </span>
                   </div>
 
@@ -110,16 +114,13 @@ export function ProcessTimeline() {
                     <Icon className="w-6 h-6" />
                   </div>
 
-                  {/* Step Title & Visual Badge */}
+                  {/* Step Title */}
                   <div className="space-y-1.5 flex-1">
-                    <h3 className="font-heading font-extrabold text-sm sm:text-base text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors leading-snug">
+                    <h3 className="font-heading font-extrabold text-base sm:text-lg text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors leading-snug">
                       {item.title}
                     </h3>
-                    <span className="font-mono text-[10px] text-brand-red font-semibold uppercase tracking-wider block">
-                      {item.badge}
-                    </span>
                   </div>
-                </div>
+                </ScrollReveal>
               );
             })}
           </div>

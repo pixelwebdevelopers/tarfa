@@ -162,14 +162,14 @@ export default async function ServicesPage({
                         </h2>
                       </div>
 
-                      <span className="font-mono text-xs text-charcoal-500 dark:text-charcoal-400 block font-medium">
+                      <span className="font-mono text-sm text-charcoal-700 dark:text-charcoal-300 block font-medium">
                         {svc.headline}
                       </span>
                     </div>
 
                     {/* Operational Envelope */}
                     <div className="pt-3 border-t border-charcoal-100 dark:border-charcoal-800 space-y-2">
-                      <div className="font-mono text-[11px] text-charcoal-500 dark:text-charcoal-400">
+                      <div className="font-mono text-xs text-charcoal-600 dark:text-charcoal-300">
                         <span className="text-[10px] uppercase text-charcoal-400 block">
                           {isAr ? "نطاق المواصفات" : "SPEC ENVELOPE"}
                         </span>
@@ -193,7 +193,24 @@ export default async function ServicesPage({
           </div>
         </div>
       </section>
+
+      {/* Action Banner */}
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1">
+            <span className="font-mono text-xs text-brand-red font-semibold uppercase">
+              WORKSHOP OVERHAUL CAPABILITY
+            </span>
+            <h3 className="font-heading font-bold text-xl text-white">
+              {isAr ? "هل لديك معدة تحتاج إلى فحص عاجل أو إعادة لف؟" : "Need an Emergency Assessment or Certified Rewind Quotation?"}
+            </h3>
+          </div>
+          <Button href="/contact" variant="primary" size="md" withChamfer className="rounded-full">
+            <span>{isAr ? "طلب عرض سعر فني" : "Request Technical Quotation"}</span>
+            <ArrowIcon className="w-4 h-4 ms-2" />
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
-

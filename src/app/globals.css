@@ -208,5 +208,65 @@
       transparent 100%
     );
   }
+
+  /* =====================================================================
+     Scroll Reveal Entrance Animations (WordPress / Elementor Style)
+     ===================================================================== */
+  .reveal-base {
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-fade-up {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  .reveal-fade-down {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+
+  .reveal-slide-left {
+    opacity: 0;
+    transform: translateX(-44px);
+  }
+
+  .reveal-slide-right {
+    opacity: 0;
+    transform: translateX(44px);
+  }
+
+  /* RTL flip for horizontal sliding directions */
+  html[dir="rtl"] .reveal-slide-left {
+    transform: translateX(44px);
+  }
+
+  html[dir="rtl"] .reveal-slide-right {
+    transform: translateX(-44px);
+  }
+
+  .reveal-zoom-in {
+    opacity: 0;
+    transform: scale(0.93);
+  }
+
+  .reveal-fade-in {
+    opacity: 0;
+  }
+
+  .reveal-base.is-revealed {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-base {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
 }
 

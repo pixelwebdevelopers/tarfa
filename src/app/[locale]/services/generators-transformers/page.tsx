@@ -88,7 +88,7 @@ export default async function GeneratorsTransformersPage({
                 title={isAr ? "جاهزية واستقرار مصادر الطاقة ومحطات التوزيع" : "Ensuring Uninterrupted Electrical Power Distribution"}
               />
 
-              <div className="space-y-4 font-body text-charcoal-600 dark:text-charcoal-300 leading-relaxed text-sm sm:text-base">
+              <div className="space-y-4 font-body text-charcoal-700 dark:text-charcoal-200 leading-relaxed text-base sm:text-lg">
                 <p>
                   {isAr
                     ? "تعتمد موثوقية شبكات الطاقة في المصانع على السلامة العازلة لمحولات التوزيع والمولدات الاحتياطية. توفر ورشة تارفا خدمات الفحص الكهروميكانيكي المتكامل للمولدات، بما في ذلك إعادة لف ملفات العضو الثابت، ملفات الأقطاب الدوارة، وملفات المولد المساعد (Exciter)، مع استبدال قناطر التوحيد الدوارة (Rotating Diodes)."
@@ -170,7 +170,7 @@ export default async function GeneratorsTransformersPage({
       </section>
 
       {/* 3. Action Banner */}
-      <section className="py-12 bg-charcoal-950 text-white">
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">

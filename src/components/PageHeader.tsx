@@ -22,7 +22,7 @@ export function PageHeader({
   return (
     <div
       className={cn(
-        "w-full bg-charcoal-950 text-white border-b border-charcoal-800 py-12 lg:py-16 relative overflow-hidden",
+        "w-full bg-charcoal-950 text-white border-b border-[#2d3164] py-14 lg:py-20 relative overflow-hidden",
         className
       )}
     >
@@ -36,7 +36,7 @@ export function PageHeader({
         </h1>
 
         {description && (
-          <p className="font-body text-base sm:text-lg text-charcoal-300 max-w-2xl leading-relaxed">
+          <p className="font-body text-base sm:text-lg lg:text-xl text-slate-200 max-w-3xl leading-relaxed">
             {description}
           </p>
         )}

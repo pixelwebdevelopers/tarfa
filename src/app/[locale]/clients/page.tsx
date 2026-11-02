@@ -139,7 +139,7 @@ export default async function ClientsPage({
             <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-charcoal-900 dark:text-white">
               {isAr ? "ثقة متبادلة مع كبرى الجهات والشركات" : "Trusted by Critical National Enterprises"}
             </h2>
-            <p className="font-body text-sm text-charcoal-600 dark:text-charcoal-400 leading-relaxed">
+            <p className="font-body text-base sm:text-lg text-charcoal-700 dark:text-charcoal-200 leading-relaxed">
               {isAr
                 ? "قائمتنا تضم نخبة من الشركات الرائدة في قطاعات النقل، تصنيع المضخات، الصناعات البلاستيكية، الرعاية الصحية، والمرافق الجامعية بالمملكة."
                 : "Our customer relationships are built on swift diagnostic turnaround, zero-compromise rewinding standards, and reliable post-repair performance."}
@@ -181,7 +181,7 @@ export default async function ClientsPage({
                         {c.arabicName}
                       </span>
                     )}
-                    <p className="font-mono text-xs text-charcoal-600 dark:text-charcoal-300 font-medium">
+                    <p className="font-mono text-sm text-charcoal-700 dark:text-charcoal-200 font-medium">
                       {c.sector}
                     </p>
                   </div>
@@ -192,7 +192,7 @@ export default async function ClientsPage({
                   <span className="font-mono text-[10px] uppercase tracking-wider text-charcoal-400 block font-semibold">
                     {isAr ? "نطاق الصيانة المنفذ:" : "SERVICES PERFORMED:"}
                   </span>
-                  <span className="font-body text-xs text-charcoal-700 dark:text-charcoal-400 block leading-relaxed">
+                  <span className="font-body text-sm text-charcoal-700 dark:text-charcoal-300 block leading-relaxed">
                     {c.scope}
                   </span>
                 </div>
@@ -218,7 +218,7 @@ export default async function ClientsPage({
       </section>
 
       {/* Action Banner */}
-      <section className="py-12 bg-charcoal-950 text-white">
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">

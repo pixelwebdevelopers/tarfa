@@ -101,35 +101,35 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-200">
       {/* Top Utility Bar */}
-      <div className="bg-charcoal-950 text-charcoal-300 border-b border-charcoal-800 text-xs py-1.5 px-4 sm:px-6 lg:px-8">
+      <div className="bg-charcoal-950 text-slate-200 border-b border-[#2d3164] text-xs py-2 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 font-mono">
           {/* Workshop Dispatch details */}
           <div className="flex items-center gap-6">
             <a
               href={`tel:${COMPANY_DETAILS.phonePrimary}`}
-              className="flex items-center gap-1.5 hover:text-white transition-colors"
+              className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="phone-number text-xs font-semibold text-white">
+              <span className="phone-number text-xs font-bold text-white tracking-wide">
                 {COMPANY_DETAILS.phonePrimary}
               </span>
             </a>
             <a
               href={`mailto:${COMPANY_DETAILS.email}`}
-              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors"
+              className="hidden sm:flex items-center gap-2 text-slate-200 hover:text-white transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="text-xs">{COMPANY_DETAILS.email}</span>
+              <span className="text-xs font-medium">{COMPANY_DETAILS.email}</span>
             </a>
-            <div className="hidden lg:flex items-center gap-1.5 text-charcoal-400">
+            <div className="hidden lg:flex items-center gap-2 text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span>{isAr ? "المدينة الصناعية، الرياض" : "Al Sina'iyah, Riyadh"}</span>
+              <span className="text-xs font-medium">{isAr ? "المدينة الصناعية، الرياض" : "Al Sina'iyah, Riyadh"}</span>
             </div>
           </div>
 
           {/* Right utility: Est & Language Toggle */}
           <div className="flex items-center gap-4">
-            <span className="hidden md:inline-block text-[11px] font-semibold text-charcoal-400 uppercase tracking-widest border-e border-charcoal-800 pe-4">
+            <span className="hidden md:inline-block text-xs font-semibold text-slate-300 uppercase tracking-wider border-e border-[#2d3164] pe-4">
               {isAr ? "بيت الجودة • تأسست 1983" : "House of Quality • Est. 1983"}
             </span>
             <LanguageToggle variant="dark" />

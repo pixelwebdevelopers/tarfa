@@ -302,7 +302,7 @@ export default async function IndustriesPage({
                       {sector.chips.map((chip, idx) => (
                         <span
                           key={idx}
-                          className="px-2 py-0.5 bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 font-mono text-[10px] text-charcoal-700 dark:text-charcoal-300"
+                          className="px-2 py-0.5 bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 font-mono text-xs text-charcoal-700 dark:text-charcoal-200"
                         >
                           {chip}
                         </span>
@@ -326,7 +326,7 @@ export default async function IndustriesPage({
                             <div className="w-6 h-6 bg-white dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
                               <EqIcon className="w-3.5 h-3.5" />
                             </div>
-                            <span className="font-medium text-xs">{eq.title}</span>
+                            <span className="font-medium text-xs sm:text-sm text-charcoal-900 dark:text-slate-100">{eq.title}</span>
                           </div>
                         );
                       })}
@@ -340,7 +340,7 @@ export default async function IndustriesPage({
       </section>
 
       {/* Action Banner */}
-      <section className="py-12 bg-charcoal-950 text-white">
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">

@@ -88,7 +88,7 @@ export default async function TestingBalancingPage({
                 title={isAr ? "دقة الاختبار تضمن سلامة التشغيل واستقرار الأداء" : "Precision Balancing Eliminates Machine Vibration at Root"}
               />
 
-              <div className="space-y-4 font-body text-charcoal-600 dark:text-charcoal-300 leading-relaxed text-sm sm:text-base">
+              <div className="space-y-4 font-body text-charcoal-700 dark:text-charcoal-200 leading-relaxed text-base sm:text-lg">
                 <p>
                   {isAr
                     ? "تعتبر الاهتزازات الميكانيكية السبب الأول لتلف كراسي التحميل وتصدع أغطية المحركات. توفر ورشة تارفا محطة موازنة ديناميكية إلكترونية مجهزة لرصد واحتساب أي اختلال في توزيع الكتلة على طول العضو الدوار (Rotor) أو مروحة المضخة، وتصحيحه بدقة متناهية وفق معيار ISO 1940 درجة G2.5."
@@ -170,7 +170,7 @@ export default async function TestingBalancingPage({
       </section>
 
       {/* 3. Action Banner */}
-      <section className="py-12 bg-charcoal-950 text-white">
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">

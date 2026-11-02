@@ -120,7 +120,7 @@ export default async function ProcessPage({
                 <span className="font-heading font-bold text-sm text-charcoal-900 dark:text-white block">
                   {isAr ? "مخطط العمليات المعياري" : "Standard Industrial Lifecycle Protocol"}
                 </span>
-                <span className="font-body text-xs text-charcoal-600 dark:text-charcoal-400">
+                <span className="font-body text-sm text-charcoal-700 dark:text-charcoal-300 leading-relaxed">
                   {isAr
                     ? "هذا المسار يمثل إجراءات الصيانة القياسية المتبعة في ورشة الرياض، ويتم تعديله وفق متطلبات الصانع أو الشروط الخاصة بالعميل."
                     : "This workflow outlines our standard Al Sina'iyah workshop practice and is customized per client technical specifications."}
@@ -162,7 +162,7 @@ export default async function ProcessPage({
 
                   {/* Middle: Clean Scope Tag */}
                   <div className="lg:w-4/12 ps-14 lg:ps-0">
-                    <span className="font-mono text-xs text-charcoal-600 dark:text-charcoal-300 font-medium block">
+                    <span className="font-mono text-sm text-charcoal-700 dark:text-charcoal-200 font-medium block">
                       {st.scope}
                     </span>
                   </div>
@@ -173,7 +173,7 @@ export default async function ProcessPage({
                       <Shield className="w-3 h-3" />
                       <span>QC VERIFICATION</span>
                     </div>
-                    <span className="font-mono text-[11px] text-charcoal-700 dark:text-charcoal-300 block font-semibold">
+                    <span className="font-mono text-xs text-charcoal-700 dark:text-charcoal-200 block font-semibold">
                       {st.qa}
                     </span>
                   </div>
@@ -185,7 +185,7 @@ export default async function ProcessPage({
       </section>
 
       {/* Action Banner */}
-      <section className="py-12 bg-charcoal-950 text-white">
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">

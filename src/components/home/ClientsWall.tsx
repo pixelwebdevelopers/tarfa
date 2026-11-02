@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function ClientsWall() {
   const t = useTranslations("clients");
@@ -62,11 +63,11 @@ export function ClientsWall() {
 
   return (
     <section className="w-full py-16 lg:py-20 bg-white dark:bg-charcoal-900 border-b border-charcoal-200 dark:border-charcoal-800 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10 text-center">
+      <ScrollReveal animation="fade-up" duration={700} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10 text-center">
         <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-charcoal-950 dark:text-white tracking-tight">
           {isAr ? "موثوق من كبرى الشركات السعودية" : "Trusted by Leading Saudi Enterprises"}
         </h2>
-      </div>
+      </ScrollReveal>
 
       {/* Marquee Track Container with Edge Gradient Masking */}
       <div className="w-full relative overflow-hidden mask-marquee py-2">

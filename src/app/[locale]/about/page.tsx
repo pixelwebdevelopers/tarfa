@@ -67,7 +67,7 @@ export default async function AboutPage({
                 title={isAr ? "نبض خدمات إعادة اللف منذ عام 1983" : "The Pulse of Industrial Rewinding Since 1983"}
               />
 
-              <div className="space-y-4 font-body text-charcoal-600 dark:text-charcoal-300 leading-relaxed text-sm sm:text-base">
+              <div className="space-y-4 font-body text-charcoal-600 dark:text-charcoal-300 leading-relaxed text-base sm:text-lg leading-relaxed">
                 <p>
                   {isAr
                     ? "أصبحت شركة تارفا لصيانة المعدات نبض خدمات إعادة اللف والصيانة في قطاع الصناعة بالمملكة العربية السعودية عام 1983، حيث اكتسبت ثقة عملائها عبر تقديم خدمات بأعلى معايير الجودة، مما بنى جسوراً متينة من الشراكة والاعتمادية."
@@ -232,7 +232,7 @@ export default async function AboutPage({
       </section>
 
       {/* 4. Action Banner */}
-      <section className="py-12 bg-charcoal-950 text-white">
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">

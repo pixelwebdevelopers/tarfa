@@ -218,7 +218,7 @@ export default function ContactPage() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-2.5 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white flex items-center justify-center gap-2 rounded-sm font-heading font-semibold text-xs uppercase tracking-wider transition-colors"
+                    className="w-full py-3 px-5 bg-[#25D366] hover:bg-[#1EBE5D] text-white flex items-center justify-center gap-2.5 rounded-full font-heading font-bold text-xs uppercase tracking-wider transition-all shadow-md hover:shadow-lg"
                   >
                     <MessageSquare className="w-4 h-4 fill-current" />
                     <span>{isAr ? "محادثة فورية عبر واتساب" : "Direct WhatsApp Inquiry"}</span>

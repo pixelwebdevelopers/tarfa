@@ -95,7 +95,7 @@ export default async function WaterPumpsPage({
                 title={isAr ? "كفاءة مائية وهيدروليكية موثوقة لأعلى معايير التشغيل" : "Precision Hydraulic Rebuilding for Municipal & Heavy Plants"}
               />
 
-              <div className="space-y-4 font-body text-charcoal-600 dark:text-charcoal-300 leading-relaxed text-sm sm:text-base">
+              <div className="space-y-4 font-body text-charcoal-700 dark:text-charcoal-200 leading-relaxed text-base sm:text-lg">
                 <p>
                   {isAr
                     ? "تعتبر مضخات المياه عصب المرافق العامة والمصانع ومشاريع البنية التحتية. تقدم ورشة تارفا خدمات إعادة لف وصيانة شاملة تشمل المضخات الغاطسة التي تعمل في أعماق الآبار الارتوازية وتتطلب عوازل سلكية مائية متخصصة لمنع تسرب الرطوبة تحت الضغط العالي."
@@ -177,7 +177,7 @@ export default async function WaterPumpsPage({
       </section>
 
       {/* 3. Action Banner */}
-      <section className="py-12 bg-charcoal-950 text-white">
+      <section className="py-14 bg-[#0a0c14] text-white border-t border-charcoal-800 border-b-2 border-brand-red/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-brand-red font-semibold uppercase">

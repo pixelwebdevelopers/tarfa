@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/components/Button";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ArrowRight, ArrowLeft, Shield, Gauge, Cpu, MapPin } from "lucide-react";
 
 export function HeroSection() {
@@ -22,14 +23,14 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: 7 Cols (Editorial Typography & Action) */}
-          <div className="lg:col-span-7 space-y-6 text-start">
+          <ScrollReveal animation="fade-up" duration={700} className="lg:col-span-7 space-y-6 text-start">
             {/* Eyebrow & Est. Badge */}
             <div className="flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 px-2.5 py-1 bg-brand-red text-white font-mono text-[11px] font-bold tracking-wider uppercase industrial-cut-badge">
                 <span className="w-1.5 h-1.5 bg-white" />
                 {common("est")}
               </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-charcoal-400 font-medium">
+              <span className="font-mono text-xs uppercase tracking-widest text-slate-300 font-semibold">
                 {t("eyebrow")}
               </span>
             </div>
@@ -40,7 +41,7 @@ export function HeroSection() {
             </h1>
 
             {/* Subheadline */}
-            <p className="font-body text-base sm:text-lg text-charcoal-300 max-w-2xl leading-relaxed">
+            <p className="font-body text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl leading-relaxed">
               {t("subheadline")}
             </p>
 
@@ -59,9 +60,9 @@ export function HeroSection() {
 
               <Link
                 href="/services"
-                className="group inline-flex items-center gap-2 font-heading font-semibold text-sm text-charcoal-300 hover:text-white transition-colors"
+                className="group inline-flex items-center gap-2 font-heading font-semibold text-sm text-slate-200 hover:text-white transition-colors"
               >
-                <span className="border-b border-charcoal-600 group-hover:border-brand-red pb-0.5 transition-colors">
+                <span className="border-b border-slate-400 group-hover:border-brand-red pb-0.5 transition-colors">
                   {t("secondaryCta")}
                 </span>
                 <ArrowIcon className="w-3.5 h-3.5 text-brand-red transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
@@ -69,60 +70,48 @@ export function HeroSection() {
             </div>
 
             {/* Technical Proof Strip */}
-            <div className="pt-6 border-t border-charcoal-800/80 grid grid-cols-3 gap-4 font-mono text-xs">
+            <div className="pt-6 border-t border-[#2d3164] grid grid-cols-3 gap-4 font-mono text-xs sm:text-sm">
               <div className="space-y-1">
-                <span className="block text-[10px] uppercase tracking-wider text-charcoal-500">
+                <span className="block text-[11px] uppercase tracking-wider text-slate-300 font-medium">
                   {isAr ? "الجهد التشغيلي" : "VOLTAGE RANGE"}
                 </span>
-                <span className="text-white font-semibold">400V - 13.8 kV</span>
+                <span className="text-white font-bold text-xs sm:text-sm">400V - 13.8 kV</span>
               </div>
-              <div className="space-y-1 border-s border-charcoal-800 ps-4">
-                <span className="block text-[10px] uppercase tracking-wider text-charcoal-500">
+              <div className="space-y-1 border-s border-[#2d3164] ps-4">
+                <span className="block text-[11px] uppercase tracking-wider text-slate-300 font-medium">
                   {isAr ? "بروتوكول الاختبار" : "TEST PROTOCOL"}
                 </span>
-                <span className="text-white font-semibold">ISO 1940 / Surge</span>
+                <span className="text-white font-bold text-xs sm:text-sm">ISO 1940 / Surge</span>
               </div>
-              <div className="space-y-1 border-s border-charcoal-800 ps-4">
-                <span className="block text-[10px] uppercase tracking-wider text-charcoal-500">
+              <div className="space-y-1 border-s border-[#2d3164] ps-4">
+                <span className="block text-[11px] uppercase tracking-wider text-slate-300 font-medium">
                   {isAr ? "الموقع الصناعي" : "WORKSHOP"}
                 </span>
-                <span className="text-white font-semibold">{isAr ? "صناعية الرياض" : "Al Sina'iyah"}</span>
+                <span className="text-white font-bold text-xs sm:text-sm">{isAr ? "صناعية الرياض" : "Al Sina'iyah"}</span>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Right Column: 5 Cols (Authentic Full-Bleed Workshop Photo with Precision 25° Chamfer Mask) */}
-          <div className="lg:col-span-5 relative">
-            {/* Hairline Technical Corner Crop Marks */}
-            <div className="relative p-1 border border-charcoal-800 bg-charcoal-900/40">
-              <div className="relative h-[340px] sm:h-[400px] lg:h-[440px] w-full overflow-hidden industrial-cut bg-charcoal-900">
-                <Image
-                  src="/images/workshop/hero-stator-rewind.png"
-                  alt="Tarfa technician rewinding industrial stator coils in Riyadh workshop"
-                  fill
-                  priority
-                  className="object-cover filter contrast-[1.05] grayscale-[15%]"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-                {/* Subtle dark vignette overlay to guarantee contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent pointer-events-none" />
+          {/* Right Column: 5 Cols (Photorealistic Workshop Image Seamlessly Blended with Background) */}
+          <ScrollReveal animation="slide-left" delay={150} duration={800} className="lg:col-span-5 relative">
+            <div className="relative h-[360px] sm:h-[420px] lg:h-[460px] w-full overflow-hidden rounded-md bg-[#1c1e3e]">
+              <Image
+                src="/images/workshop/hero-industrial-motor.jpg"
+                alt="Tarfa specialized technician inspecting heavy industrial motor stator core in Riyadh workshop"
+                fill
+                priority
+                className="object-cover filter contrast-[1.05]"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+              />
 
-                {/* Overlaid Technical Spec Tag */}
-                <div className="absolute bottom-4 start-4 z-10 bg-charcoal-950/90 border border-charcoal-700/80 px-3 py-2 text-start font-mono text-[11px] backdrop-blur-xs">
-                  <div className="flex items-center gap-2 text-brand-red font-semibold mb-0.5">
-                    <span className="w-1.5 h-1.5 bg-brand-red animate-pulse" />
-                    <span>FACILITY BAY 01 // RIYADH</span>
-                  </div>
-                  <span className="text-charcoal-300 block text-[10px]">
-                    {isAr ? "إعادة لف أسلاك النحاس المعزولة لمحرك جهد متوسط" : "Stator Round & Strip Wire Rewinding"}
-                  </span>
-                </div>
-              </div>
+              {/* Seamless blend on the start/left edge into the #1c1e3e background */}
+              <div className="absolute inset-y-0 start-0 w-28 sm:w-44 bg-gradient-to-r rtl:bg-gradient-to-l from-[#1c1e3e] via-[#1c1e3e]/80 to-transparent pointer-events-none z-10" />
 
-              {/* Red hairline accent along the bottom edge */}
-              <div className="absolute -bottom-1 start-4 end-12 h-[2px] bg-brand-red" />
+              {/* Top and bottom subtle edge blend */}
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#1c1e3e]/70 to-transparent pointer-events-none z-10" />
+              <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#1c1e3e]/70 to-transparent pointer-events-none z-10" />
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

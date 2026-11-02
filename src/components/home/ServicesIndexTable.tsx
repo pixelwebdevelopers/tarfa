@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import {
   ArrowRight,
   ArrowLeft,
@@ -86,7 +87,7 @@ export function ServicesIndexTable() {
     <section className="w-full py-16 lg:py-24 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8 text-start">
+        <ScrollReveal animation="fade-up" duration={700} className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8 text-start">
           <SectionHeading
             eyebrow={t("eyebrow")}
             title={t("headline")}
@@ -100,10 +101,10 @@ export function ServicesIndexTable() {
             <span>{isAr ? "دليل المواصفات الكامل" : "Explore Master Spec Catalog"}</span>
             <ArrowIcon className="w-4 h-4" />
           </Link>
-        </div>
+        </ScrollReveal>
 
         {/* Master Indexed Table */}
-        <div className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 divide-y divide-charcoal-200 dark:divide-charcoal-800 relative">
+        <ScrollReveal animation="fade-up" delay={150} duration={750} className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 divide-y divide-charcoal-200 dark:divide-charcoal-800 relative">
           {services.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -122,20 +123,20 @@ export function ServicesIndexTable() {
 
                 {/* Col A: Icon & Title */}
                 <div className="lg:w-5/12 flex items-center gap-4 sm:gap-5">
-                  <div className="w-11 h-11 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                  <div className="w-12 h-12 rounded-none bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-heading font-extrabold text-lg sm:text-xl text-charcoal-950 dark:text-white group-hover:text-white transition-colors">
+                  <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-charcoal-950 dark:text-white group-hover:text-white transition-colors">
                     {item.title}
                   </h3>
                 </div>
 
                 {/* Col B: Technical Rating / Envelope */}
-                <div className="lg:w-4/12 font-mono text-xs text-charcoal-600 dark:text-charcoal-300 group-hover:text-charcoal-300 transition-colors ps-14 lg:ps-0">
-                  <span className="text-[10px] uppercase text-charcoal-400 group-hover:text-charcoal-500 block mb-0.5">
+                <div className="lg:w-4/12 font-mono text-sm text-charcoal-700 dark:text-charcoal-200 group-hover:text-slate-200 transition-colors ps-14 lg:ps-0">
+                  <span className="text-[11px] uppercase tracking-wider text-charcoal-400 group-hover:text-slate-300 block mb-1 font-semibold">
                     {isAr ? "النطاق التشغيلي" : "SPEC ENVELOPE"}
                   </span>
-                  <span className="font-semibold text-brand-red group-hover:text-white transition-colors block">
+                  <span className="font-bold text-brand-red group-hover:text-white transition-colors block text-sm sm:text-base">
                     {item.specs}
                   </span>
                 </div>
@@ -163,7 +164,7 @@ export function ServicesIndexTable() {
               </Link>
             );
           })}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
