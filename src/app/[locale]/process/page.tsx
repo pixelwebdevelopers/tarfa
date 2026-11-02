@@ -143,15 +143,15 @@ export default async function ProcessPage({
               return (
                 <div
                   key={st.num}
-                  className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-5 hover:border-brand-red transition-all duration-200 shadow-hairline group"
+                  className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 rounded-xl p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-5 hover:border-brand-red transition-all duration-300 shadow-xs hover:shadow-lg group"
                 >
                   {/* Left: Step number, icon, and title */}
                   <div className="lg:w-5/12 flex items-center gap-4">
-                    <span className="w-10 h-10 flex items-center justify-center font-mono font-bold text-sm bg-charcoal-950 text-white group-hover:bg-brand-red transition-colors flex-shrink-0">
+                    <span className="w-10 h-10 flex items-center justify-center font-mono font-bold text-sm bg-[#1c1e3e] text-white rounded-md group-hover:bg-brand-red transition-colors flex-shrink-0">
                       {st.num}
                     </span>
-                    <div className="w-10 h-10 flex items-center justify-center bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors flex-shrink-0">
-                      <Icon className="w-5 h-5" />
+                    <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors flex-shrink-0">
+                      <Icon className="w-6 h-6" />
                     </div>
                     <div>
                       <h3 className="font-heading font-extrabold text-base sm:text-lg text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors">

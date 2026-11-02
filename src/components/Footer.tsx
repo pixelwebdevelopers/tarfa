@@ -184,7 +184,7 @@ export function Footer() {
                     href={COMPANY_DETAILS.address.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-xs text-brand-red hover:underline mt-1 font-mono"
+                    className="inline-flex items-center gap-1 text-xs text-red-400 hover:text-white underline underline-offset-2 mt-1.5 font-mono font-medium"
                   >
                     <span>{isAr ? "عرض الموقع على الخريطة" : "Google Maps View"}</span>
                     <ExternalLink className="w-3 h-3" />
@@ -194,7 +194,7 @@ export function Footer() {
 
               <div className="flex items-start gap-2 pt-1">
                 <Clock className="w-4 h-4 text-brand-red flex-shrink-0 mt-0.5" />
-                <span className="text-xs text-slate-300">
+                <span className="text-xs sm:text-sm text-slate-200">
                   {isAr ? COMPANY_DETAILS.hours.ar : COMPANY_DETAILS.hours.en}
                 </span>
               </div>
@@ -216,7 +216,7 @@ export function Footer() {
                 href="https://pixelwebdevelopers.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-brand-red font-semibold underline underline-offset-4 decoration-brand-red/60 hover:decoration-brand-red transition-colors"
+                className="text-white hover:text-brand-red font-semibold underline underline-offset-4 decoration-red-400 hover:decoration-brand-red transition-colors font-bold"
               >
                 Pixel Web Developers
               </a>

@@ -24,7 +24,7 @@ export function ScrollReveal({
   children,
   animation = "fade-up",
   delay = 0,
-  duration = 950, // Slower, more graceful transition
+  duration = 1200, // 1.2s default for visible, elegant, graceful motion
   className,
   as: Component = "div",
 }: ScrollRevealProps) {
@@ -46,8 +46,8 @@ export function ScrollReveal({
     if (!node) return;
 
     const rect = node.getBoundingClientRect();
-    // Check if element is already within the visible viewport on initial page load
-    const isAboveFold = rect.top < window.innerHeight - 80 && rect.bottom > 0;
+    // Only elements clearly above the fold (top 60% of viewport) remain visible immediately
+    const isAboveFold = rect.top < window.innerHeight * 0.6 && rect.bottom > 0;
 
     if (isAboveFold) {
       setIsRevealed(true);
@@ -55,7 +55,7 @@ export function ScrollReveal({
       return;
     }
 
-    // Element is below the fold: prime it to animate only when scrolled into view
+    // Element is below the viewing area: prime it to animate only when scrolled well into view
     setIsRevealed(false);
     setIsInitialized(true);
 
@@ -63,12 +63,12 @@ export function ScrollReveal({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsRevealed(true);
-          observer.disconnect(); // Trigger once as user scrolls into the section
+          observer.disconnect(); // Trigger once as user scrolls comfortably into the section
         }
       },
       {
-        threshold: 0.15, // Requires 15% of the element to be inside the viewport
-        rootMargin: "0px 0px -80px 0px", // Only triggers AFTER the element is 80px inside the visible screen!
+        threshold: 0.15, // Requires 15% of the element inside the active viewing window
+        rootMargin: "0px 0px -140px 0px", // Waits until element is 140px UP into the screen before animating
       }
     );
 
@@ -88,9 +88,11 @@ export function ScrollReveal({
     "fade-in": "reveal-fade-in",
   }[animation];
 
+  const actualDuration = Math.max(duration, 1100);
+
   const style: React.CSSProperties = isInitialized
     ? {
-        transitionDuration: `${duration}ms`,
+        transitionDuration: `${actualDuration}ms`,
         transitionDelay: `${delay}ms`,
       }
     : {};

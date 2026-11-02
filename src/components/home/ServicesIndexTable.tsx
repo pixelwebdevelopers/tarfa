@@ -87,7 +87,7 @@ export function ServicesIndexTable() {
     <section className="w-full py-16 lg:py-24 bg-canvas-warm border-b border-charcoal-200 dark:border-charcoal-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
-        <ScrollReveal animation="fade-up" duration={700} className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8 text-start">
+        <ScrollReveal animation="fade-up" duration={1100} className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-charcoal-200 dark:border-charcoal-800 pb-8 text-start">
           <SectionHeading
             eyebrow={t("eyebrow")}
             title={t("headline")}
@@ -104,7 +104,7 @@ export function ServicesIndexTable() {
         </ScrollReveal>
 
         {/* Master Indexed Table */}
-        <ScrollReveal animation="fade-up" delay={150} duration={750} className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 divide-y divide-charcoal-200 dark:divide-charcoal-800 relative">
+        <ScrollReveal animation="fade-up" delay={150} duration={1200} className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 divide-y divide-charcoal-200 dark:divide-charcoal-800 relative">
           {services.map((item, idx) => {
             const Icon = item.icon;
             return (

@@ -46,14 +46,16 @@ export function CoreMaintenanceMosaic() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
         {/* Section Heading & Context */}
-        <ScrollReveal animation="fade-up" duration={700} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end text-start border-b border-charcoal-800 pb-8">
+        <ScrollReveal animation="fade-up" duration={1100} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end text-start border-b border-charcoal-800 pb-8">
           <div className="lg:col-span-8 space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-brand-red" />
-              <span className="font-mono text-xs uppercase tracking-widest text-brand-red font-semibold">
-                {t("eyebrow")}
-              </span>
-            </div>
+            {t("eyebrow") ? (
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-brand-red" />
+                <span className="font-mono text-xs uppercase tracking-widest text-brand-red font-semibold">
+                  {t("eyebrow")}
+                </span>
+              </div>
+            ) : null}
             <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl tracking-tight text-white">
               {t("headline")}
             </h2>
@@ -78,7 +80,7 @@ export function CoreMaintenanceMosaic() {
         {/* Asymmetric 3-Panel Mosaic with Real PDF Photos */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Panel 1: Primary Large Feature (Core Testing) - 7 Cols */}
-          <ScrollReveal animation="slide-left" duration={800} className="lg:col-span-7 border border-[#2d3164] bg-[#161838] relative overflow-hidden flex flex-col justify-between group">
+          <ScrollReveal animation="slide-left" duration={1200} className="lg:col-span-7 border border-[#2d3164] bg-[#161838] relative overflow-hidden flex flex-col justify-between group">
             <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-charcoal-950">
               <Image
                 src={panels[0].image}
@@ -107,7 +109,7 @@ export function CoreMaintenanceMosaic() {
           </ScrollReveal>
 
           {/* Right Column: 2 Stacked Panels (5 Cols) */}
-          <ScrollReveal animation="slide-right" delay={150} duration={800} className="lg:col-span-5 grid grid-cols-1 gap-6">
+          <ScrollReveal animation="slide-right" delay={180} duration={1200} className="lg:col-span-5 grid grid-cols-1 gap-6">
             {/* Panel 2: Core Cleaning & Re-Varnishing */}
             <div className="border border-[#2d3164] bg-[#161838] p-5 sm:p-6 flex flex-col sm:flex-row gap-5 items-center group text-start">
               <div className="relative w-full sm:w-36 h-36 flex-shrink-0 bg-charcoal-950 overflow-hidden border border-charcoal-700">

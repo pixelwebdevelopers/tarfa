@@ -38,8 +38,8 @@ export function CredibilityStrip() {
             <ScrollReveal
               key={idx}
               animation="fade-up"
-              delay={idx * 80}
-              duration={650}
+              delay={idx * 110}
+              duration={1200}
               className="py-6 sm:py-8 px-4 sm:px-6 lg:px-7 flex flex-col justify-between space-y-2 first:ps-0 last:pe-0"
             >
               <span className="font-mono text-xs uppercase tracking-wider text-brand-red font-semibold">

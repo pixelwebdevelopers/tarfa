@@ -466,7 +466,7 @@ export function ColdChainFoodIcon({ className = "w-6 h-6", size, ...props }: Ico
 }
 
 // ==========================================
-// WORKFLOW / PROCESS STAGE ICONS
+// WORKFLOW / PROCESS STAGE ICONS (ENGINEERED)
 // ==========================================
 
 /** Stage 01: Receipt & Initial Log Inspection */
@@ -484,15 +484,19 @@ export function LogInspectionIcon({ className = "w-6 h-6", size, ...props }: Ico
       className={className}
       {...props}
     >
-      {/* Quality Logging Clipboard */}
-      <rect x="5" y="4" width="14" height="17" rx="1" />
-      <path d="M9 2h6v3H9z" />
-      <path d="M8 9h8" />
-      <path d="M8 13h5" />
-      <path d="M8 17h4" />
-      {/* Caliper / Magnifying Inspect Point */}
-      <circle cx="16" cy="15" r="2" />
-      <path d="M17.5 16.5L20 19" />
+      {/* Technical Inspection Clipboard */}
+      <rect x="4" y="4" width="16" height="17" rx="2" />
+      <path d="M9 2h6a1 1 0 0 1 1 1v2H8V3a1 1 0 0 1 1-1z" />
+      {/* Verified Inspection Checkmarks */}
+      <path d="M7.5 9.5l1.5 1.5 3-3" />
+      <line x1="14" y1="9.5" x2="17" y2="9.5" />
+      <path d="M7.5 13.5l1.5 1.5 3-3" />
+      <line x1="14" y1="13.5" x2="17" y2="13.5" />
+      {/* Dimensional Caliper / Gauge Marks */}
+      <line x1="7.5" y1="17.5" x2="16.5" y2="17.5" />
+      <line x1="7.5" y1="16.5" x2="7.5" y2="18.5" />
+      <line x1="12" y1="16.5" x2="12" y2="18.5" />
+      <line x1="16.5" y1="16.5" x2="16.5" y2="18.5" />
     </svg>
   );
 }
@@ -512,16 +516,17 @@ export function TeardownIcon({ className = "w-6 h-6", size, ...props }: IconProp
       className={className}
       {...props}
     >
-      {/* Heavy Mechanical Open-End Wrench */}
-      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-      {/* Disassembly Bearing Puller Jaws */}
-      <path d="M5 5l4 4" />
-      <circle cx="18" cy="6" r="1" />
+      {/* Machine Gear & Bearing Assembly */}
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6l1.4 1.4m10 10l1.4 1.4M5.6 18.4l1.4-1.4m10-10l1.4-1.4" />
+      {/* Diagonal Mechanic Wrench Tool */}
+      <path d="M17 7l3.5-3.5a1.5 1.5 0 0 1 2.1 2.1L19.1 9.1" />
+      <path d="M7 17l-3.5 3.5a1.5 1.5 0 0 0 2.1 2.1L9.1 19.1" />
     </svg>
   );
 }
 
-/** Stage 03: Precision Rewinding & Slot Insulation */
+/** Stage 03: Precision Stator Rewinding & Copper Coils */
 export function RewindingSpoolIcon({ className = "w-6 h-6", size, ...props }: IconProps) {
   return (
     <svg
@@ -536,23 +541,23 @@ export function RewindingSpoolIcon({ className = "w-6 h-6", size, ...props }: Ic
       className={className}
       {...props}
     >
-      {/* Copper Wire Spool Flanges */}
-      <path d="M5 4h14v3H5z" />
-      <path d="M5 17h14v3H5z" />
-      {/* Spool Barrel */}
-      <rect x="7" y="7" width="10" height="10" />
-      {/* Wound Copper Wire Strands */}
-      <path d="M7 9h10" />
-      <path d="M7 11h10" />
-      <path d="M7 13h10" />
-      <path d="M7 15h10" />
-      {/* Outgoing Copper Conductor to Winding Needle */}
-      <path d="M17 12h4l-2-2" />
+      {/* Stator Core Frame with Winding Slots */}
+      <rect x="4" y="3" width="16" height="18" rx="2" />
+      <line x1="8" y1="3" x2="8" y2="21" />
+      <line x1="16" y1="3" x2="16" y2="21" />
+      {/* Concentric Copper Winding Coils */}
+      <line x1="8" y1="7" x2="16" y2="7" />
+      <line x1="8" y1="10" x2="16" y2="10" />
+      <line x1="8" y1="13" x2="16" y2="13" />
+      <line x1="8" y1="16" x2="16" y2="16" />
+      {/* Copper Winding Needle / Lead Wire */}
+      <circle cx="12" cy="11.5" r="1.5" fill="currentColor" />
+      <path d="M16 10l3-3h2" />
     </svg>
   );
 }
 
-/** Stage 04: Varnish Impregnation & Thermal Baking */
+/** Stage 04: Varnish Impregnation & Thermal Baking Oven */
 export function BakingOvenIcon({ className = "w-6 h-6", size, ...props }: IconProps) {
   return (
     <svg
@@ -567,27 +572,63 @@ export function BakingOvenIcon({ className = "w-6 h-6", size, ...props }: IconPr
       className={className}
       {...props}
     >
-      {/* Thermal Baking Oven Chamber */}
-      <rect x="4" y="4" width="16" height="15" rx="1" />
-      {/* Oven Inspection Glass Window */}
-      <rect x="7" y="7" width="10" height="6" rx="0.5" />
-      {/* Internal Heating Radiator Elements */}
-      <path d="M9 10c.5-.8 1.5-.8 2 0s1.5.8 2 0" />
-      {/* VPI Temperature Dial */}
-      <circle cx="12" cy="16" r="1" />
-      {/* Oven Legs */}
-      <path d="M6 19v3" />
-      <path d="M18 19v3" />
+      {/* Heavy Curing Oven Chamber */}
+      <rect x="3" y="3" width="18" height="17" rx="1.5" />
+      {/* Oven Control Panel / Digital Display */}
+      <line x1="3" y1="7" x2="21" y2="7" />
+      <circle cx="6" cy="5" r="0.75" fill="currentColor" />
+      <circle cx="9" cy="5" r="0.75" fill="currentColor" />
+      <line x1="14" y1="5" x2="18" y2="5" />
+      {/* Insulated Oven Window */}
+      <rect x="6" y="10" width="12" height="7" rx="1" />
+      {/* Thermal Heat Convection Waves */}
+      <path d="M9 12.5c.6-.8 1.4-.8 2 0s1.4.8 2 0" />
+      <path d="M9 15c.6-.8 1.4-.8 2 0s1.4.8 2 0" />
+      {/* Heavy Base Supports */}
+      <line x1="6" y1="20" x2="6" y2="22" />
+      <line x1="18" y1="20" x2="18" y2="22" />
     </svg>
   );
 }
 
-/** Stage 05: Dynamic Rotor Balancing Machine */
+/** Stage 05: Dynamic Rotor Balancing Machine (ISO 1940) */
 export function BalancingRigIcon({ className = "w-6 h-6", size, ...props }: IconProps) {
-  return <RotorBalancingIcon className={className} size={size} {...props} />;
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      {...props}
+    >
+      {/* Motor Rotor Body with Lamination Segments */}
+      <rect x="7" y="8" width="10" height="7" rx="1" />
+      <line x1="10" y1="8" x2="10" y2="15" />
+      <line x1="12" y1="8" x2="12" y2="15" />
+      <line x1="14" y1="8" x2="14" y2="15" />
+      {/* Center Rotor Shaft */}
+      <line x1="2" y1="11.5" x2="7" y2="11.5" />
+      <line x1="17" y1="11.5" x2="22" y2="11.5" />
+      {/* Dual Precision Bearing Pedestals */}
+      <path d="M4 11.5v6.5" />
+      <path d="M2 18h4" />
+      <path d="M20 11.5v6.5" />
+      <path d="M18 18h4" />
+      {/* Dynamic Rotation Balancing Indicator */}
+      <path d="M9 4.5a5 5 0 0 1 6 0" />
+      <path d="M14.5 3.5l1.5 1-1.5 1" />
+      {/* Vibration Pick-Up Sensor Probe */}
+      <line x1="12" y1="6.5" x2="12" y2="8" />
+    </svg>
+  );
 }
 
-/** Stage 06: Full No-Load Run & Electrical Sign-off */
+/** Stage 06: Surge Comparison & Electrical High-Pot Testing */
 export function ElectricalTestIcon({ className = "w-6 h-6", size, ...props }: IconProps) {
   return (
     <svg
@@ -602,14 +643,21 @@ export function ElectricalTestIcon({ className = "w-6 h-6", size, ...props }: Ic
       className={className}
       {...props}
     >
-      {/* Electrical Test Console */}
-      <rect x="3" y="4" width="18" height="14" rx="1" />
-      {/* Sinusoidal Surge / Megger Waveform Display */}
-      <path d="M6 11c1 0 1.5-3 2.5-3s2 6 3 6 2-4 3-4 1.5 1 2.5 1" />
-      {/* High-Pot Voltage Terminals */}
-      <path d="M8 18v3" />
-      <path d="M16 18v3" />
-      <circle cx="17" cy="8" r="1" />
+      {/* Electrical Test Analyzer Console */}
+      <rect x="3" y="4" width="18" height="14" rx="2" />
+      {/* Oscilloscope Screen */}
+      <rect x="5" y="6" width="10" height="10" rx="1" />
+      {/* Surge Waveform on Screen */}
+      <path d="M6 11c1-2 1.5-2 2 0s1.5 2 2 0 1.5-2 2 0 1.5 2 2 0" />
+      {/* High-Voltage Flash Symbol */}
+      <path d="M18 7l-1.5 3h2l-2 3" />
+      {/* Control Dials & Jacks */}
+      <circle cx="18" cy="14" r="1" fill="currentColor" />
+      {/* Test Leads / Kelvin Probes extending from bottom */}
+      <line x1="8" y1="18" x2="8" y2="21" />
+      <line x1="14" y1="18" x2="14" y2="21" />
+      <line x1="7" y1="21" x2="9" y2="21" />
+      <line x1="13" y1="21" x2="15" y2="21" />
     </svg>
   );
 }
@@ -629,17 +677,22 @@ export function DispatchCrateIcon({ className = "w-6 h-6", size, ...props }: Ico
       className={className}
       {...props}
     >
-      {/* Heavy-Duty Equipment Packaging Crate */}
-      <rect x="3" y="5" width="18" height="15" rx="1" />
-      {/* Structural Corner & Center Steel Braces */}
-      <path d="M3 5l18 15" />
-      <path d="M21 5L3 20" />
-      <path d="M10 5v15" />
-      <path d="M14 5v15" />
-      {/* Transport Forklift / Skid Pocket Base */}
-      <path d="M6 20v2" />
-      <path d="M18 20v2" />
+      {/* Heavy-Duty Industrial Wooden Crate */}
+      <rect x="3" y="4" width="18" height="15" rx="1" />
+      {/* Steel Strapping Bands */}
+      <line x1="3" y1="11.5" x2="21" y2="11.5" />
+      <line x1="12" y1="4" x2="12" y2="19" />
+      {/* Reinforced Corner Steel Brackets */}
+      <path d="M3 8h4V4" />
+      <path d="M21 8h-4V4" />
+      <path d="M3 15h4v4" />
+      <path d="M21 15h-4v4" />
+      {/* Pallet Skids */}
+      <line x1="6" y1="19" x2="6" y2="21.5" />
+      <line x1="18" y1="19" x2="18" y2="21.5" />
+      {/* Quality Certified Inspection Checkmark Stamp */}
+      <circle cx="16.5" cy="15.5" r="2.5" fill="#DC2324" stroke="none" />
+      <path d="M15.2 15.5l1 1 1.6-1.6" stroke="white" strokeWidth="1.2" />
     </svg>
   );
 }
-

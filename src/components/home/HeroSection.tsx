@@ -92,16 +92,7 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: 7 Cols (Editorial Typography & Action) */}
           <div className="lg:col-span-7 xl:col-span-6 space-y-6 text-start">
-            {/* Eyebrow & Est. Badge */}
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 px-2.5 py-1 bg-brand-red text-white font-mono text-[11px] font-bold tracking-wider uppercase industrial-cut-badge">
-                <span className="w-1.5 h-1.5 bg-white" />
-                {common("est")}
-              </span>
-              <span className="font-mono text-xs uppercase tracking-widest text-slate-300 font-semibold">
-                {t("eyebrow")}
-              </span>
-            </div>
+
 
             {/* Headline */}
             <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.12] text-white">
