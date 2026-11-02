@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ShieldCheck } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {
   LogInspectionIcon,
   TeardownIcon,
@@ -104,41 +105,45 @@ export function ProcessTimeline() {
           {/* Subtle Pipeline Track on Desktop behind cards */}
           <div className="hidden xl:block absolute top-12 start-6 end-6 h-0.5 bg-gradient-to-r from-brand-red/30 via-charcoal-200 dark:via-charcoal-700 to-emerald-500/30 z-0 pointer-events-none" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-7 gap-4 lg:gap-4 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-7 gap-3 sm:gap-4 relative z-10">
             {steps.map((item, idx) => {
               const Icon = item.icon;
+              const isLast = idx === 6;
               return (
                 <ScrollReveal
                   key={idx}
                   animation="fade-up"
                   delay={idx * 110}
                   duration={1200}
-                  className="bg-white dark:bg-charcoal-850 border border-charcoal-200 dark:border-charcoal-750 rounded-xl p-5 flex flex-col justify-between shadow-xs hover:shadow-xl hover:border-brand-red transition-all duration-300 relative group overflow-hidden hover:-translate-y-1"
+                  className={cn(
+                    "bg-white dark:bg-charcoal-850 border border-charcoal-200 dark:border-charcoal-750 rounded-xl p-3 sm:p-5 flex flex-col justify-between shadow-xs hover:shadow-xl hover:border-brand-red transition-all duration-300 relative group overflow-hidden hover:-translate-y-1",
+                    isLast && "col-span-2 md:col-span-1"
+                  )}
                 >
                   {/* Top Red Accent Line on Hover */}
                   <div className="absolute top-0 start-0 end-0 h-1 bg-charcoal-100 dark:bg-charcoal-750 group-hover:bg-brand-red transition-colors" />
 
                   {/* Step Header: Number & Stage Acronym Badge */}
-                  <div className="flex items-center justify-between border-b border-charcoal-100 dark:border-charcoal-750 pb-3">
-                    <span className="font-mono text-xs font-extrabold px-2 py-0.5 bg-[#1c1e3e] text-white rounded-sm group-hover:bg-brand-red transition-colors">
+                  <div className="flex items-center justify-between border-b border-charcoal-100 dark:border-charcoal-750 pb-2.5 sm:pb-3">
+                    <span className="font-mono text-[11px] sm:text-xs font-extrabold px-1.5 sm:px-2 py-0.5 bg-[#1c1e3e] text-white rounded-sm group-hover:bg-brand-red transition-colors">
                       {item.num}
                     </span>
-                    <span className="font-mono text-[10px] font-bold text-brand-red uppercase tracking-wider">
+                    <span className="font-mono text-[9px] sm:text-[10px] font-bold text-brand-red uppercase tracking-wider truncate max-w-[85px] sm:max-w-none">
                       {item.badge}
                     </span>
                   </div>
 
                   {/* High-Detail Industrial Icon Box */}
-                  <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-lg bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200/90 dark:border-charcoal-700 text-brand-red flex items-center justify-center group-hover:bg-brand-red group-hover:text-white group-hover:scale-105 transition-all duration-300 my-4 shadow-xs flex-shrink-0">
-                    <Icon className="w-7 h-7" />
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-lg bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200/90 dark:border-charcoal-700 text-brand-red flex items-center justify-center group-hover:bg-brand-red group-hover:text-white group-hover:scale-105 transition-all duration-300 my-2.5 sm:my-4 shadow-xs flex-shrink-0">
+                    <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
                   </div>
 
                   {/* Title & Technical Summary */}
-                  <div className="space-y-1.5 flex-1">
-                    <h3 className="font-heading font-extrabold text-base lg:text-[15px] xl:text-base text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors leading-snug">
+                  <div className="space-y-1 sm:space-y-1.5 flex-1">
+                    <h3 className="font-heading font-extrabold text-sm sm:text-base lg:text-[15px] xl:text-base text-charcoal-950 dark:text-white group-hover:text-brand-red transition-colors leading-snug">
                       {item.title}
                     </h3>
-                    <p className="font-body text-xs sm:text-[13px] text-charcoal-700 dark:text-charcoal-300 leading-relaxed">
+                    <p className="font-body text-[11px] sm:text-xs text-charcoal-700 dark:text-charcoal-300 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
