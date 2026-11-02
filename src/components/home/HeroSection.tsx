@@ -137,7 +137,7 @@ export function HeroSection() {
                 variant="primary"
                 size="lg"
                 withChamfer
-                className="text-sm font-bold shadow-technical rounded-full"
+                className="text-sm font-bold shadow-technical"
               >
                 <span>{t("primaryCta")}</span>
                 <ArrowIcon className="w-4 h-4 ms-2" />

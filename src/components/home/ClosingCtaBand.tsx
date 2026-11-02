@@ -108,7 +108,8 @@ export function ClosingCtaBand() {
                   href="/contact"
                   variant="primary"
                   size="md"
-                  className="text-xs font-bold px-6 py-3.5 rounded-full shadow-lg hover:scale-105 transition-transform"
+                  withChamfer
+                  className="text-xs font-bold px-6 py-3.5 shadow-lg hover:scale-105 transition-transform"
                 >
                   <span>{t("buttonLabel")}</span>
                   <ArrowIcon className="w-3.5 h-3.5 ms-1.5" />

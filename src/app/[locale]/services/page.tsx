@@ -205,7 +205,7 @@ export default async function ServicesPage({
               {isAr ? "هل لديك معدة تحتاج إلى فحص عاجل أو إعادة لف؟" : "Need an Emergency Assessment or Certified Rewind Quotation?"}
             </h3>
           </div>
-          <Button href="/contact" variant="primary" size="md" withChamfer className="rounded-full">
+          <Button href="/contact" variant="primary" size="md" withChamfer>
             <span>{isAr ? "طلب عرض سعر فني" : "Request Technical Quotation"}</span>
             <ArrowIcon className="w-4 h-4 ms-2" />
           </Button>
