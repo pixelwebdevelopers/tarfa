@@ -225,47 +225,47 @@ export default async function IndustriesPage({
         ]}
       />
 
-      {/* Visual Diagnostic & Reliability Capabilities Strip */}
-      <section className="py-8 bg-charcoal-950 text-white border-b border-charcoal-800">
+      {/* Visual Diagnostic & Reliability Capabilities Strip (Light Warm Theme) */}
+      <section className="py-6 sm:py-8 bg-[#F8F7F4] dark:bg-charcoal-950 border-b border-charcoal-200 dark:border-charcoal-800 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="p-4 bg-charcoal-900 border border-charcoal-800 flex items-center gap-4">
-              <div className="w-12 h-12 bg-charcoal-950 border border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
-                <Clock className="w-6 h-6" />
+            <div className="p-4 sm:p-5 bg-white dark:bg-charcoal-900 border border-charcoal-200/90 dark:border-charcoal-800 rounded-lg flex items-center gap-4 shadow-xs hover:border-brand-red transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-lg bg-[#F8F7F4] dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 flex-shrink-0 shadow-2xs">
+                <Clock className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
               </div>
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-brand-red font-bold block">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-brand-red font-bold block mb-0.5">
                   {isAr ? "جاهزية الطوارئ" : "24/7 RAPID DISPATCH"}
                 </span>
-                <span className="font-heading font-bold text-sm text-white block">
+                <span className="font-heading font-bold text-sm sm:text-base text-charcoal-950 dark:text-white block leading-snug">
                   {isAr ? "استجابة فورية للأعطال بالرياض" : "Round-the-Clock Breakdown Support"}
                 </span>
               </div>
             </div>
 
-            <div className="p-4 bg-charcoal-900 border border-charcoal-800 flex items-center gap-4">
-              <div className="w-12 h-12 bg-charcoal-950 border border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
-                <ShieldCheck className="w-6 h-6" />
+            <div className="p-4 sm:p-5 bg-white dark:bg-charcoal-900 border border-charcoal-200/90 dark:border-charcoal-800 rounded-lg flex items-center gap-4 shadow-xs hover:border-brand-red transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-lg bg-[#F8F7F4] dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 flex-shrink-0 shadow-2xs">
+                <ShieldCheck className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
               </div>
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-brand-red font-bold block">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-brand-red font-bold block mb-0.5">
                   {isAr ? "المعايير المعتمدة" : "OEM TOLERANCE COMPLIANCE"}
                 </span>
-                <span className="font-heading font-bold text-sm text-white block">
+                <span className="font-heading font-bold text-sm sm:text-base text-charcoal-950 dark:text-white block leading-snug">
                   {isAr ? "مطابقة مواصفات المصانع العالمية" : "Certified Surge & ISO 1940 Protocols"}
                 </span>
               </div>
             </div>
 
-            <div className="p-4 bg-charcoal-900 border border-charcoal-800 flex items-center gap-4">
-              <div className="w-12 h-12 bg-charcoal-950 border border-charcoal-700 flex items-center justify-center text-brand-red flex-shrink-0">
-                <Truck className="w-6 h-6" />
+            <div className="p-4 sm:p-5 bg-white dark:bg-charcoal-900 border border-charcoal-200/90 dark:border-charcoal-800 rounded-lg flex items-center gap-4 shadow-xs hover:border-brand-red transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-lg bg-[#F8F7F4] dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-300 flex-shrink-0 shadow-2xs">
+                <Truck className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
               </div>
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-brand-red font-bold block">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-brand-red font-bold block mb-0.5">
                   {isAr ? "الخدمات اللوجستية" : "HEAVY CRANE & LOGISTICS"}
                 </span>
-                <span className="font-heading font-bold text-sm text-white block">
+                <span className="font-heading font-bold text-sm sm:text-base text-charcoal-950 dark:text-white block leading-snug">
                   {isAr ? "استلام وتسليم المعدات الثقيلة بالموقع" : "Direct Transport to Riyadh Sina'iyah"}
                 </span>
               </div>
@@ -283,13 +283,13 @@ export default async function IndustriesPage({
               return (
                 <div
                   key={sector.id}
-                  className="border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 sm:p-7 flex flex-col justify-between space-y-5 hover:border-brand-red transition-colors shadow-hairline group"
+                  className="border border-charcoal-200/90 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 p-6 sm:p-7 flex flex-col justify-between space-y-5 hover:border-brand-red transition-colors shadow-xs group rounded-lg"
                 >
                   <div className="space-y-4">
                     <div className="flex items-start justify-between gap-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors flex-shrink-0">
-                          <Icon className="w-6 h-6" />
+                        <div className="w-13 h-13 rounded-lg bg-[#F8F7F4] dark:bg-charcoal-800 border border-charcoal-200/90 dark:border-charcoal-700 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white group-hover:scale-105 transition-all duration-300 flex-shrink-0 shadow-2xs">
+                          <Icon className="w-6 h-6 transition-transform duration-300" />
                         </div>
                         <h3 className="font-heading font-bold text-lg text-charcoal-950 dark:text-white leading-snug">
                           {sector.name}

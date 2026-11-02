@@ -153,7 +153,7 @@ export default async function AboutPage({
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
-              <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[#F8F7F4] dark:bg-charcoal-800 border border-charcoal-200/90 dark:border-charcoal-700 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-2xs">
                 <RotorBalancingIcon className="w-6 h-6" />
               </div>
               <div>
@@ -172,7 +172,7 @@ export default async function AboutPage({
             </div>
 
             <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
-              <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[#F8F7F4] dark:bg-charcoal-800 border border-charcoal-200/90 dark:border-charcoal-700 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-2xs">
                 <BakingOvenIcon className="w-6 h-6" />
               </div>
               <div>
@@ -191,7 +191,7 @@ export default async function AboutPage({
             </div>
 
             <div className="p-6 border border-charcoal-200 dark:border-charcoal-800 bg-white dark:bg-charcoal-900 space-y-4 hover:border-brand-red transition-colors group">
-              <div className="w-12 h-12 bg-charcoal-950 dark:bg-charcoal-850 border border-charcoal-800 dark:border-charcoal-700 flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-[#F8F7F4] dark:bg-charcoal-800 border border-charcoal-200/90 dark:border-charcoal-700 bg-[url('/images/bg.webp')] dark:bg-none bg-repeat flex items-center justify-center text-brand-red group-hover:bg-brand-red group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-2xs">
                 <ElectricalTestIcon className="w-6 h-6" />
               </div>
               <div>
