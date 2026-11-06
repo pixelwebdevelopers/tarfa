@@ -174,9 +174,9 @@ export function Header() {
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo & House of Quality lockup */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0">
+          {/* Brand Logo & House of Quality lockup (Enlarged Logo & Reduced Vertical Gap) */}
+          <Link href="/" className="flex items-center gap-3.5 group">
+            <div className="relative w-[54px] h-[42px] sm:w-[64px] sm:h-[48px] md:w-[70px] md:h-[54px] flex-shrink-0 transition-transform group-hover:scale-105 duration-200">
               <Image
                 src="/images/logo.png"
                 alt="Tarfa Equipment Maintenance Logo"
@@ -185,11 +185,11 @@ export function Header() {
                 priority
               />
             </div>
-            <div className="flex flex-col text-start">
-              <span className="font-heading font-extrabold text-base sm:text-lg tracking-tight text-charcoal-950 dark:text-white uppercase leading-none">
+            <div className="flex flex-col text-start justify-center gap-0">
+              <span className="font-heading font-extrabold text-lg sm:text-xl md:text-[22px] tracking-tight text-charcoal-950 dark:text-white uppercase leading-none">
                 {isAr ? "تارفا لصيانة المعدات" : "TARFA"}
               </span>
-              <span className="font-mono text-[11px] text-brand-red font-extrabold tracking-wider uppercase mt-0.5">
+              <span className="font-mono text-[10px] sm:text-[11px] text-brand-red font-extrabold tracking-wider uppercase leading-none pt-1">
                 {isAr ? "بيت الجودة" : "EQUIPMENT MAINTENANCE"}
               </span>
             </div>
@@ -350,9 +350,9 @@ export function Header() {
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center gap-2.5"
+            className="flex items-center gap-3"
           >
-            <div className="relative w-9 h-9 flex-shrink-0">
+            <div className="relative w-[48px] h-[36px] flex-shrink-0">
               <Image
                 src="/images/logo.png"
                 alt="Tarfa Logo"
@@ -360,11 +360,11 @@ export function Header() {
                 className="object-contain"
               />
             </div>
-            <div className="flex flex-col text-start">
-              <span className="font-heading font-extrabold text-sm tracking-tight text-charcoal-950 dark:text-white uppercase leading-none">
+            <div className="flex flex-col text-start justify-center gap-0">
+              <span className="font-heading font-extrabold text-base tracking-tight text-charcoal-950 dark:text-white uppercase leading-none">
                 {isAr ? "تارفا لصيانة المعدات" : "TARFA"}
               </span>
-              <span className="font-mono text-[9px] text-brand-red font-bold tracking-wider uppercase mt-0.5">
+              <span className="font-mono text-[10px] text-brand-red font-extrabold tracking-wider uppercase leading-none pt-0.5">
                 {isAr ? "بيت الجودة · 1983" : "HOUSE OF QUALITY"}
               </span>
             </div>
