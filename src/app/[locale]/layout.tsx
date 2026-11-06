@@ -284,11 +284,11 @@ export default async function LocaleLayout({
       <body
         className={`min-h-screen flex flex-col font-body ${
           isAr ? "font-arabic" : "font-heading"
-        } antialiased selection:bg-brand-red selection:text-white bg-canvas-warm`}
+        } antialiased selection:bg-brand-red selection:text-white bg-canvas-warm overflow-x-clip max-w-full`}
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header />
-          <main className="flex-1 w-full">{children}</main>
+          <main className="flex-1 w-full overflow-x-clip">{children}</main>
           <Footer />
           <WhatsAppButton />
         </NextIntlClientProvider>

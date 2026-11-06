@@ -31,7 +31,7 @@ export function CredibilityStrip() {
   ];
 
   return (
-    <section className="w-full bg-white dark:bg-charcoal-900 border-b border-charcoal-200 dark:border-charcoal-800">
+    <section className="w-full bg-white dark:bg-charcoal-900 border-b border-charcoal-200 dark:border-charcoal-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x rtl:sm:divide-x-reverse divide-charcoal-200 dark:divide-charcoal-800 text-start">
           {items.map((item, idx) => (
