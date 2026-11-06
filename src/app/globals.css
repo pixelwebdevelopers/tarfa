@@ -99,6 +99,16 @@
     outline-offset: 2px;
   }
 
+  
+  /* Increase font weight for all text in the header */
+  header,
+  header * {
+    font-weight: 700;
+  }
+  header .font-extrabold {
+    font-weight: 800 !important;
+  }
+
   /* Western digits in Arabic */
   .western-digits {
     font-variant-numeric: tabular-nums lining-nums;

@@ -31,7 +31,7 @@ export function LanguageToggle({
   return (
     <div
       className={cn(
-        "inline-flex items-center font-mono text-xs font-semibold tracking-wider border rounded-sm p-0.5",
+        "inline-flex items-center font-mono text-xs font-bold tracking-wider border rounded-sm p-0.5",
         isDark
           ? "border-charcoal-700 bg-charcoal-850 text-charcoal-300"
           : "border-charcoal-200 bg-white text-charcoal-600",
@@ -45,7 +45,7 @@ export function LanguageToggle({
         onClick={() => handleSwitch("en")}
         disabled={isPending}
         className={cn(
-          "px-2 py-1 transition-all duration-150 rounded-none",
+          "px-2 py-1 font-bold transition-all duration-150 rounded-none",
           locale === "en"
             ? "bg-brand-red text-white shadow-xs"
             : isDark
@@ -63,7 +63,7 @@ export function LanguageToggle({
         onClick={() => handleSwitch("ar")}
         disabled={isPending}
         className={cn(
-          "px-2 py-1 font-arabic transition-all duration-150 rounded-none",
+          "px-2 py-1 font-arabic font-bold transition-all duration-150 rounded-none",
           locale === "ar"
             ? "bg-brand-red text-white shadow-xs"
             : isDark

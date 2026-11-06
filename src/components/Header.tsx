@@ -137,7 +137,7 @@ export function Header() {
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="phone-number text-xs font-bold text-white tracking-wide">
+              <span className="phone-number text-xs font-extrabold text-white tracking-wide">
                 {COMPANY_DETAILS.phonePrimary}
               </span>
             </a>
@@ -146,17 +146,17 @@ export function Header() {
               className="hidden sm:flex items-center gap-2 text-slate-200 hover:text-white transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="text-xs font-medium">{COMPANY_DETAILS.email}</span>
+              <span className="text-xs font-bold text-white">{COMPANY_DETAILS.email}</span>
             </a>
             <div className="hidden lg:flex items-center gap-2 text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="text-xs font-medium">{isAr ? "المدينة الصناعية، الرياض" : "Al Sina'iyah, Riyadh"}</span>
+              <span className="text-xs font-bold text-white">{isAr ? "المدينة الصناعية، الرياض" : "Al Sina'iyah, Riyadh"}</span>
             </div>
           </div>
 
           {/* Right utility: Est & Language Toggle */}
           <div className="flex items-center gap-4">
-            <span className="hidden md:inline-block text-xs font-semibold text-slate-300 uppercase tracking-wider border-e border-[#2d3164] pe-4">
+            <span className="hidden md:inline-block text-xs font-bold text-white uppercase tracking-wider border-e border-[#2d3164] pe-4">
               {isAr ? "بيت الجودة • تأسست 1983" : "House of Quality • Est. 1983"}
             </span>
             <LanguageToggle variant="dark" />
@@ -189,7 +189,7 @@ export function Header() {
               <span className="font-heading font-extrabold text-base sm:text-lg tracking-tight text-charcoal-950 dark:text-white uppercase leading-none">
                 {isAr ? "تارفا لصيانة المعدات" : "TARFA"}
               </span>
-              <span className="font-mono text-[10px] text-brand-red font-semibold tracking-wider uppercase mt-0.5">
+              <span className="font-mono text-[10px] text-brand-red font-bold tracking-wider uppercase mt-0.5">
                 {isAr ? "بيت الجودة" : "EQUIPMENT MAINTENANCE"}
               </span>
             </div>
@@ -214,7 +214,7 @@ export function Header() {
                     <Link
                       href={link.href as any}
                       className={cn(
-                        "inline-flex items-center gap-1 font-heading text-sm font-semibold transition-colors py-2",
+                        "inline-flex items-center gap-1 font-heading text-sm font-bold transition-colors py-2",
                         isActive
                           ? "text-brand-red"
                           : "text-charcoal-800 dark:text-charcoal-200 hover:text-brand-red dark:hover:text-white"
@@ -228,12 +228,12 @@ export function Header() {
                     {servicesMenuOpen && (
                       <div className="absolute top-full start-0 w-[580px] bg-white dark:bg-charcoal-900 border border-charcoal-200 dark:border-charcoal-700 shadow-technical p-5 z-50">
                         <div className="border-b border-charcoal-100 dark:border-charcoal-800 pb-3 mb-3 flex items-center justify-between">
-                          <span className="font-mono text-xs uppercase tracking-wider text-brand-red font-semibold">
+                          <span className="font-mono text-xs uppercase tracking-wider text-brand-red font-bold">
                             {isAr ? "دليل الخدمات الصناعية المعتمدة" : "INDUSTRIAL REWINDING & REPAIR DIRECTORY"}
                           </span>
                           <Link
                             href="/services"
-                            className="font-mono text-xs text-charcoal-500 hover:text-brand-red flex items-center gap-1"
+                            className="font-mono text-xs font-bold text-charcoal-600 hover:text-brand-red flex items-center gap-1"
                           >
                             <span>{isAr ? "عرض الكل" : "View All"}</span>
                             <ArrowIcon className="w-3 h-3" />
@@ -271,7 +271,7 @@ export function Header() {
                   key={link.href}
                   href={link.href as any}
                   className={cn(
-                    "font-heading text-sm font-semibold transition-colors py-1 relative",
+                    "font-heading text-sm font-bold transition-colors py-1 relative",
                     isActive
                       ? "text-brand-red"
                       : "text-charcoal-800 dark:text-charcoal-200 hover:text-brand-red dark:hover:text-white"
@@ -293,7 +293,7 @@ export function Header() {
               variant="primary"
               size="sm"
               withChamfer
-              className="text-xs"
+              className="text-xs font-bold tracking-wide"
             >
               <span>{common("requestQuote")}</span>
               <ArrowIcon className="w-3.5 h-3.5 ms-1" />
@@ -364,7 +364,7 @@ export function Header() {
               <span className="font-heading font-extrabold text-sm tracking-tight text-charcoal-950 dark:text-white uppercase leading-none">
                 {isAr ? "تارفا لصيانة المعدات" : "TARFA"}
               </span>
-              <span className="font-mono text-[9px] text-brand-red font-semibold tracking-wider uppercase mt-0.5">
+              <span className="font-mono text-[9px] text-brand-red font-bold tracking-wider uppercase mt-0.5">
                 {isAr ? "بيت الجودة · 1983" : "HOUSE OF QUALITY"}
               </span>
             </div>
@@ -405,7 +405,7 @@ export function Header() {
                   >
                     <span className="flex items-center gap-2">
                       {link.label}
-                      <span className="text-[10px] font-mono px-1.5 py-0.5 bg-brand-red text-white rounded-xs font-semibold">
+                      <span className="text-[10px] font-mono px-1.5 py-0.5 bg-brand-red text-white rounded-xs font-bold">
                         6
                       </span>
                     </span>
@@ -437,14 +437,14 @@ export function Header() {
                             className={cn(
                               "p-2.5 rounded-lg flex items-center gap-3 transition-colors text-start",
                               isServiceActive
-                                ? "bg-brand-red/10 text-brand-red font-semibold"
+                                ? "bg-brand-red/10 text-brand-red font-bold"
                                 : "text-charcoal-700 dark:text-charcoal-300 hover:text-charcoal-950 dark:hover:text-white hover:bg-charcoal-100/70 dark:hover:bg-charcoal-900"
                             )}
                           >
                             <div className="w-7 h-7 rounded-md bg-canvas-warm dark:bg-charcoal-800 border border-charcoal-200 dark:border-charcoal-700 text-brand-red flex items-center justify-center flex-shrink-0">
                               <Icon className="w-4 h-4" />
                             </div>
-                            <span className="font-heading text-xs font-semibold line-clamp-1">
+                            <span className="font-heading text-xs font-bold line-clamp-1">
                               {item.title}
                             </span>
                           </Link>
@@ -515,7 +515,7 @@ export function Header() {
 
           {/* Language Switcher */}
           <div className="flex items-center justify-between pt-1">
-            <span className="font-mono text-[11px] text-charcoal-500 dark:text-charcoal-400">
+            <span className="font-mono text-[11px] font-bold text-charcoal-700 dark:text-charcoal-300">
               {isAr ? "لغة الموقع" : "Language"}
             </span>
             <LanguageToggle variant="light" />
