@@ -137,7 +137,7 @@ export function Header() {
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="phone-number text-xs font-extrabold text-white tracking-wide">
+              <span className="phone-number text-[13px] font-black text-white tracking-wide">
                 {COMPANY_DETAILS.phonePrimary}
               </span>
             </a>
@@ -146,17 +146,17 @@ export function Header() {
               className="hidden sm:flex items-center gap-2 text-slate-200 hover:text-white transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="text-xs font-bold text-white">{COMPANY_DETAILS.email}</span>
+              <span className="text-[13px] font-extrabold text-white">{COMPANY_DETAILS.email}</span>
             </a>
             <div className="hidden lg:flex items-center gap-2 text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-brand-red flex-shrink-0" />
-              <span className="text-xs font-bold text-white">{isAr ? "المدينة الصناعية، الرياض" : "Al Sina'iyah, Riyadh"}</span>
+              <span className="text-[13px] font-extrabold text-white">{isAr ? "المدينة الصناعية، الرياض" : "Al Sina'iyah, Riyadh"}</span>
             </div>
           </div>
 
           {/* Right utility: Est & Language Toggle */}
           <div className="flex items-center gap-4">
-            <span className="hidden md:inline-block text-xs font-bold text-white uppercase tracking-wider border-e border-[#2d3164] pe-4">
+            <span className="hidden md:inline-block text-[13px] font-extrabold text-white uppercase tracking-wider border-e border-[#2d3164] pe-4">
               {isAr ? "بيت الجودة • تأسست 1983" : "House of Quality • Est. 1983"}
             </span>
             <LanguageToggle variant="dark" />
@@ -189,7 +189,7 @@ export function Header() {
               <span className="font-heading font-extrabold text-base sm:text-lg tracking-tight text-charcoal-950 dark:text-white uppercase leading-none">
                 {isAr ? "تارفا لصيانة المعدات" : "TARFA"}
               </span>
-              <span className="font-mono text-[10px] text-brand-red font-bold tracking-wider uppercase mt-0.5">
+              <span className="font-mono text-[11px] text-brand-red font-extrabold tracking-wider uppercase mt-0.5">
                 {isAr ? "بيت الجودة" : "EQUIPMENT MAINTENANCE"}
               </span>
             </div>
@@ -214,7 +214,7 @@ export function Header() {
                     <Link
                       href={link.href as any}
                       className={cn(
-                        "inline-flex items-center gap-1 font-heading text-sm font-bold transition-colors py-2",
+                        "inline-flex items-center gap-1 font-heading text-[15px] font-extrabold transition-colors py-2",
                         isActive
                           ? "text-brand-red"
                           : "text-charcoal-800 dark:text-charcoal-200 hover:text-brand-red dark:hover:text-white"
@@ -271,7 +271,7 @@ export function Header() {
                   key={link.href}
                   href={link.href as any}
                   className={cn(
-                    "font-heading text-sm font-bold transition-colors py-1 relative",
+                    "font-heading text-[15px] font-extrabold transition-colors py-1 relative",
                     isActive
                       ? "text-brand-red"
                       : "text-charcoal-800 dark:text-charcoal-200 hover:text-brand-red dark:hover:text-white"
@@ -293,7 +293,7 @@ export function Header() {
               variant="primary"
               size="sm"
               withChamfer
-              className="text-xs font-bold tracking-wide"
+              className="text-xs font-extrabold tracking-wide shadow-sm"
             >
               <span>{common("requestQuote")}</span>
               <ArrowIcon className="w-3.5 h-3.5 ms-1" />

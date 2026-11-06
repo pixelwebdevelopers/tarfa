@@ -19,6 +19,7 @@
   font-display: swap;
 }
 
+/* Arial Unicode MS - Regular / Normal (100-500) */
 @font-face {
   font-family: 'Arial Unicode MS';
   src: local('Arial Unicode MS'),
@@ -26,7 +27,20 @@
        local('ArialUnicodeMS'),
        url('/fonts/ArialUnicodeMS.woff') format('woff'),
        url('/fonts/ArialUnicodeMS.ttf') format('truetype');
-  font-weight: 100 900;
+  font-weight: 100 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Arial Unicode MS - Bold / ExtraBold (600-900) */
+@font-face {
+  font-family: 'Arial Unicode MS';
+  src: local('Arial Bold'),
+       local('Arial-Bold'),
+       local('Arial-BoldMT'),
+       url('/fonts/ArialBold.woff') format('woff'),
+       url('/fonts/ArialBold.ttf') format('truetype');
+  font-weight: 600 900;
   font-style: normal;
   font-display: swap;
 }
@@ -100,13 +114,20 @@
   }
 
   
-  /* Increase font weight for all text in the header */
+  /* High-Contrast Bold Typography for All Header Text */
   header,
-  header * {
-    font-weight: 700;
-  }
-  header .font-extrabold {
+  header *,
+  header nav a,
+  header nav button,
+  header nav span {
+    font-family: 'Arial Unicode MS', 'Arial Bold', Arial, sans-serif !important;
     font-weight: 800 !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header .font-extrabold,
+  header .phone-number {
+    font-weight: 900 !important;
   }
 
   /* Western digits in Arabic */

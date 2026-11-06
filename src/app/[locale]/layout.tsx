@@ -267,6 +267,14 @@ export default async function LocaleLayout({
           type="font/woff"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          href="/fonts/ArialBold.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+
 
         <script
           type="application/ld+json"
