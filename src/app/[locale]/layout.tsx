@@ -284,7 +284,7 @@ export default async function LocaleLayout({
       <body
         className={`min-h-screen flex flex-col font-body ${
           isAr ? "font-arabic" : "font-heading"
-        } antialiased selection:bg-brand-red selection:text-white bg-canvas-warm overflow-x-clip max-w-full`}
+        } antialiased selection:bg-brand-red selection:text-white bg-canvas-warm`}
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Header />
