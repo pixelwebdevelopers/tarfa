@@ -253,6 +253,21 @@ export default async function LocaleLayout({
       className={`${barlow.variable} ${ibmPlexArabic.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <link
+          rel="preload"
+          href="/fonts/AFDiwa.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/ArialUnicodeMS.woff"
+          as="font"
+          type="font/woff"
+          crossOrigin="anonymous"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -44,9 +44,11 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Barlow", "system-ui", "sans-serif"],
-        body: ["var(--font-body)", "Barlow", "system-ui", "sans-serif"],
-        arabic: ["var(--font-arabic)", "IBM Plex Sans Arabic", "Noto Kufi Arabic", "system-ui", "sans-serif"],
+        major: ["'AFDiwa'", "'AF Diwa'", "'AF_Diwa'", "'AF_Diwani'", "'Arial Unicode MS'", "Arial", "sans-serif"],
+        display: ["'AFDiwa'", "'AF Diwa'", "'AF_Diwa'", "'AF_Diwani'", "'Arial Unicode MS'", "Arial", "sans-serif"],
+        heading: ["'Arial Unicode MS'", "'Arial Unicode'", "Arial", "sans-serif"],
+        body: ["'Arial Unicode MS'", "'Arial Unicode'", "Arial", "sans-serif"],
+        arabic: ["'Arial Unicode MS'", "'Arial Unicode'", "Arial", "sans-serif"],
         mono: ["var(--font-mono)", "JetBrains Mono", "IBM Plex Mono", "monospace"],
       },
       borderRadius: {

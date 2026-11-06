@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   Typography Webfonts: AFDiwa (Major Headings) & Arial Unicode MS (Body/Headings)
+   ========================================================================== */
+@font-face {
+  font-family: 'AFDiwa';
+  src: local('AFDiwa'),
+       local('AF Diwa'),
+       local('AF_Diwa'),
+       local('AF_Diwani'),
+       local('AFDiwani'),
+       url('/fonts/AFDiwa.woff') format('woff'),
+       url('/fonts/AFDiwa.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arial Unicode MS';
+  src: local('Arial Unicode MS'),
+       local('Arial Unicode'),
+       local('ArialUnicodeMS'),
+       url('/fonts/ArialUnicodeMS.woff') format('woff'),
+       url('/fonts/ArialUnicodeMS.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 :root {
   --color-brand-red: #DC2324;
   --color-brand-red-hover: #B81B1C;
@@ -32,7 +62,25 @@
     background-image: url('/images/bg.webp');
     background-repeat: repeat;
     color: #0F172A;
+    font-family: 'Arial Unicode MS', 'Arial Unicode', Arial, sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Major Headings: Page Headings and Hero Main Heading */
+  h1,
+  .font-major,
+  .font-display,
+  .major-heading {
+    font-family: 'AFDiwa', 'AF Diwa', 'AF_Diwa', 'AF_Diwani', 'Arial Unicode MS', Arial, sans-serif !important;
+  }
+
+  /* Normal Headings and Text: Arial Unicode MS */
+  h2, h3, h4, h5, h6,
+  p, span, a, button, input, textarea, select,
+  .font-heading,
+  .font-body,
+  .font-arabic {
+    font-family: 'Arial Unicode MS', 'Arial Unicode', Arial, sans-serif;
   }
 
   /* Arabic typography adjustments */

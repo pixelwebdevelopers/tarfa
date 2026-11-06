@@ -95,7 +95,7 @@ export function HeroSection() {
 
 
             {/* Headline */}
-            <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.12] text-white">
+            <h1 className="font-major font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.12] text-white">
               {t("headline")}
             </h1>
 

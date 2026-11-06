@@ -31,7 +31,7 @@ export function PageHeader({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 relative z-10 text-start">
         <Breadcrumbs items={breadcrumbs} className="mb-3" />
 
-        <h1 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight max-w-4xl">
+        <h1 className="font-major font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight max-w-4xl">
           {title}
         </h1>
 
